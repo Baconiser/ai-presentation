@@ -7,7 +7,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --fix --ext .ts,.vue .",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start"
   },
   "devDependencies": {
     "@nuxt/image-edge": "^v1.0.0-28050764.aaee7ac",
