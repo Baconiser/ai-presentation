@@ -20,7 +20,7 @@
             alt=""
             format="webp"
             loading="lazy"
-            src="~/images/quiz/dog-left.jpg"
+            src="/images/quiz/dog-left.jpg"
             class="max-w-full"
           />
         </div>
