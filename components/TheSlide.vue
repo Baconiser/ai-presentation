@@ -3,9 +3,7 @@
 
 <template>
   <div class="slide overflow-hidden w-screen h-screen flex justify-center items-center relative">
-    <div class="slide__content">
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
 

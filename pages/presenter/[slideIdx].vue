@@ -46,6 +46,12 @@ onBeforeUnmount(() => {
       <the-slide>
         <slides-slide03 />
       </the-slide>
+      <the-slide>
+        <slides-slide04 />
+      </the-slide>
+      <the-slide>
+        <slides-slide05 />
+      </the-slide>
     </div>
   </div>
 </template>

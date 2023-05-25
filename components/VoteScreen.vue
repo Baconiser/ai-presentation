@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col m-0 items-center min-h-screen">
+  <div class="flex flex-col items-center min-h-screen">
     <div class="flex flex-col items-center justify-center grow gap-2">
       <h1
         class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 h-12 md:h-20 flex justify-center items-center"
