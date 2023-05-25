@@ -1,24 +1,23 @@
-<template>
-  <div class="laser-pointer" :style="{transform: `translate3d(${x}px, ${y}px,0)`}">
-  </div>
-</template>
-
 <script setup lang="ts">
-let x = ref(0);
-let y = ref(0);
+const x = ref(0)
+const y = ref(0)
 
-function movePointer(e: MouseEvent) {
-  x.value = e.clientX;
-  y.value = e.clientY;
+function movePointer (e: MouseEvent) {
+  x.value = e.clientX
+  y.value = e.clientY
 }
 
 onMounted(() => {
-  window.addEventListener("mousemove", movePointer);
-});
+  window.addEventListener('mousemove', movePointer)
+})
 
 </script>
 
-<style scoped lang="less">
+´<template>
+  <div class="laser-pointer" :style="{transform: `translate3d(${x}px, ${y}px,0)`}" />
+</template>
+
+<style scoped>
 .laser-pointer {
   z-index: 1111;
   position: absolute;
