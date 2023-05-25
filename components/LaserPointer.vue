@@ -28,5 +28,6 @@ onMounted(() => {
   border-radius: 50%;
   background-color: #fff;
   box-shadow: red 0 0 14px 7px;
+  pointer-events: none;
 }
 </style>

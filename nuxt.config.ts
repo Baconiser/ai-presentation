@@ -25,7 +25,6 @@ export default defineNuxtConfig({
       md: 768,
       lg: 1024
     },
-    provider: 'netlify',
   },
   modules: [
     '@nuxt/image-edge',
