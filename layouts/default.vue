@@ -4,16 +4,16 @@
 
 <template>
   <div class="layout">
-    <!--    <laser-pointer />-->
+    <laser-pointer/>
     <transition name="fade">
-      <slot />
+      <slot/>
     </transition>
   </div>
 </template>
 
 <style>
 .layout {
-  cursor: url('@/assets/images/laser-pointer.png'), auto;
+  cursor: none;
 }
 
 .fade-enter-active,

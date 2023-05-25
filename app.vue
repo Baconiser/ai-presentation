@@ -1,8 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+
+onMounted(() => {
+
+  if (process.client) {
+    const event = new EventSource('http://localhost:3000/api/connect');
+
+    event.addEventListener('message', (e) => {
+      console.log(e.data);
+      //todo update state
+
+    });
+  }
+})
+
+</script>
 
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage/>
   </NuxtLayout>
 </template>
 
