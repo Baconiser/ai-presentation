@@ -4,7 +4,7 @@
 onMounted(() => {
 
   if (process.client) {
-    const event = new EventSource('http://localhost:3000/api/connect');
+    const event = new EventSource('/api/connect');
 
     event.addEventListener('message', (e) => {
       console.log(e.data);
