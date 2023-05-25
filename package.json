@@ -12,12 +12,12 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^v1.0.0-28050764.aaee7ac",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/tailwindcss": "^6.7.0",
     "@types/node": "^18"
   },
   "dependencies": {
-    "nuxt": "^3.5.1"
+    "nuxt": "^3.5.1",
+    "@nuxt/image-edge": "^v1.0.0-28050764.aaee7ac",
+    "@nuxtjs/tailwindcss": "^6.7.0"
   }
 }
