@@ -1,0 +1,12 @@
+build:
+  docker:
+    web: Dockerfile  # Replace with the path to your Dockerfile, if applicable
+  config:
+    NODE_ENV: production
+
+install:
+  - npm install --production=false
+
+release:
+  command:
+    - npm run build
