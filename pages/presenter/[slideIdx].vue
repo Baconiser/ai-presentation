@@ -41,8 +41,11 @@ onBeforeUnmount(() => {
         <slides-slide01 @drag="preventDrag" />
       </TheSlide>
       <TheSlide>
-        Das ist ein zweiter slide
+        <slides-slide02 />
       </TheSlide>
+      <the-slide>
+        <slides-slide03 />
+      </the-slide>
     </div>
   </div>
 </template>

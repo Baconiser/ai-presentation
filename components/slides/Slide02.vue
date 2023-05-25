@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const options = [
-  { image: '/images/quiz/sun-left.jpg' },
-  { image: '/images/quiz/sun-right.jpg' }
+  { image: '/images/quiz/dog-left.jpg' },
+  { image: '/images/quiz/h.png' }
 ]
 </script>
 

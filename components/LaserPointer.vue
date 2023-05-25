@@ -13,7 +13,7 @@ onMounted(() => {
 
 </script>
 
-´<template>
+<template>
   <div class="laser-pointer" :style="{transform: `translate3d(${x}px, ${y}px,0)`}" />
 </template>
 
