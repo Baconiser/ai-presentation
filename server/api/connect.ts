@@ -12,8 +12,10 @@ export default defineEventHandler(async (event) => {
 
     const sendEvent = (data: any) => {
         console.log(`Event ${ counter } was sent`);
-        event.node.res.write(`id: ${ ++counter }\n`);
-        event.node.res.write(`data: ${ JSON.stringify(store.getVotes()) }\n\n`);
+        const res = event.node.res;
+        res.write(`id: ${ ++counter }\n`);
+        res.write(`data: ${ JSON.stringify(store.getVotes()) }\n\n`);
+        res.flushHeaders();
     }
 
     store.addListener(() => {
