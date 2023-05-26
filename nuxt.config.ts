@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
+  app:{
+  baseURL: 'ai-presentation',
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       titleTemplate: 'AI Presentation%s',
@@ -25,6 +26,7 @@ export default defineNuxtConfig({
       md: 768,
       lg: 1024
     },
+    provider: "static",
   },
   modules: [
     '@nuxt/image-edge',
