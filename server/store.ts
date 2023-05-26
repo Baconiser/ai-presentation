@@ -18,6 +18,7 @@ class Store {
             return;
         }
         this.votes.push(vote);
+        console.log("vote added notifiy listeners", vote);
         this.listeners.forEach(listener => listener());
     }
 

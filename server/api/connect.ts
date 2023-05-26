@@ -11,11 +11,13 @@ export default defineEventHandler(async (event) => {
     let counter = 0
 
     const sendEvent = (data: any) => {
+        console.log(`Event ${ counter } was sent`);
         event.node.res.write(`id: ${ ++counter }\n`);
         event.node.res.write(`data: ${ JSON.stringify(store.getVotes()) }\n\n`);
     }
 
     store.addListener(() => {
+        console.log("Store updated, sending event");
         sendEvent(store.getVotes())
     });
 

@@ -10,6 +10,7 @@ export default defineEventHandler(async (event) => {
         vote,
         correct: false
     };
+    console.log("VOTE RECEIVED", newVote);
     store.addVote(newVote);
     return newVote;
 });
