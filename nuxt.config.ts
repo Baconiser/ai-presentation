@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app:{
-  baseURL: 'ai-presentation',
+  baseURL: '/ai-presentation',
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       titleTemplate: 'AI Presentation%s',
