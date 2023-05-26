@@ -1,6 +1,4 @@
 
-N
-pages/presenter/[slideIdx].vue,c\5\c5f687951e245a5034d63a67372b9d0434ee795c
 G
 components/TheSlide.vue,4\c\4c6cae7ce621905351fe1391553c0f1d424d4a8a
 I

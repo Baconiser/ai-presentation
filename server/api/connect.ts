@@ -14,10 +14,10 @@ export default defineEventHandler(async (event) => {
 
     const sendEvent = (data: any) => {
         console.log(`Event ${ counter } was sent`);
-
+        res.cork();
         res.write(`id: ${ ++counter }\n`);
         res.write(`data: ${ JSON.stringify(store.getVotes()) }\n\n`);
-
+        res.uncork();
     }
 
     store.addListener(() => {
