@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import eggLeft from '@/assets/images/quiz/egg-left.jpg'
+import eggRight from '@/assets/images/quiz/e.png'
+
 const options = [
-  { image: '../images/quiz/egg-left.jpg' },
-  { image: '../images/quiz/e.png' }
+  { image: eggLeft },
+  { image: eggRight }
 ]
 </script>
 

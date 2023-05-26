@@ -19,11 +19,9 @@ defineProps({
       </h1>
       <div class="gap-x-8 gap-y-2 flex justify-center items-center img-container">
         <div v-for="option in options" :key="option.image" class="flex flex-col max-h-full justify-center">
-          <nuxt-img
+          <img
             alt=""
-            format="webp"
             loading="lazy"
-            sizes="xs:100vw sm:100vw md:100vw lg:100vw"
             :src="option.image"
             class="max-w-full"
           />

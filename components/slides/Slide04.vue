@@ -16,13 +16,12 @@
       </template>
       <template #right>
         <div class="flex justify-center items-center">
-          <nuxt-img
+          <img
             alt=""
-            format="webp"
             loading="lazy"
-            src="/images/quiz/dog-left.jpg"
+            src="@/assets/images/quiz/dog-left.jpg"
             class="max-w-full"
-          />
+          >
         </div>
       </template>
     </TwoColumnLayout>

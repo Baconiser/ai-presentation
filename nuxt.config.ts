@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app:{
+  app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       titleTemplate: 'AI Presentation%s',
@@ -17,17 +17,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  image: {
-    dir: 'assets',
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024
-    }
-  },
   modules: [
-    '@nuxt/image-edge',
     '@nuxtjs/tailwindcss'
   ]
 })

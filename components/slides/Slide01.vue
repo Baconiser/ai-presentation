@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import sunLeft from '@/assets/images/quiz/sun-left.jpg'
+import sunRight from '@/assets/images/quiz/sun-right.jpg'
+
 const options = [
-  { image: '/images/quiz/sun-left.jpg' },
-  { image: '/images/quiz/sun-right.jpg' }
+  { image: sunLeft },
+  { image: sunRight }
 ]
 </script>
 
