@@ -30,9 +30,13 @@ watch(slideIdx, (newVal) => {
   router.push(`/presenter/${newVal}`)
 })
 
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener('keydown', switchSlide)
   // add event listener for keypress
+  // const jwt = localStorage.getItem('is-worthy')
+  // if (!jwt) {
+  //   await navigateTo('/')
+  // }
 })
 
 onBeforeUnmount(() => {
@@ -42,7 +46,8 @@ onBeforeUnmount(() => {
 
 const options = [
   {
-    type: Slide01
+    type: Slide01,
+    isCover: true
   },
   {
     type: Slide02
@@ -54,7 +59,8 @@ const options = [
     type: Slide04
   },
   {
-    type: Slide05
+    type: Slide05,
+    isCover: true
   }
 ]
 </script>
@@ -66,9 +72,9 @@ const options = [
       :style="{transform: `translateX(${-100 * slideIdx}vw)`}"
     >
       <template v-for="option in options" :key="option.type">
-        <div class="slide overflow-hidden w-screen h-screen flex justify-center items-center relative">
+        <TheSlide :is-cover="option.isCover">
           <component :is="option.type" @drag="preventDrag" />
-        </div>
+        </TheSlide>
       </template>
     </div>
   </div>

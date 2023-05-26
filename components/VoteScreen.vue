@@ -10,30 +10,28 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col items-center min-h-screen">
-    <div class="flex flex-col items-center justify-center grow gap-2">
-      <h1
-        class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 h-12 md:h-20 flex justify-center items-center"
-      >
-        🤖 <span class="text-red-800">AI</span>rtist or 🎨 Artist
-      </h1>
-      <div class="gap-x-8 gap-y-2 flex justify-center items-center img-container">
-        <div v-for="option in options" :key="option.image" class="flex flex-col max-h-full justify-center">
-          <img
-            alt=""
-            loading="lazy"
-            :src="option.image"
-            class="max-w-full"
-          />
-          <div class="flex justify-center shrink-0">
-            <vote-button>
-              🤖
-            </vote-button>
-            <div class="w-1 bg-white" />
-            <vote-button>
-              🎨
-            </vote-button>
-          </div>
+  <div class="flex flex-col min-h-full grow gap-2">
+    <h1
+      class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center "
+    >
+      🤖 <span class="text-red-800">AI</span>rtist or 🎨 Artist
+    </h1>
+    <div class="gap-x-8 gap-y-2 flex justify-center items-center img-container">
+      <div v-for="option in options" :key="option.image" class="flex flex-col max-h-full justify-center">
+        <img
+          alt=""
+          loading="lazy"
+          :src="option.image"
+          class="max-w-full"
+        >
+        <div class="flex justify-center shrink-0">
+          <vote-button>
+            🤖
+          </vote-button>
+          <div class="w-1 bg-white" />
+          <vote-button>
+            🎨
+          </vote-button>
         </div>
       </div>
     </div>

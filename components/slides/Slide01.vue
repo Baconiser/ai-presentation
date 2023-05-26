@@ -1,15 +1,9 @@
 <script setup lang="ts">
-import sunLeft from '@/assets/images/quiz/sun-left.jpg'
-import sunRight from '@/assets/images/quiz/sun-right.jpg'
-
-const options = [
-  { image: sunLeft },
-  { image: sunRight }
-]
+import bg from '@/assets/images/bg/d.jpg'
 </script>
 
 <template>
-  <vote-screen :options="options" />
+  <CoverLayout :img="bg" headline="<span class='hl'>AI</span>rtist or Artist" />
 </template>
 
 <style scoped></style>

@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section class="flex flex-col items-center min-h-screen w-full p-8">
+  <section class="flex flex-col items-center min-h-full w-full">
     <h1
       class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center items-center"
     >

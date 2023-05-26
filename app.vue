@@ -1,16 +1,13 @@
 <script setup lang="ts">
 
-
 onMounted(() => {
-
   if (process.client) {
-    const event = new EventSource('/api/connect');
+    const event = new EventSource('/api/connect')
 
     event.addEventListener('message', (e) => {
-      console.log(e.data);
-      //todo update state
-
-    });
+      console.log(e.data)
+      // todo update state
+    })
   }
 })
 
@@ -18,7 +15,7 @@ onMounted(() => {
 
 <template>
   <NuxtLayout>
-    <NuxtPage/>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
