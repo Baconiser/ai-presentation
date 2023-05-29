@@ -5,7 +5,7 @@ import bg from '@/assets/images/bg/lock.jpeg'
 <template>
   <CoverLayout
     :img="bg"
-    text="Künstliche Intelligenz ist unsere Reise, wir enthüllen ihre Macht, zeigen ihre Weise. Kommt mit, erkundet diese neue Dimension, wir bieten Einblicke und schaffen gemeinsam Visionen!"
+    text="Künstliche Intelligenz ist unsere Reise, wir enthüllen ihre Macht, zeigen ihre Weise. Kommt mit, erkundet diese neuen Dimensionen, wir bieten Einblicke und schaffen gemeinsam Visionen!"
   />
 </template>
 

@@ -8,6 +8,10 @@ import Slide07 from '~/components/slides/Slide07.vue'
 import Slide06 from '~/components/slides/Slide06.vue'
 import Slide08 from '~/components/slides/Slide08.vue'
 import Slide09 from '~/components/slides/Slide09.vue'
+import Slide10 from "~/components/slides/Slide10.vue";
+import Slide11 from "~/components/slides/Slide11.vue";
+import Slide12 from "~/components/slides/Slide12.vue";
+import Slide13 from "~/components/slides/Slide13.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -53,10 +57,19 @@ const options = [
     type: Slide07
   },
   {
-    type: Slide08
+    type: Slide10
   },
   {
     type: Slide09
+  },
+  {
+    type: Slide11
+  },
+  {
+    type: Slide12
+  },
+  {
+    type: Slide13
   },
   {
     type: Slide01
