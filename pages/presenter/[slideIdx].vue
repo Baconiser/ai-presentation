@@ -4,6 +4,10 @@ import Slide02 from '~/components/slides/Slide02.vue'
 import Slide03 from '~/components/slides/Slide03.vue'
 import Slide04 from '~/components/slides/Slide04.vue'
 import Slide05 from '~/components/slides/Slide05.vue'
+import Slide07 from '~/components/slides/Slide07.vue'
+import Slide06 from '~/components/slides/Slide06.vue'
+import Slide08 from '~/components/slides/Slide08.vue'
+import Slide09 from '~/components/slides/Slide09.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -46,8 +50,16 @@ onBeforeUnmount(() => {
 
 const options = [
   {
-    type: Slide01,
-    isCover: true
+    type: Slide07
+  },
+  {
+    type: Slide08
+  },
+  {
+    type: Slide09
+  },
+  {
+    type: Slide01
   },
   {
     type: Slide02
@@ -59,8 +71,10 @@ const options = [
     type: Slide04
   },
   {
-    type: Slide05,
-    isCover: true
+    type: Slide05
+  },
+  {
+    type: Slide06
   }
 ]
 </script>
@@ -72,7 +86,7 @@ const options = [
       :style="{transform: `translateX(${-100 * slideIdx}vw)`}"
     >
       <template v-for="option in options" :key="option.type">
-        <TheSlide :is-cover="option.isCover">
+        <TheSlide>
           <component :is="option.type" @drag="preventDrag" />
         </TheSlide>
       </template>

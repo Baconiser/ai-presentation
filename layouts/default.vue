@@ -22,7 +22,7 @@ onBeforeUnmount(() => {
   <div class="layout" :class="{'no-cursor': showLaserpointer}">
     <laser-pointer v-if="showLaserpointer" />
     <transition name="fade">
-      <slot />
+      <slot :key="$route.fullPath" />
     </transition>
   </div>
 </template>

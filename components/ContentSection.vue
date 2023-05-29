@@ -5,16 +5,23 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section class="flex flex-col items-center min-h-full w-full">
+  <section class="flex flex-col items-center min-h-full w-full h-screen p-8 gap-8">
     <h1
       class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center items-center"
     >
       {{ headline }}
     </h1>
-    <div class="flex flex-col items-center justify-center grow gap-2 w-full">
+    <div class="flex flex-col items-center justify-center grow gap-2 w-full content">
       <slot />
     </div>
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.content {
+  flex: 1 1 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+</style>

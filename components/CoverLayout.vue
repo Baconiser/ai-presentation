@@ -17,7 +17,7 @@ const randomClass = computed(() => {
 <template>
   <div
     class="cover w-full h-full bg-no-repeat bg-center bg-cover"
-    :style="`background-image: url(${img});`"
+    :style="`background-image: url(${img}); z-index: -2`"
     :class="[{gradient: !img}, randomClass]"
   >
     <div class="m-auto w-full h-full flex flex-col justify-center items-center">
@@ -67,16 +67,19 @@ h1:deep(.hl) {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.5;
+  background-image: linear-gradient(360deg, #000 0%, #000 100%);
+}
+
+.cover.gradient::after {
+  opacity: 0.3;
 }
 
 .cover.gradient.a::after {
-  background-image: -webkit-linear-gradient(90deg, #14e839 0%, #3456fd 100%);
   background-image: linear-gradient(360deg, #14e839 0%, #3456fd 100%);
 }
 
 .cover.gradient.b::after {
-  background-image: -webkit-linear-gradient(345deg, #ae5ceb 0%, #6aa4e1 100%);
   background-image: linear-gradient(105deg, #ae5ceb 0%, #6aa4e1 100%);
 }
 
@@ -88,6 +91,6 @@ p {
   line-height: 1.5;
   text-shadow: 4px 3px 0 rgba(0,0,0,.3);
   text-align: center;
-  margin: 40px 5%;
+  margin: 80px 5% 40px;
 }
 </style>

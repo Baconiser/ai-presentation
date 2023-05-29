@@ -1,7 +1,6 @@
 <script setup lang="ts">
 onMounted(async () => {
-  const jwt = localStorage.getItem('is-worty')
-  console.log(jwt);
+  const jwt = localStorage.getItem('is-worthy')
   if (jwt) {
     await navigateTo('/presenter/0')
   } else {
