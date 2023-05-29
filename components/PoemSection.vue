@@ -17,7 +17,7 @@
   color: #fff;
   font-weight: 100;
   font-size: 40px;
-  font-family: Verdana,Courier New,monospace;
+  font-family: operator mono,Courier New,monospace;
   line-height: 1.5;
   text-shadow: 4px 3px 0 rgba(0,0,0,.3);
 }
