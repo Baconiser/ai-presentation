@@ -1,5 +1,7 @@
 <script setup lang="ts">
 let data = reactive({ votes: [], gif_votes: [], currentSlideIdx: 0 });
+const currentSlideIdx = useState("currentSlideIdx", () => data.currentSlideIdx);
+const votedGifs = useState("votedGifs", () => []);
 onMounted(() => {
   if (process.client) {
     const event = new EventSource('/api/connect')
@@ -9,37 +11,19 @@ onMounted(() => {
       data.gif_votes = parsedData.gif_votes;
       data.votes = parsedData.votes;
       data.currentSlideIdx = parsedData.currentSlideIdx
+      currentSlideIdx.value = data.currentSlideIdx;
+      votedGifs.value = data.gif_votes;
     })
 
   }
 })
 
-const votedGifs = computed(() => {
-  return new Set(data.gif_votes.map((gifVote: any) => {
-    return gifVote.gifId;
-  }));
-});
-
-function getGifVoteCount(gifId: string) {
-  return data.gif_votes.filter((gifVote: any) => {
-    return gifVote.gifId === gifId;
-  }).length;
-}
 </script>
 
 <template>
-  <div>
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
-    <div class="gifs">
-      <div> Slide: {{ data.currentSlideIdx }}</div>
-      <div class="gif" v-for="(gif, index) in votedGifs" :key="index">
-        <span>{{ getGifVoteCount(gif) }}x</span>
-        <img :src="`/${gif}.webp`"/>
-      </div>
-    </div>
-  </div>
 </template>
 
 <style>

@@ -11,8 +11,8 @@
 
   >
     <div class="card__content flex-1 p-2 pb-8">
+      {{props.handledState}}
       <slot/>
-
     </div>
   </div>
 
@@ -24,6 +24,10 @@ import { ref } from "vue";
 const emit = defineEmits(["like", "dislike"]);
 
 const props = defineProps({
+  handledState: {
+    type: String,
+    required: true
+  },
   index: {
     type: Number,
     required: true
@@ -64,6 +68,19 @@ const offsetLeft = computed(() => {
 const offsetTop = computed(() => {
   return `${ props.index * -6 }px`;
 });
+
+watch(props.handledState, (nv: string) => {
+  console.log(nv);
+  if(nv) {
+    isTransitioning.value = true;
+
+    if(nv === 'liked') {
+      position.x = window.innerWidth * 1.5;
+    } else if (nv === 'disliked') {
+      position.x = -window.innerWidth * 1.5;
+    }
+  }
+})
 
 const startSwipe = (index: number, event: MouseEvent | TouchEvent) => {
   event.preventDefault();

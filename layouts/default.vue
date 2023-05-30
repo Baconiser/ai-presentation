@@ -25,7 +25,7 @@ onKeyStroke('l', (e) => {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 10.5s ease;
+  transition: opacity .4s ease;
 }
 
 .fade-enter-from,

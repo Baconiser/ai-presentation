@@ -9,7 +9,6 @@ export default defineEventHandler(async (event) => {
     res.flushHeaders();
 
     const sendEvent = (data: any) => {
-        console.log(`Event was sent`);
         res.cork();
         res.write(`id: ${ Date.now() }\n`);
         const temp = {...store};
@@ -19,7 +18,6 @@ export default defineEventHandler(async (event) => {
     }
 
     store.addListener(() => {
-        console.log("Store updated, sending event");
         sendEvent(store.getVotes())
     });
 

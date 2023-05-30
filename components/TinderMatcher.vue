@@ -1,5 +1,5 @@
 <template>
-  <div class="image-stack  relative w-full h-full">
+  <div class="image-stack  relative w-full h-[100vh] overflow-hidden">
     <div
         class="image-stack__cards absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-200px pb-[45%] max-w-520px"
     >
@@ -8,8 +8,10 @@
           :id="image"
           :key="index"
           :index="images.length - index"
+          :handledState="getHandledState(image)"
           @like="likeImage(index)"
           @dislike="dislikeImage(index)"
+
       >
         <img :src="image" alt="Image" class="w-full h-full object-cover">
       </Card>
@@ -30,25 +32,26 @@ const props = defineProps({
   images: { type: Array, default: [] }
 })
 
-const handledImages: Ref<string[]> = ref([])
+const handledImages: Ref<{image:string, liked:boolean}[]> = ref([])
 
 const currentIndex = ref(0)
 
 const availableImages = computed(() => {
   return props.images.filter((image: any) => {
-    return !handledImages.value.includes(image)
+    return !handledImages.value.find(e => e.image == image)
   })
 })
 
 const likeImage = (index: number) => {
   console.log(`Liked image at index ${ index }`)
-  handledImages.value.push(props.images[index])
+
+  handledImages.value.push({ image: props.images[index], liked: true })
   nextImage()
 }
 
 const dislikeImage = (index: number) => {
   console.log(`Disliked image at index ${ index }`)
-  handledImages.value.push(props.images[index])
+  handledImages.value.push({ image: props.images[index], liked: false })
   nextImage()
 }
 
@@ -65,6 +68,14 @@ const handleLike = (index: number) => {
 
 const handleDislike = (index: number) => {
   dislikeImage(index)
+}
+
+function getHandledState(image: string) {
+  const handledImage = handledImages.value.find(e => e.image == image)
+  if (handledImage) {
+    return handledImage.liked ? 'liked' : 'disliked'
+  }
+  return 'none'
 }
 
 onMounted(() => {
