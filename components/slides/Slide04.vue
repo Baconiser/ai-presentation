@@ -5,8 +5,8 @@
     <poem-section>
       <template #poem>
         <p>
-          KI in Gesundheit und Bildung am Start,<br> sie hilft uns allen mit ihrem smarten Art.<br>
-          Frühzeitige Diagnose, Lernen maßgeschneidert,<br> KI hat unser wissen erweitert.
+          KI in Gesundheit und Bildung am Start,<br> sie hilft uns allen - und jetzt Abfahrt.<br>
+          Frühzeitige Diagnose, Lernen maßgeschneidert,<br> KI hat unser Wissen erweitert.
         </p>
         <p>
           Wirtschaft und Unterhaltung gehen voran,<br> KI hilft uns, macht uns zum Fachmann.<br>
@@ -14,7 +14,7 @@
         </p>
       </template>
       <template #img>
-        <img src="@/assets/images/poem/delorian.jpeg">
+        <video src="@/assets/videos/ki-anwendung.mp4" controls />
       </template>
     </poem-section>
   </content-section>
