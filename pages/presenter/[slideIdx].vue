@@ -12,26 +12,31 @@ import Slide10 from "~/components/slides/Slide10.vue";
 import Slide11 from "~/components/slides/Slide11.vue";
 import Slide12 from "~/components/slides/Slide12.vue";
 import Slide13 from "~/components/slides/Slide13.vue";
+import store from "~/server/store";
+import { onKeyStroke } from "@vueuse/core";
 
 const route = useRoute()
 const router = useRouter()
 const slideIdx = ref(Number(route.params.slideIdx))
+
+if(process.server) {
+  store.setCurrentSlideIdx(slideIdx.value);
+}
 
 function preventDrag (e: DragEvent) {
   e.preventDefault()
   return false
 }
 
-// switch slideIdx based on keypress
-function switchSlide (e: KeyboardEvent) {
-  if (e.key === 'ArrowRight' || e.key === ' ') {
-    slideIdx.value += 1
-    slideIdx.value = Math.min(slideIdx.value, options.length - 1)
-  } else if (e.key === 'ArrowLeft') {
-    slideIdx.value -= 1
-    slideIdx.value = Math.max(slideIdx.value, 0)
-  }
-}
+onKeyStroke(["ArrowRight", " "], () => {
+  slideIdx.value += 1
+  slideIdx.value = Math.min(slideIdx.value, options.length - 1)
+});
+
+onKeyStroke(["ArrowLeft"], () => {
+  slideIdx.value -= 1
+  slideIdx.value = Math.max(slideIdx.value, 0)
+});
 
 // watch slideIdx and update route params
 watch(slideIdx, (newVal) => {
@@ -39,17 +44,13 @@ watch(slideIdx, (newVal) => {
 })
 
 onMounted(async () => {
-  window.addEventListener('keydown', switchSlide)
-  // add event listener for keypress
-  // const jwt = localStorage.getItem('is-worthy')
-  // if (!jwt) {
-  //   await navigateTo('/')
-  // }
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', switchSlide)
-  // remove event listener for keypress
+  useFetch("/api/set_slide_idx", {
+    method: "POST",
+    body: JSON.stringify({ slideIdx: slideIdx.value }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 })
 
 const options = [

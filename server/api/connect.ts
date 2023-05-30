@@ -1,5 +1,4 @@
 import store from '../store'
-
 export default defineEventHandler(async (event) => {
     const res = event.node.res;
     // Enable SSE endpoint
@@ -9,14 +8,13 @@ export default defineEventHandler(async (event) => {
     setResponseStatus(event, 200);
     res.flushHeaders();
 
-
-    let counter = 0
-
     const sendEvent = (data: any) => {
-        console.log(`Event ${ counter } was sent`);
+        console.log(`Event was sent`);
         res.cork();
         res.write(`id: ${ Date.now() }\n`);
-        res.write(`data: ${ JSON.stringify(store.getVotes()) }\n\n`);
+        const temp = {...store};
+        temp.listeners = [];
+        res.write(`data: ${ JSON.stringify(temp) }\n\n`);
         res.uncork();
     }
 

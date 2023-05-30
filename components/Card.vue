@@ -100,9 +100,9 @@ const endSwipe = () => {
     isSwiping.value = false;
     isTransitioning.value = true;
     if (position.x > 0) {
-      position.x = window.innerWidth;
+      position.x = window.innerWidth * 1.5;
     } else {
-      position.x = -window.innerWidth;
+      position.x = -window.innerWidth * 1.5;
     }
 
     setTimeout(() => {

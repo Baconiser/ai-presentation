@@ -1,28 +1,19 @@
 <script setup lang="ts">
-const showLaserpointer = ref<boolean>(false)
 
-function toggleShortcuts (e: KeyboardEvent) {
-  if (e.key === 'l') {
-    showLaserpointer.value = !showLaserpointer.value
-  }
-}
+import { onKeyStroke } from '@vueuse/core'
 
-onMounted(() => {
-  window.addEventListener('keydown', toggleShortcuts)
-  // add event listener for keypress
+let showPointer = ref(false);
+onKeyStroke('l', (e) => {
+  showPointer.value = !showPointer.value
 })
 
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', toggleShortcuts)
-  // remove event listener for keypress
-})
 </script>
 
 <template>
-  <div class="layout" :class="{'no-cursor': showLaserpointer}">
-    <laser-pointer v-if="showLaserpointer" />
+  <div class="layout" :class="{'no-cursor': showPointer}">
+    <laser-pointer v-if="showPointer"/>
     <transition name="fade">
-      <slot :key="$route.fullPath" />
+      <slot :key="$route.fullPath"/>
     </transition>
   </div>
 </template>

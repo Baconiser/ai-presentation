@@ -1,16 +1,5 @@
 <script setup lang="ts">
-const x = ref(0)
-const y = ref(0)
-
-function movePointer (e: MouseEvent) {
-  x.value = e.clientX
-  y.value = e.clientY
-}
-
-onMounted(() => {
-  window.addEventListener('mousemove', movePointer)
-})
-
+const { x, y } = useMouse()
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import bg from '@/assets/images/bg/d.jpg'
+import LaserPointer from "~/components/LaserPointer.vue";
 </script>
 
 <template>
