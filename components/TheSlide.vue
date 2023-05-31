@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const votedGifs:Ref<string[]> = useState("votedGifs");
-
+import ParticleEffect from '@/components/ParticleEffect.vue';
 const currentSlideIdx:Ref<number> = useState("currentSlideIdx");
 const votedGifIds = computed(() => {
   return new Set(votedGifs.value.map((gifVote: any) => {
@@ -22,6 +22,8 @@ function getGifVoteCount(gifId: string) {
   >
     <slot />
     <div class="gifs">
+      <ParticleEffect></ParticleEffect>
+
       <div> Slide: {{ currentSlideIdx }}</div>
       <div class="gif" v-for="(gif, index) in votedGifIds" :key="index">
         <span>{{ getGifVoteCount(gif) }}x</span>

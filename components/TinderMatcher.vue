@@ -11,7 +11,7 @@
           :handledState="getHandledState(image)"
           @like="likeImage(index)"
           @dislike="dislikeImage(index)"
-
+          :ref="`card-${index}`"
       >
         <img :src="image" alt="Image" class="w-full h-full object-cover">
       </Card>
@@ -34,7 +34,9 @@ const props = defineProps({
 
 const handledImages: Ref<{image:string, liked:boolean}[]> = ref([])
 
-const currentIndex = ref(0)
+const currentIndex = computed(() => {
+  return Math.max(0, (props.images.length -1) - handledImages.value.length)
+})
 
 const availableImages = computed(() => {
   return props.images.filter((image: any) => {

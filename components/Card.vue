@@ -11,7 +11,6 @@
 
   >
     <div class="card__content flex-1 p-2 pb-8">
-      {{props.handledState}}
       <slot/>
     </div>
   </div>
@@ -69,10 +68,10 @@ const offsetTop = computed(() => {
   return `${ props.index * -6 }px`;
 });
 
-watch(props.handledState, (nv: string) => {
-  console.log(nv);
+watch(() => props.handledState, (nv: string) => {
   if(nv) {
     isTransitioning.value = true;
+    done.value = true;
 
     if(nv === 'liked') {
       position.x = window.innerWidth * 1.5;
