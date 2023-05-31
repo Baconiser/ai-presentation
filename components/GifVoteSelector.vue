@@ -5,6 +5,7 @@ import ParticleEffect from "~/components/ParticleEffect.vue"
 
 
 function voteForGif(gifId: string) {
+  console.log(gifId, "GIF ID")
   const userId = IdUtil.getId()
   fetch('/api/vote_gif/', {
     body: JSON.stringify({ userId, gifId }),
@@ -22,24 +23,23 @@ function voteForGif(gifId: string) {
       h-screen flex flex-col relative align-center"
   >
     <div class="w-full grow-1 flex flex-col overflow-hidden">
-      <div class="w-full relative">
+      <div class="w-full relative" @click="voteForGif(GifIds.boo)">
         <ParticleEffect/>
-        <img class="w-full" :src="`/${GifIds.boo}.webp`" @click="voteForGif(GifIds.boo)">
+        <img class="w-full  relative" :src="`/${GifIds.boo}.webp`" >
       </div>
-      <div class="w-full relative">
+      <div class="w-full relative"  @click="voteForGif(GifIds.mindblow)">
         <ParticleEffect/>
-        <img class="w-full" :src="`/${GifIds.mindblow}.webp`" @click="voteForGif(GifIds.mindblow)">
+        <img class="w-full  relative" :src="`/${GifIds.mindblow}.webp`">
       </div>
-
     </div>
     <div class="w-full flex flex-row overflow-hidden">
-      <div class="w-full">
+      <div class="w-full  relative" @click="voteForGif(GifIds.huh)">
         <ParticleEffect/>
-        <img class="h-full max-w-1/2" :src="`/${GifIds.huh}.webp`" @click="voteForGif(GifIds.huh)">
+        <img class="h-full max-w-1/2" :src="`/${GifIds.huh}.webp`" >
       </div>
-      <div class="w-full">
+      <div class="w-full relative"  @click="voteForGif(GifIds.nice)">
         <ParticleEffect/>
-        <img class="h-full max-w-1/2" :src="`/${GifIds.nice}.webp`" @click="voteForGif(GifIds.nice)">
+        <img class="h-full max-w-1/2" :src="`/${GifIds.nice}.webp`">
       </div>
     </div>
   </div>

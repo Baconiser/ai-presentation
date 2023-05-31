@@ -8,18 +8,14 @@ export default defineEventHandler(async (event) => {
   setResponseStatus(event, 200)
   res.flushHeaders()
 
-  const sendEvent = (data: any) => {
+  const sendEvent = () => {
     res.cork()
     res.write(`id: ${Date.now()}\n`)
-    const temp = { ...store }
-    temp.listeners = []
-    res.write(`data: ${JSON.stringify(temp)}\n\n`)
+    res.write(`data: ${JSON.stringify(store.getState())}\n\n`)
     res.uncork()
   }
 
-  store.addListener(() => {
-    sendEvent(store.getVotes())
-  })
+  store.addListener(sendEvent)
 
   await new Promise(() => {
     // Wait forever

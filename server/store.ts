@@ -30,14 +30,25 @@ class Store {
 
   setCurrentSlideIdx (idx: number) {
     this.currentSlideIdx = idx
-    console.log(`Current slide idx is now ${idx}`)
-    this.listeners.forEach(listener => listener())
+      this.emitToAll();
+  }
+
+  resetStore() {
+    this.votes = []
+    this.gif_votes = []
+    this.listeners = []
+    this.currentSlideIdx = 0
+      this.emitToAll();
+  }
+
+  emitToAll() {
+      this.listeners.forEach(listener => listener())
   }
 
   addGifVote (vote: GifVote) {
     this.gif_votes.push(vote)
     console.log(`Gif vote added: ${JSON.stringify(vote)}`)
-    this.listeners.forEach(listener => listener())
+    this.emitToAll();
   }
 
   addVote (vote: Vote) {
@@ -45,7 +56,7 @@ class Store {
       return
     }
     this.votes.push(vote)
-    this.listeners.forEach(listener => listener())
+      this.emitToAll();
   }
 
   checkVoteExists (vote: Vote) {
@@ -62,6 +73,14 @@ class Store {
 
   addListener (listener: Listener) {
     this.listeners.push(listener)
+  }
+
+  getState () {
+    return {
+      votes: this.votes,
+      gif_votes: this.gif_votes,
+      currentSlideIdx: this.currentSlideIdx
+    }
   }
 }
 

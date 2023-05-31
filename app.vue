@@ -1,27 +1,42 @@
 <script setup lang="ts">
-const data = reactive({ votes: [], gif_votes: [], currentSlideIdx: 0 })
+const data = reactive({
+  votes: [],
+  gif_votes: [],
+  currentSlideIdx: 0
+})
 const currentSlideIdx = useState('currentSlideIdx', () => data.currentSlideIdx)
 const votedGifs = useState('votedGifs', () => [])
+
+const { data: state } = await useFetch<{ votes: [], gif_votes: [], currentSlideIdx: 0 }>('/api/get_state/')
+if (state.value) {
+  updateState(state.value)
+}
+
 onMounted(() => {
   if (process.client) {
+    console.log("Connecting to event source");
     const event = new EventSource('/api/connect')
 
     event.addEventListener('message', (e) => {
       const parsedData = JSON.parse(e.data)
-      data.gif_votes = parsedData.gif_votes
-      data.votes = parsedData.votes
-      data.currentSlideIdx = parsedData.currentSlideIdx
-      currentSlideIdx.value = data.currentSlideIdx
-      votedGifs.value = data.gif_votes
+      updateState(parsedData)
     })
   }
 })
+
+function updateState (state: any) {
+  data.gif_votes = state.gif_votes
+  data.votes = state.votes
+  data.currentSlideIdx = state.currentSlideIdx
+  currentSlideIdx.value = state.currentSlideIdx
+  votedGifs.value = state.gif_votes
+}
 
 </script>
 
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage/>
   </NuxtLayout>
 </template>
 

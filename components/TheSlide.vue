@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { onKeyStroke } from '@vueuse/core'
+
 const votedGifs:Ref<string[]> = useState("votedGifs")
 
 const currentSlideIdx:Ref<number> = useState("currentSlideIdx")
@@ -14,6 +16,15 @@ function getGifVoteCount (gifId: string) {
   }).length
 }
 
+onKeyStroke(['r'], () => {
+  useFetch("/api/reset_store", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+})
+
 </script>
 
 <template>
@@ -25,7 +36,8 @@ function getGifVoteCount (gifId: string) {
 
       <div> Slide: {{ currentSlideIdx }}</div>
       <div class="gif relative flex align-center justify-center py-2" v-for="(gif, index) in votedGifIds" :key="index">
-        <span class="jello-horizontal counter absolute top-0 left-0  z-10 drop-shadow text-5xl flex items-center justify-center w-full h-full" >{{ getGifVoteCount(gif) }}x</span>
+        <span class="jello-horizontal counter absolute top-0 left-0
+        z-10 drop-shadow text-5xl flex items-center justify-center w-full h-full" >{{ getGifVoteCount(gif) }}x</span>
         <img :src="`/${gif}.webp`" class="jello-horizontal" :key="getGifVoteCount(gif)"/>
       </div>
     </div>
