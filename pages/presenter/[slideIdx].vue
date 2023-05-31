@@ -42,7 +42,7 @@ watch(slideIdx, (newVal) => {
   router.push(`/presenter/${newVal}`)
 })
 
-onMounted(() => {
+onMounted(async () => {
   useFetch('/api/set_slide_idx', {
     method: 'POST',
     body: JSON.stringify({ slideIdx: slideIdx.value }),
@@ -50,17 +50,21 @@ onMounted(() => {
       'Content-Type': 'application/json'
     }
   })
+
+  const jwt = localStorage.getItem('is-worthy')
+  if (!jwt) {
+    await navigateTo('/')
+  }
 })
 
 onKeyStroke(['r'], () => {
-  useFetch("/api/reset_store", {
-    method: "POST",
+  useFetch('/api/reset_store', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-    },
-  });
+      'Content-Type': 'application/json'
+    }
+  })
 })
-
 
 const options = [
   {
@@ -108,8 +112,7 @@ const options = [
       class="slide__scroller h-full relative flex transition-transform ease-linear duration-500"
       :style="{transform: `translateX(${-100 * slideIdx}vw)`}"
     >
-
-      <ParticleEffect></ParticleEffect>
+      <ParticleEffect />
       <template v-for="option in options" :key="option.type">
         <TheSlide>
           <component :is="option.type" @drag="preventDrag" />

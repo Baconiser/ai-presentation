@@ -15,6 +15,9 @@
       </template>
       <template #img>
         <video src="@/assets/videos/ki-anwendung.mp4" controls />
+        <p class="text-sm text-center mt-4">
+          Video von Quelle
+        </p>
       </template>
     </poem-section>
   </content-section>

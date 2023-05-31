@@ -1,18 +1,20 @@
 <template>
   <div class="particle__container" @click="handleClick($event)">
     <div class="particle__emitter" :style="{top: `${clickedTop}px`, left: `${clickedLeft}px`}">
-      <div class="particle" v-for="particle in particles"
-           :style="{transform: `translate(${particle.coords.x}px, ${particle.coords.y}px) scale(${particle.scale})`,
-           opacity: particle.animation.animating ? particle.opacity : 0,
-         background: `rgb(${particle.color.r}, ${particle.color.g}, ${particle.color.b})`,
-         boxShadow: `0 0 3px 2px rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0.4)`}">
-      </div>
+      <div
+        v-for="particle in particles"
+        class="particle"
+        :style="{transform: `translate(${particle.coords.x}px, ${particle.coords.y}px) scale(${particle.scale})`,
+                 opacity: particle.animation.animating ? particle.opacity : 0,
+                 background: `rgb(${particle.color.r}, ${particle.color.g}, ${particle.color.b})`,
+                 boxShadow: `0 0 3px 2px rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0.4)`}"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
 interface Coords {
   x: number;
@@ -54,100 +56,99 @@ const EasingFunctions = {
   easeInExpo: (t: number): number => 1 * Math.pow(2, 10 * (t - 1)),
   easeOutExpo: (t: number): number => 1 * (-Math.pow(2, -10 * t) + 1),
   easeInOutExpo: (t: number): number => {
-    t /= 0.5;
-    if (t < 1) return 0.5 * Math.pow(2, 10 * (t - 1));
-    t--;
-    return 0.5 * (-Math.pow(2, -10 * t) + 2);
+    t /= 0.5
+    if (t < 1) { return 0.5 * Math.pow(2, 10 * (t - 1)) }
+    t--
+    return 0.5 * (-Math.pow(2, -10 * t) + 2)
   },
 
   easeInCirc: (t: number): number => -1 * (Math.sqrt(1 - t * t) - 1),
   easeOutCirc: (t: number): number => 1 * Math.sqrt(1 - (--t) * t),
   easeInOutCirc: (t: number): number => {
-    t /= 0.5;
-    if (t < 1) return -0.5 * (Math.sqrt(1 - t * t) - 1);
-    t -= 2;
-    return 0.5 * (Math.sqrt(1 - t * t) + 1);
-  }
-};
-
-
-class Animation {
-  from: Coords = { x: 0, y: 0 };
-  to: Coords = { x: 0, y: 0 };
-  animating: boolean = false;
-  duration: number = 0;
-  onUpdate: (coords: Coords, progress: number) => void;
-  onFinished: () => void;
-
-  constructor(to: Coords, duration: number, onUpdate: (coords: Coords, progress: number) => void, onFinished: () => void) {
-    this.to = to;
-    this.duration = duration;
-    this.onFinished = onFinished;
-    this.onUpdate = onUpdate;
-  }
-
-  animate() {
-    this.animating = true;
-    const startTime = Date.now();
-    const duration = this.duration;
-    const from = this.from;
-    const to = this.to;
-    const distance = {
-      x: to.x - from.x,
-      y: to.y - from.y
-    };
-
-    const step = () => {
-      if (!this.animating) return;
-      const elapsed = Date.now() - startTime;
-      let progress = elapsed / duration;
-
-      // Apply ease-out easing function
-      progress = EasingFunctions.easeOutCubic(progress);
-      const coords = {
-        x: from.x + distance.x * (progress),
-        y: from.y + distance.y * (progress)
-      };
-      progress = Math.min(progress, 1);
-
-      this.onUpdate(coords, progress);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        this.animating = false;
-        this.onFinished();
-      }
-    };
-
-    window.requestAnimationFrame(step);
+    t /= 0.5
+    if (t < 1) { return -0.5 * (Math.sqrt(1 - t * t) - 1) }
+    t -= 2
+    return 0.5 * (Math.sqrt(1 - t * t) + 1)
   }
 }
 
-const particles: Ref<Particle[]> = ref([]);
+class Animation {
+  from: Coords = { x: 0, y: 0 }
+  to: Coords = { x: 0, y: 0 }
+  animating = false
+  duration = 0
+  onUpdate: (coords: Coords, progress: number) => void
+  onFinished: () => void
 
-const clickedTop = ref(0);
-const clickedLeft = ref(0);
+  constructor (to: Coords, duration: number, onUpdate: (coords: Coords, progress: number) => void, onFinished: () => void) {
+    this.to = to
+    this.duration = duration
+    this.onFinished = onFinished
+    this.onUpdate = onUpdate
+  }
 
-function handleClick(e: MouseEvent) {
-  if (particles.value.length > 0) return;
-  clickedTop.value = e.clientY;
-  clickedLeft.value = e.clientX;
-  generateParticle();
-};
+  animate () {
+    this.animating = true
+    const startTime = Date.now()
+    const duration = this.duration
+    const from = this.from
+    const to = this.to
+    const distance = {
+      x: to.x - from.x,
+      y: to.y - from.y
+    }
 
-async function generateParticle() {
-  let randomParticleCount = rand(25, 35);
+    const step = () => {
+      if (!this.animating) { return }
+      const elapsed = Date.now() - startTime
+      let progress = elapsed / duration
+
+      // Apply ease-out easing function
+      progress = EasingFunctions.easeOutCubic(progress)
+      const coords = {
+        x: from.x + distance.x * (progress),
+        y: from.y + distance.y * (progress)
+      }
+      progress = Math.min(progress, 1)
+
+      this.onUpdate(coords, progress)
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      } else {
+        this.animating = false
+        this.onFinished()
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }
+}
+
+const particles: Ref<Particle[]> = ref([])
+
+const clickedTop = ref(0)
+const clickedLeft = ref(0)
+
+function handleClick (e: MouseEvent) {
+  if (particles.value.length > 0) { return }
+  clickedTop.value = e.clientY
+  clickedLeft.value = e.clientX
+  generateParticle()
+}
+
+async function generateParticle () {
+  const randomParticleCount = rand(25, 35)
   for (let i = 0; i < randomParticleCount; i++) {
     const x =
         (0) +
         rand(80, 150) *
-        Math.cos((2 * Math.PI * i) / rand(randomParticleCount - 10, randomParticleCount + 10));
+        Math.cos((2 * Math.PI * i) / rand(randomParticleCount - 10, randomParticleCount + 10))
     const y =
         (0) +
         rand(80, 150) *
-        Math.sin((2 * Math.PI * i) / rand(randomParticleCount - 10, randomParticleCount + 10));
-    const color = { r: rand(0, 255), g: rand(0, 255), b: rand(0, 255) };
-    const id = `particle_${ i }`;
+        Math.sin((2 * Math.PI * i) / rand(randomParticleCount - 10, randomParticleCount + 10))
+    const color = { r: rand(0, 255), g: rand(0, 255), b: rand(0, 255) }
+    const id = `particle_${i}`
     const particleData: Particle = {
       id,
       scale: rand(0.7, 1),
@@ -155,31 +156,30 @@ async function generateParticle() {
       opacity: 1,
       color,
       animation: new Animation({ x, y }, 420,
-          (coords: Coords, progress: number) => {
-            const particle = particles.value.find(p => p.id === id);
-            if (particle) {
-              particle.coords = coords;
-              particle.opacity =  EasingFunctions.easeOutCubic(1 - progress);
-            }
-          },
-          () => {
-            particles.value = particles.value.filter(p => p.id !== id);
-          })
+        (coords: Coords, progress: number) => {
+          const particle = particles.value.find(p => p.id === id)
+          if (particle) {
+            particle.coords = coords
+            particle.opacity = EasingFunctions.easeOutCubic(1 - progress)
+          }
+        },
+        () => {
+          particles.value = particles.value.filter(p => p.id !== id)
+        })
     }
-    particles.value.push(particleData);
-
+    particles.value.push(particleData)
   }
-  await nextTick();
+  await nextTick()
   particles.value.forEach((p, i) => {
     setTimeout(() => {
-      p.animation.animate();
-    }, rand(0, i * rand(2, 5)));
-  });
+      p.animation.animate()
+    }, rand(0, i * rand(2, 5)))
+  })
 }
 
 const rand = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max + 1)) + min;
-};
+  return Math.floor(Math.random() * (max + 1)) + min
+}
 </script>
 
 <style scoped>

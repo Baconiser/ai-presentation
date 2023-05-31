@@ -85,7 +85,7 @@ h1:deep(.hl) {
   background-image: linear-gradient(105deg, #ae5ceb 0%, #6aa4e1 100%);
 }
 
-p {
+.cover :deep(p) {
   font-size: 50px;
   text-align: center;
   margin: 80px 5% 40px;

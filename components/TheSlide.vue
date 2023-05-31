@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { GifVote } from '~/server/store'
 
-const votedGifs:Ref<GifVote[]> = useState("votedGifs")
+const votedGifs:Ref<GifVote[]> = useState('votedGifs')
 
-const currentSlideIdx:Ref<number> = useState("currentSlideIdx")
+const currentSlideIdx:Ref<number> = useState('currentSlideIdx')
 const votedGifIds = computed(() => {
-  return new Set(votedGifs.value.filter(e => e.slideId === currentSlideIdx.value ).map((gifVote: any) => {
+  return new Set(votedGifs.value.filter(e => e.slideId === currentSlideIdx.value).map((gifVote: any) => {
     return gifVote.gifId
   }))
 })
@@ -22,13 +22,16 @@ function getGifVoteCount (gifId: string) {
     class="slide overflow-hidden w-screen h-screen flex flex-col justify-center items-center relative"
   >
     <slot />
-    <div class="gifs">
-
-      <div> Slide: {{ currentSlideIdx }}</div>
-      <div class="gif relative flex align-center justify-center py-2" v-for="(gif, index) in votedGifIds" :key="index">
-        <span class="jello-horizontal counter absolute top-0 left-0
-        z-10 drop-shadow text-5xl flex items-center justify-center w-full h-full" >{{ getGifVoteCount(gif) }}x</span>
-        <img :src="`/${gif}.webp`" class="jello-horizontal" :key="getGifVoteCount(gif)"/>
+    <div class="absolute bottom-2 right-2">
+      {{ currentSlideIdx + 1 }}
+    </div>
+    <div class="fixed bottom-0 w-[66vw] h-[150px] z-10 grid grid-cols-4">
+      <div v-for="(gif, index) in votedGifIds" :key="index" class="gif relative flex align-center justify-center py-2">
+        <span
+          class="jello-horizontal counter absolute top-0 left-0
+        z-10 drop-shadow text-5xl flex items-center justify-center w-full h-full"
+        >{{ getGifVoteCount(gif) }}x</span>
+        <img :key="getGifVoteCount(gif)" :src="`/${gif}.webp`" class="jello-horizontal">
       </div>
     </div>
   </div>
@@ -70,6 +73,5 @@ function getGifVoteCount (gifId: string) {
     transform: scale3d(1, 1, 1);
   }
 }
-
 
 </style>

@@ -14,7 +14,7 @@ if (state.value) {
 
 onMounted(() => {
   if (process.client) {
-    console.log("Connecting to event source");
+    console.log('Connecting to event source')
     const event = new EventSource('/api/connect')
 
     event.addEventListener('message', (e) => {
@@ -36,7 +36,7 @@ function updateState (state: any) {
 
 <template>
   <NuxtLayout>
-    <NuxtPage/>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 

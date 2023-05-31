@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
   const sendEvent = () => {
     res.cork()
     res.write(`id: ${Date.now()}\n`)
-    console.log("EMITTING STATE", store.getState());
+    console.log('EMITTING STATE', store.getState())
     res.write(`data: ${JSON.stringify(store.getState())}\n\n`)
     res.uncork()
   }

@@ -28,7 +28,7 @@
       <template #right>
         <div class="flex justify-center items-center">
           <audio controls>
-          <source src="@/assets/audios/alarmstufe-rot-ki.mp3" />
+            <source src="@/assets/audios/alarmstufe-rot-ki.mp3">
           </audio>
         </div>
       </template>
