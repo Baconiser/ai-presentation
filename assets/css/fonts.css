@@ -1,4 +1,9 @@
 @font-face {
-    font-family: 'OpenSans';
-    src: url('~/assets/fonts/OpenSans.ttf') format('truetype');
+    font-family: 'NunitoSans';
+    src: url('~/assets/fonts/NunitoSans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'operator mono';
+    src: url('~/assets/fonts/OperatorMono-Light.otf') format('truetype');
 }

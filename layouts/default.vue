@@ -6,16 +6,15 @@ const showPointer = ref(false)
 onKeyStroke('l', () => {
   showPointer.value = !showPointer.value
 })
-
 </script>
 
 <template>
-  <div class="layout" :class="{'no-cursor': showPointer}">
+  <main class="layout" :class="{'no-cursor': showPointer}">
     <laser-pointer v-if="showPointer" />
     <transition name="fade">
       <slot :key="$route.fullPath" />
     </transition>
-  </div>
+  </main>
 </template>
 
 <style>

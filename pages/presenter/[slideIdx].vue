@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onKeyStroke } from '@vueuse/core'
 import store from '~/server/store'
+
 import CoverStart from '~/components/slides/CoverStart.vue'
 import CoverIntroduction from '~/components/slides/CoverIntroduction.vue'
 import GeschichteKI from '~/components/slides/GeschichteKI.vue'
@@ -53,7 +54,7 @@ onMounted(async () => {
 
   const jwt = localStorage.getItem('is-worthy')
   if (!jwt) {
-    await navigateTo('/')
+    await navigateTo('/presenter')
   }
 })
 
@@ -112,7 +113,6 @@ const options = [
       class="slide__scroller h-full relative flex transition-transform ease-linear duration-500"
       :style="{transform: `translateX(${-100 * slideIdx}vw)`}"
     >
-      <ParticleEffect />
       <template v-for="option in options" :key="option.type">
         <TheSlide>
           <component :is="option.type" @drag="preventDrag" />

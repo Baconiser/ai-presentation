@@ -2,9 +2,9 @@
 </script>
 
 <template>
-  <div class="h-screen">
-    <div class="relative isolate px-6 lg:px-8 h-full">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 h-full flex-col flex items-center">
+  <div class="min-h-screen">
+    <div class="relative isolate h-screen px-6 lg:px-8 h-full">
+      <div class="max-w-2xl pt-12 pb-12 mx-auto h-full flex-col flex items-center justify-center">
         <div class="mb-4 sm:mb-8 flex sm:justify-center">
           <div
             class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/10"
@@ -14,7 +14,7 @@
         </div>
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
-            KI: Eure Reise beginnt
+            Eure Reise beginnt
           </h1>
           <p class="mt-6 text-lg leading-8">
             Taucht ein in die faszinierende Welt der Künstlichen Intelligenz! Begleitet uns auf einer spannenden Reise

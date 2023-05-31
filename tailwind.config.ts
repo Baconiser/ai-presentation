@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['OpenSans', ...defaultTheme.fontFamily.sans]
+        sans: ['NunitoSans', ...defaultTheme.fontFamily.sans]
+      },
+      height: {
+        screen: ['100vh /* fallback for Opera, IE and etc. */', '100dvh']
       }
     }
   }
