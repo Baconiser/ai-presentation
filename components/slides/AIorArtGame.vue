@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import TinderMatcher from '~/components/TinderMatcher.vue'
-
 </script>
 
 <template>
@@ -13,7 +11,6 @@ import TinderMatcher from '~/components/TinderMatcher.vue'
       Artist
     </div>
   </div>
-
 </template>
 
 <style scoped></style>

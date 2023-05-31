@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import { GifIds } from '@/server/store'
-import IdUtil from "~/utils/IdUtil";
+import IdUtil from '~/utils/IdUtil'
 
-
-function voteForGif(gifId: string) {
-
-  const userId = IdUtil.getId();
-  fetch(`/api/vote_gif/`, {
-    body: JSON.stringify({ userId, gifId,  }),
+function voteForGif (gifId: string) {
+  const userId = IdUtil.getId()
+  fetch('/api/vote_gif/', {
+    body: JSON.stringify({ userId, gifId }),
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     }
   })
 }
@@ -18,7 +16,7 @@ function voteForGif(gifId: string) {
 </script>
 <template>
   <div
-      class="slide overflow-hidden w-screen
+    class="slide overflow-hidden w-screen
       h-screen flex flex-col relative align-center"
   >
     <div class="w-full grow-1 flex flex-col overflow-hidden">
@@ -27,10 +25,8 @@ function voteForGif(gifId: string) {
     </div>
 
     <div class="w-full flex flex-row overflow-hidden">
-      <img class="h-full max-w-1/2" :src="`/${GifIds.huh}.webp`" @click="voteForGif(GifIds.huh)" >
+      <img class="h-full max-w-1/2" :src="`/${GifIds.huh}.webp`" @click="voteForGif(GifIds.huh)">
       <img class="h-full max-w-1/2" :src="`/${GifIds.nice}.webp`" @click="voteForGif(GifIds.nice)">
     </div>
-
   </div>
 </template>
-

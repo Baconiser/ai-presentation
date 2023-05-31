@@ -1,7 +1,7 @@
 <template>
-  <div class="image-stack  relative w-full h-[100vh] overflow-hidden">
+  <div class="image-stack relative w-full h-[100vh] overflow-hidden">
     <div
-        class="image-stack__cards absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-200px pb-[45%] max-w-520px"
+      class="image-stack__cards absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-200px pb-[45%] max-w-520px"
     >
       <Card
           v-for="(image, index) in images"
@@ -13,7 +13,7 @@
           @dislike="dislikeImage(index)"
           :ref="`card-${index}`"
       >
-        <img :src="image" alt="Image" class="w-full h-full object-cover">
+        <img :src="image" alt="Content" class="w-full h-full object-cover">
       </Card>
     </div>
     <div class="image-stack__buttons">

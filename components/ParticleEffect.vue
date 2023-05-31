@@ -5,54 +5,53 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 
-function handleClick(e: MouseEvent){
-  explode(e.pageX, e.pageY);
-};
+function handleClick (e: MouseEvent) {
+  explode(e.pageX, e.pageY)
+}
 
 const explode = (x: number, y: number) => {
-  console.log("exploding");
-  const particles = 15;
-  const explosion = document.createElement("div");
-  explosion.className = "explosion";
-  document.body.appendChild(explosion);
-  explosion.style.left = `${x - explosion.clientWidth / 2}px`;
-  explosion.style.top = `${y - explosion.clientHeight / 2}px`;
+  console.log('exploding')
+  const particles = 15
+  const explosion = document.createElement('div')
+  explosion.className = 'explosion'
+  document.body.appendChild(explosion)
+  explosion.style.left = `${x - explosion.clientWidth / 2}px`
+  explosion.style.top = `${y - explosion.clientHeight / 2}px`
 
   for (let i = 0; i < particles; i++) {
     const x =
         (explosion.clientWidth / 2) +
         rand(80, 150) *
-        Math.cos((2 * Math.PI * i) / rand(particles - 10, particles + 10));
+        Math.cos((2 * Math.PI * i) / rand(particles - 10, particles + 10))
     const y =
         (explosion.clientHeight / 2) +
         rand(80, 150) *
-        Math.sin((2 * Math.PI * i) / rand(particles - 10, particles + 10));
-    const color = `${rand(0, 255)}, ${rand(0, 255)}, ${rand(0, 255)}`;
-    const elm = document.createElement("div");
-    elm.className = "particle";
-    elm.style.backgroundColor = `rgb(${color})`;
-    elm.style.top = `${y}px`;
-    elm.style.left = `${x}px`;
+        Math.sin((2 * Math.PI * i) / rand(particles - 10, particles + 10))
+    const color = `${rand(0, 255)}, ${rand(0, 255)}, ${rand(0, 255)}`
+    const elm = document.createElement('div')
+    elm.className = 'particle'
+    elm.style.backgroundColor = `rgb(${color})`
+    elm.style.top = `${y}px`
+    elm.style.left = `${x}px`
 
     if (i === 0) {
-      elm.addEventListener("animationend", () => {
-        explosion.remove();
-      });
+      elm.addEventListener('animationend', () => {
+        explosion.remove()
+      })
     }
-    explosion.appendChild(elm);
+    explosion.appendChild(elm)
   }
-};
+}
 
 const rand = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max + 1)) + min;
-};
+  return Math.floor(Math.random() * (max + 1)) + min
+}
 </script>
 
 <style scoped>
 .particle__container {
-  background: #000 !important;
+  background: transparent !important;
   width: 100%;
   min-height: 450px;
   color: #fff;

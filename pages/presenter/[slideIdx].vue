@@ -1,26 +1,25 @@
 <script setup lang="ts">
-import Slide01 from '~/components/slides/Slide01.vue'
-import Slide02 from '~/components/slides/Slide02.vue'
-import Slide03 from '~/components/slides/Slide03.vue'
-import Slide04 from '~/components/slides/Slide04.vue'
+import { onKeyStroke } from '@vueuse/core'
+import store from '~/server/store'
+import CoverStart from '~/components/slides/CoverStart.vue'
+import CoverIntroduction from '~/components/slides/CoverIntroduction.vue'
+import GeschichteKI from '~/components/slides/GeschichteKI.vue'
+import VorteileKI from '~/components/slides/VorteileKI.vue'
+import TrendsKI from '~/components/slides/TrendsKI.vue'
+import PraxisKI from '~/components/slides/PraxisKI.vue'
+import RisikenKI from '~/components/slides/RisikenKI.vue'
+import CoverAIorArt from '~/components/slides/CoverAIorArt.vue'
+import AIorArtGame from '~/components/slides/AIorArtGame.vue'
 import Slide05 from '~/components/slides/Slide05.vue'
-import Slide07 from '~/components/slides/Slide07.vue'
-import Slide06 from '~/components/slides/Slide06.vue'
-import Slide08 from '~/components/slides/Slide08.vue'
-import Slide09 from '~/components/slides/Slide09.vue'
-import Slide10 from "~/components/slides/Slide10.vue";
-import Slide11 from "~/components/slides/Slide11.vue";
-import Slide12 from "~/components/slides/Slide12.vue";
-import Slide13 from "~/components/slides/Slide13.vue";
-import store from "~/server/store";
-import { onKeyStroke } from "@vueuse/core";
+import CodingInterviewKI from '~/components/slides/CodingInterviewKI.vue'
+import AnwendungKI from '~/components/slides/AnwendungKI.vue'
 
 const route = useRoute()
 const router = useRouter()
 const slideIdx = ref(Number(route.params.slideIdx))
 
-if(process.server) {
-  store.setCurrentSlideIdx(slideIdx.value);
+if (process.server) {
+  store.setCurrentSlideIdx(slideIdx.value)
 }
 
 function preventDrag (e: DragEvent) {
@@ -28,67 +27,67 @@ function preventDrag (e: DragEvent) {
   return false
 }
 
-onKeyStroke(["ArrowRight", " "], () => {
+onKeyStroke(['ArrowRight', ' '], () => {
   slideIdx.value += 1
   slideIdx.value = Math.min(slideIdx.value, options.length - 1)
-});
+})
 
-onKeyStroke(["ArrowLeft"], () => {
+onKeyStroke(['ArrowLeft'], () => {
   slideIdx.value -= 1
   slideIdx.value = Math.max(slideIdx.value, 0)
-});
+})
 
 // watch slideIdx and update route params
 watch(slideIdx, (newVal) => {
   router.push(`/presenter/${newVal}`)
 })
 
-onMounted(async () => {
-  useFetch("/api/set_slide_idx", {
-    method: "POST",
+onMounted(() => {
+  useFetch('/api/set_slide_idx', {
+    method: 'POST',
     body: JSON.stringify({ slideIdx: slideIdx.value }),
     headers: {
-      "Content-Type": "application/json",
-    },
-  });
+      'Content-Type': 'application/json'
+    }
+  })
 })
 
 const options = [
   {
-    type: Slide07
+    type: CoverStart
   },
   {
-    type: Slide10
+    type: CoverIntroduction
   },
   {
-    type: Slide09
+    type: GeschichteKI
   },
   {
-    type: Slide11
+    type: PraxisKI
   },
   {
-    type: Slide12
+    type: VorteileKI
   },
   {
-    type: Slide13
+    type: AnwendungKI
   },
   {
-    type: Slide01
+    type: TrendsKI
   },
   {
-    type: Slide02
+    type: RisikenKI
   },
   {
-    type: Slide03
+    type: CoverAIorArt
   },
   {
-    type: Slide04
+    type: AIorArtGame
   },
   {
     type: Slide05
   },
   {
-    type: Slide06
+    type: CodingInterviewKI
   }
 ]
 </script>

@@ -2,8 +2,8 @@
 
 import { onKeyStroke } from '@vueuse/core'
 
-let showPointer = ref(false);
-onKeyStroke('l', (e) => {
+const showPointer = ref(false)
+onKeyStroke('l', () => {
   showPointer.value = !showPointer.value
 })
 
@@ -11,9 +11,9 @@ onKeyStroke('l', (e) => {
 
 <template>
   <div class="layout" :class="{'no-cursor': showPointer}">
-    <laser-pointer v-if="showPointer"/>
+    <laser-pointer v-if="showPointer" />
     <transition name="fade">
-      <slot :key="$route.fullPath"/>
+      <slot :key="$route.fullPath" />
     </transition>
   </div>
 </template>

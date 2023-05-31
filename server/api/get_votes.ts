@@ -1,6 +1,6 @@
-import store, { Vote } from '../store'
-import { defineEventHandler, readBody } from "h3";
+import { defineEventHandler } from 'h3'
+import store from '../store'
 
-export default defineEventHandler(async (event) => {
-    return store.getVotes();
-});
+export default defineEventHandler(() => {
+  return store.getVotes()
+})
