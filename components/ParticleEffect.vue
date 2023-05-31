@@ -129,10 +129,16 @@ const particles: Ref<Particle[]> = ref([])
 const clickedTop = ref(0)
 const clickedLeft = ref(0)
 
-function handleClick (e: MouseEvent) {
+function handleClick (e: PointerEvent) {
+  console.log(e);
   if (particles.value.length > 0) { return }
-  clickedTop.value = e.clientY
-  clickedLeft.value = e.clientX
+
+  // get the x,y on the current element
+  const rect = (e.currentTarget as HTMLElement).getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+  clickedTop.value = y
+  clickedLeft.value = x
   generateParticle()
 }
 

@@ -19,19 +19,19 @@ function voteForGif (gifId: string) {
   <div
     class="overflow-hidden w-screen h-screen landscape:grid landscape:grid-cols-2 landscape:grid-rows-2 portrait:flex flex-col p-8 lg:p-12 gap-x-8 gap-y-4 lg:gap-8 relative align-center"
   >
-    <button type="button" class="card shadow-lg shadow-blue-800/80 active:ring-blue-800" @click="voteForGif(GifIds.boo)">
+    <button type="button" class="card shadow-lg shadow-blue-800/80 active:ring-blue-800 relative" @click="voteForGif(GifIds.boo)">
       <ParticleEffect />
       <img class="image" :src="`/${GifIds.boo}.webp`">
     </button>
-    <button type="button" class="card shadow-lg shadow-cyan-800/80 active:ring-cyan-800" @click="voteForGif(GifIds.mindblow)">
+    <button type="button" class="card shadow-lg shadow-cyan-800/80 active:ring-cyan-800 relative" @click="voteForGif(GifIds.mindblow)">
       <ParticleEffect />
       <img class="image" :src="`/${GifIds.mindblow}.webp`">
     </button>
-    <button type="button" class="card shadow-lg shadow-red-800/80 active:ring-red-800" @click="voteForGif(GifIds.huh)">
+    <button type="button" class="card shadow-lg shadow-red-800/80 active:ring-red-800 relative" @click="voteForGif(GifIds.huh)">
       <ParticleEffect />
       <img class="image" :src="`/${GifIds.huh}.webp`">
     </button>
-    <button type="button" class="card shadow-lg shadow-purple-800/80 active:ring-purple-800" @click="voteForGif(GifIds.nice)">
+    <button type="button" class="card shadow-lg shadow-purple-800/80 active:ring-purple-800 relative" @click="voteForGif(GifIds.nice)">
       <ParticleEffect />
       <img class="image" :src="`/${GifIds.nice}.webp`">
     </button>

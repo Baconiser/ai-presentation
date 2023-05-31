@@ -6,6 +6,7 @@ const data = reactive({
 })
 const currentSlideIdx = useState('currentSlideIdx', () => data.currentSlideIdx)
 const votedGifs = useState('votedGifs', () => [])
+const tinderVotes = useState('tinderVotes', () => [])
 
 const { data: state } = await useFetch<{ votes: [], gif_votes: [], currentSlideIdx: 0 }>('/api/get_state/')
 if (state.value) {
@@ -30,6 +31,7 @@ function updateState (state: any) {
   data.currentSlideIdx = state.currentSlideIdx
   currentSlideIdx.value = state.currentSlideIdx
   votedGifs.value = state.gif_votes
+  tinderVotes.value = state.votes
 }
 
 </script>

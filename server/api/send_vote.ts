@@ -3,14 +3,14 @@ import store, { Vote } from '../store'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const { userId, vote } = body
+  const { userId, vote, id  } = body
   const newVote: Vote = {
-    id: 1,
+    id,
     userId,
     vote,
     correct: false
   }
-  console.log('VOTE RECEIVED', newVote)
+
   store.addVote(newVote)
   return newVote
 })

@@ -1,5 +1,5 @@
 interface Vote {
-    id: number;
+    id: string;
     userId: string;
     vote: string;
     correct: boolean;
@@ -41,7 +41,6 @@ class Store {
   }
 
   emitToAll () {
-    console.log('EMITTING', this.listeners.length)
     this.listeners.forEach(listener => listener())
   }
 
