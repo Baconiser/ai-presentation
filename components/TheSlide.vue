@@ -20,7 +20,7 @@ function getGifVoteCount (gifId: string) {
   >
     <slot />
     <div class="fixed bottom-0 w-[66vw] h-[150px] z-10 grid grid-cols-4">
-      <div v-for="(gif, index) in 4" :key="index" class="flex flex-col items-center justify-center">
+      <div v-for="(gif, index) in votedGifIds" :key="index" class="flex flex-col items-center justify-center">
         <span>{{ getGifVoteCount(gif) }}x</span>
         <img :src="`/${gif}.webp`">
       </div>
