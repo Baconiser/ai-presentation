@@ -30,18 +30,18 @@ class Store {
 
   setCurrentSlideIdx (idx: number) {
     this.currentSlideIdx = idx
-      this.emitToAll();
+    this.emitToAll();
   }
 
   resetStore() {
     this.votes = []
     this.gif_votes = []
-    this.listeners = []
     this.currentSlideIdx = 0
-      this.emitToAll();
+    this.emitToAll();
   }
 
   emitToAll() {
+    console.log("EMITTING", this.listeners.length);
       this.listeners.forEach(listener => listener())
   }
 

@@ -52,6 +52,16 @@ onMounted(() => {
   })
 })
 
+onKeyStroke(['r'], () => {
+  useFetch("/api/reset_store", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+})
+
+
 const options = [
   {
     type: CoverStart

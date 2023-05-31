@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { onKeyStroke } from '@vueuse/core'
+import { GifVote } from '~/server/store'
 
-const votedGifs:Ref<string[]> = useState("votedGifs")
+const votedGifs:Ref<GifVote[]> = useState("votedGifs")
 
 const currentSlideIdx:Ref<number> = useState("currentSlideIdx")
 const votedGifIds = computed(() => {
-  return new Set(votedGifs.value.map((gifVote: any) => {
+  return new Set(votedGifs.value.filter(e => e.slideId === currentSlideIdx.value ).map((gifVote: any) => {
     return gifVote.gifId
   }))
 })
@@ -15,16 +15,6 @@ function getGifVoteCount (gifId: string) {
     return gifVote.gifId === gifId
   }).length
 }
-
-onKeyStroke(['r'], () => {
-  useFetch("/api/reset_store", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-})
-
 </script>
 
 <template>
