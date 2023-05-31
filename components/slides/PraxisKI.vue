@@ -6,7 +6,7 @@
     <poem-section>
       <template #poem>
         <p>
-          DeepMind, ein Star in der Medizin,<br> LearningSlides im Bildungsbereich kein Spin.<br>
+          DeepMind, ein Star in der Medizin,<br> LearningSlides im Bildungsbereich kein Spinn.<br>
           Mit KI kann man Wunder sehen,<br> lasst uns nicht durchdrehen.
         </p>
         <p>

@@ -12,7 +12,7 @@ const images = [ai1, ar1, ar2, ai2, ai3, ar3, ar4]
 </script>
 
 <template>
-  <TinderMatcher :content="images" />
+  <TinderMatcher :contents="images" type="image" />
 </template>
 
 <style scoped></style>

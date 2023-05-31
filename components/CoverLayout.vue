@@ -86,12 +86,7 @@ h1:deep(.hl) {
 }
 
 p {
-  color: #fff;
-  font-weight: 100;
   font-size: 50px;
-  font-family: operator mono,Courier New,monospace;
-  line-height: 1.5;
-  text-shadow: 4px 3px 0 rgba(0,0,0,.3);
   text-align: center;
   margin: 80px 5% 40px;
 }

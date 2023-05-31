@@ -19,15 +19,4 @@ import bg from '@/assets/images/bg/lock.jpeg'
   </CoverLayout>
 </template>
 
-<style scoped>
-p {
-  color: #fff;
-  font-weight: 100;
-  font-size: 50px;
-  font-family: operator mono,Courier New,monospace;
-  line-height: 1.5;
-  text-shadow: 4px 3px 0 rgba(0,0,0,.3);
-  text-align: center;
-  margin: 80px 5% 40px;
-}
-</style>
+<style scoped></style>
