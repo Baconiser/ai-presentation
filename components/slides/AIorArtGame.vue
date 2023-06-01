@@ -25,8 +25,12 @@ const artistPercentage = computed(() => {
 
 <template>
   <div class="split__container absolute w-full h-full t-0 l-0 flex justify-evenly">
-    <div class="side grow-1 w-full  relative">
-      AIrtist
+    <div class="side grow-1 w-full relative">
+      <h1
+        class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center "
+      >
+        🤖 <span class="text-red-800">AI</span>rtist
+      </h1>
       <div
         class="progress origin-bottom-left transition-all absolute bg-center bg-no-repeat bg-cover bottom-0 left-0 w-full h-full"
         :style="{maxHeight: `${aiPercentage}vh`, backgroundImage: `url(${AIDali}`}"
@@ -34,7 +38,11 @@ const artistPercentage = computed(() => {
     </div>
     <div class="divider w-2 bg-white" />
     <div class="side grow-1 w-full relative">
-      Artist
+      <h1
+          class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center "
+      >
+        🎨 Artist
+      </h1>
       <div
         class="progress origin-bottom-left
       transition-all absolute

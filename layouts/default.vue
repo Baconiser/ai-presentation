@@ -11,9 +11,7 @@ onKeyStroke('l', () => {
 <template>
   <main class="layout" :class="{'no-cursor': showPointer}">
     <laser-pointer v-if="showPointer" />
-    <transition name="fade">
-      <slot :key="$route.fullPath" />
-    </transition>
+    <slot :key="$route.fullPath" />
   </main>
 </template>
 

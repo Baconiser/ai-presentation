@@ -54,9 +54,10 @@ function getHandledState (content: string) {
 </script>
 
 <template>
-  <div class="content-stack relative w-full h-screen overflow-hidden">
+  <div class="content-stack relative w-full h-screen overflow-hidden flex flex-col max-h-full justify-center items-center gap-8">
     <div
-      class="content-stack__cards absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-200px pb-[45%] max-w-520px"
+      class="content-stack__cards w-80 max-w-80  mx-auto relative aspect-[1/1]"
+      :style="`left: ${Math.floor(contents.length) / 2 * 6}px; margin-top: ${contents.length * 6}px; margin-bottom: ${contents.length * 6}px`"
     >
       <Card
         v-for="(content, index) in contents"
@@ -69,16 +70,29 @@ function getHandledState (content: string) {
       >
         <img v-if="type === 'image'" :src="content" alt="Content" class="w-full h-full object-cover">
       </Card>
+      <div
+        v-if="currentIndex === 0"
+        class="w-full h-full flex justify-center items-center"
+        :style="`margin-left: -${Math.floor(contents.length) / 2 * 6}px;`"
+      >
+        Fertig!
+      </div>
     </div>
-    <div class="content-stack__buttons">
-      <button @click="dislikeContent(currentIndex)">
-        AI
-      </button>
-      <button @click="likeContent(currentIndex)">
-        Artist
-      </button>
+    <div v-if="currentIndex !== 0" class="flex justify-center shrink-0 space-x-2">
+      <VoteButton @click="dislikeContent(currentIndex)">
+        🤖 <span class="text-red-800">AI</span>rtist
+      </VoteButton>
+      <VoteButton @click="likeContent(currentIndex)">
+        🎨 Artist
+      </VoteButton>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-height: 500px) {
+  .content-stack__cards {
+    width: 12em;
+  }
+}
+</style>

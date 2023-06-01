@@ -11,7 +11,8 @@ const currentSlideIdx = useState<number>('currentSlideIdx')
       name="fade"
       mode="out-in"
     >
-      <CoverStart v-if="coverSlides.includes(currentSlideIdx)" />
+      <AudienceLogin v-if="currentSlideIdx === 0" />
+      <CoverStart v-else-if="coverSlides.includes(currentSlideIdx)" />
       <AudienceImagesTindern v-else-if="currentSlideIdx === 9" />
       <GifVoteSelector v-else-if="!coverSlides.includes(currentSlideIdx)" />
       <div v-else>

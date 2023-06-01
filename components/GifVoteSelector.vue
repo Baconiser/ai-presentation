@@ -18,7 +18,7 @@ function voteForGif (gifId: string) {
 
 <template>
   <div
-    class="overflow-hidden w-screen h-screen landscape:grid landscape:grid-cols-2 landscape:grid-rows-2 portrait:flex flex-col p-8 lg:p-12 gap-x-8 gap-y-4 lg:gap-8 relative align-center"
+    class="bg-stone-900 overflow-hidden w-screen h-screen landscape:grid landscape:grid-cols-2 landscape:grid-rows-2 portrait:flex flex-col p-8 lg:p-12 gap-x-8 gap-y-4 lg:gap-8 relative align-center"
   >
     <button type="button" class="card shadow-lg shadow-blue-800/80 active:ring-blue-800 relative" @click="voteForGif(GifIds.boo)">
       <ParticleEffect />

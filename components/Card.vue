@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card bg-white rounded-lg shadow-md flex flex-col overflow-hidden w-[340px] h-[370px] aspect-w-9 aspect-h-16 absolute top-0 left-0"
+    class="card bg-white rounded-lg shadow-md flex flex-col overflow-hidden w-full md:w-[340px] aspect-[1/1] absolute top-0 left-0"
     :style="{background: backgroundColor, left: offsetLeft, top: offsetTop, transform, transition}"
     @mousedown="startSwipe(index, $event)"
     @touchstart="startSwipe(index, $event)"
@@ -155,5 +155,10 @@ const transform = computed(() => {
 
 </script>
 
-<style scoped lang="less">
+<style scoped>
+@media (max-height: 500px) {
+  .card {
+    width: 12rem;
+  }
+}
 </style>
