@@ -12,7 +12,7 @@ const votedGifIds = computed(() => {
 })
 
 function getGifVoteCount (gifId: string) {
-  return votedGifs.value.filter((gifVote: any) => {
+  return votedGifs.value.filter(e => e.slideId === currentSlideIdx.value).filter((gifVote: any) => {
     return gifVote.gifId === gifId
   }).length
 }

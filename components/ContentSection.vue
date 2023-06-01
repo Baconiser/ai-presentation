@@ -7,7 +7,7 @@ const props = defineProps<{
 <template>
   <section class="flex flex-col items-center w-full p-8 gap-8">
     <h1
-      class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center items-center"
+      class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center items-center text-center"
     >
       {{ headline }}
     </h1>

@@ -35,7 +35,7 @@ function vote (content: string, liked: boolean) {
     body: JSON.stringify({
       id: content,
       vote: liked ? 'Artist' : 'AI',
-      content: content
+      content
     })
   })
 }
@@ -54,18 +54,18 @@ function getHandledState (content: string) {
 </script>
 
 <template>
-  <div class="content-stack relative w-full h-[100vh] overflow-hidden">
+  <div class="content-stack relative w-full h-screen overflow-hidden">
     <div
-        class="content-stack__cards absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-200px pb-[45%] max-w-520px"
+      class="content-stack__cards absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-200px pb-[45%] max-w-520px"
     >
       <Card
-          v-for="(content, index) in contents"
-          :id="content"
-          :key="index"
-          :index="contents.length - index"
-          :handled-state="getHandledState(content)"
-          @like="likeContent(index)"
-          @dislike="dislikeContent(index)"
+        v-for="(content, index) in contents"
+        :id="content"
+        :key="index"
+        :index="contents.length - index"
+        :handled-state="getHandledState(content)"
+        @like="likeContent(index)"
+        @dislike="dislikeContent(index)"
       >
         <img v-if="type === 'image'" :src="content" alt="Content" class="w-full h-full object-cover">
       </Card>
