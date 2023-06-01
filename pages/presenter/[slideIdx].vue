@@ -5,7 +5,6 @@ import store from '~/server/store'
 import CoverStart from '~/components/slides/CoverStart.vue'
 import CoverIntroduction from '~/components/slides/CoverIntroduction.vue'
 import GeschichteKI from '~/components/slides/GeschichteKI.vue'
-import VorteileKI from '~/components/slides/VorteileKI.vue'
 import TrendsKI from '~/components/slides/TrendsKI.vue'
 import PraxisKI from '~/components/slides/PraxisKI.vue'
 import RisikenKI from '~/components/slides/RisikenKI.vue'
@@ -83,9 +82,6 @@ const options = [
   },
   {
     type: PraxisKI
-  },
-  {
-    type: VorteileKI
   },
   {
     type: AnwendungKI

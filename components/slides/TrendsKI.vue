@@ -11,12 +11,6 @@
           Doch es bleibt eine Frage klar, <br>
           wie gestalten wir die KI-Zukunft wunderbar?
         </p>
-        <p>
-          Datenschutz, Ethik stets im Blick,<br>
-          ür eine KI-Welt ohne Machtpolitik.<br>
-          Sicherheit und Zuverlässigkeit, <br>
-          sind bei KI eine Selbstverständlichkeit.
-        </p>
       </template>
       <template #img>
         <img src="@/assets/images/poem/delorian.jpeg">

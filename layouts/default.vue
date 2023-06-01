@@ -1,15 +1,25 @@
 <script setup lang="ts">
 
-import { onKeyStroke } from '@vueuse/core'
+import { onKeyStroke, useFullscreen } from '@vueuse/core'
 
 const showPointer = ref(false)
 onKeyStroke('l', () => {
   showPointer.value = !showPointer.value
 })
+
+const slideRef = ref(null)
+
+const {
+  toggle
+} = useFullscreen(slideRef)
+
+onKeyStroke(['f'], () => {
+  toggle()
+})
 </script>
 
 <template>
-  <main class="layout" :class="{'no-cursor': showPointer}">
+  <main ref="slideRef" class="layout" :class="{'no-cursor': showPointer}">
     <laser-pointer v-if="showPointer" />
     <slot :key="$route.fullPath" />
   </main>

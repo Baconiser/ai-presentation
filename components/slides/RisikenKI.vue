@@ -6,30 +6,30 @@
     <TwoColumnLayout>
       <template #left>
         <div>
-          <ul>
-            <li>
-              Vorsicht: Renommierte KI-Experten warnen vor existentiellen Risiken der Künstlichen Intelligenz, vergleichbar mit
-              Pandemien und Nuklearkrieg.
-            </li>
-            <li>
-              Unter den Unterzeichnern finden sich Größen wie OpenAI CEO Sam Altman und Google DeepMind's Demis
-              Hassabis.
-            </li>
-            <li>
-              Sie rufen dazu auf, global Prioritäten zu setzen und das Risiko einer Auslöschung durch KI zu mindern.
-            </li>
-            <li>
-              Selbst führende KI-Entwickler fordern eine strategische Pause und eine intensive Auseinandersetzung mit
-              den Sicherheitsaspekten der KI.
-            </li>
-          </ul>
+          <p>
+            Experten warnen mit kritischem Blick,
+            KI bringt Gefahren, wie Krieg und Pandemik.
+          </p>
+          <p>
+            Unterzeichner bekannt, Sam Altman und Hassabis dabei,
+            Sie stellen die Frage: Ist KI wirklich einerlei?
+          </p>
+          <p>
+            Global Prioritäten setzen, das Risiko minimieren,
+            Sonst könnten wir unsere Auslöschung riskieren.
+          </p>
+          <p>
+            Eine Pause, ein Halt, so die Führer der KI,
+            Damit Sicherheit und Kontrolle nicht bleiben Fantasie.
+          </p>
         </div>
       </template>
       <template #right>
-        <div class="flex justify-center items-center">
-          <audio controls>
-            <source src="@/assets/audios/alarmstufe-rot-ki.mp3">
-          </audio>
+        <div class="flex flex-col justify-center items-center gap-4">
+          <video src="@/assets/videos/alarmstufe-rot.mp4" controls />
+          <!--          <audio controls>-->
+          <!--            <source src="@/assets/audios/alarmstufe-rot-ki.mp3">-->
+          <!--          </audio>-->
         </div>
       </template>
     </TwoColumnLayout>

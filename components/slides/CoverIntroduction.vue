@@ -10,11 +10,10 @@ import bg from '@/assets/images/bg/lock.jpeg'
       <p>
         Ein Abenteuer startet nun,<br>
         mit KI, es gibt viel zu tun.<br>
-      </p>
-      <p>
         Steigt ein in die Expedition,<br>
         es beginnt die KI-Mission.
       </p>
+      <video src="@/assets/videos/ki-mission.mp4" controls />
     </template>
   </CoverLayout>
 </template>

@@ -6,8 +6,11 @@ import bg from '@/assets/images/bg/start.jpeg'
   <CoverLayout
     :img="bg"
     headline="Die <div class='hl'>Magie</div> der KI"
-    text=""
-  />
+  >
+    <template #text>
+      <img class="w-60 mt-10" src="@/assets/qrcode.jpg">
+    </template>
+  </CoverLayout>
 </template>
 
 <style scoped></style>

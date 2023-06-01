@@ -17,10 +17,10 @@ const randomClass = computed(() => {
 <template>
   <div
     class="cover w-full h-full bg-no-repeat bg-center bg-cover"
-    :style="`background-image: url(${img}); z-index: -2`"
+    :style="`background-image: url(${img})`"
     :class="[{gradient: !img}, randomClass]"
   >
-    <div class="m-auto w-full h-full flex flex-col justify-center items-center">
+    <div class="isolate m-auto w-full h-full flex flex-col justify-center items-center">
       <template v-if="headline">
         <h1 class="font-bold max-w-screen-xl text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-center" v-html="headline" />
       </template>
@@ -49,19 +49,7 @@ h1:deep(.hl) {
 }
 
 .cover::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  filter: grayscale(100%) contrast(160%);
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-
-.cover::after {
-  z-index: -1;
+  z-index: 0;
   content: '';
   display: block;
   width: 100%;
