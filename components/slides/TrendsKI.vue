@@ -13,7 +13,7 @@
         </p>
       </template>
       <template #img>
-        <img src="@/assets/images/poem/delorian.jpeg">
+        <img loading="lazy" src="@/assets/images/poem/delorian.jpeg">
       </template>
     </poem-section>
   </content-section>

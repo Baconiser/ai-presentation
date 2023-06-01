@@ -15,7 +15,7 @@
         </p>
       </template>
       <template #img>
-        <img src="@/assets/images/poem/cartank.jpeg">
+        <img loading="lazy" src="@/assets/images/poem/cartank.jpeg">
       </template>
     </poem-section>
   </content-section>

@@ -2,25 +2,45 @@
 const props = defineProps({
   title: {
     type: String,
-    required: true,
+    required: true
   },
   statements: {
     type: Array as PropType<string[]>,
-    required: true,
+    required: true
   },
+  src: {
+    type: String,
+    required: false
+  }
 })
-
 
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen w-full">
-    <h1 class="text-8xl font-semibold mb-6 " >{{ title }}</h1>
-    <ul class="space-y-4 text-5xl text-white list-disc grow flex justify-start items-center flex-col">
-      <li v-for="(statement, index) in statements" :key="'statement-' + index" class="grow-0">
-        {{ statement }}
-      </li>
-    </ul>
+  <div class="flex py-12 px-16 flex-col min-h-screen w-full relative">
+    <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
+      <img
+        alt=""
+        class="absolute right-0 top-0 translate-x-[-55%] translate-y-[-10%] -scale-x-100 sm:right-[-80%] sm:translate-x-[-98%] sm:translate-y-[-6%] lg:translate-x-[-106%] xl:translate-x-[-122%]"
+        src="@/assets/images/background.6c3571e0.jpg"
+        loading="lazy"
+        width="918"
+        height="1495"
+      >
+      <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
+      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
+    </div>
+    <h1 class="text-8xl font-bold mb-12 z-10 text-black">
+      {{ title }}
+    </h1>
+    <div class="z-10 flex justify-between gap-12">
+      <ul class="space-y-4 text-5xl list-disc list-outside pl-[40px] list-image-[url(boo.webp)]">
+        <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black">
+          {{ statement }}
+        </li>
+      </ul>
+      <img v-if="src" :src="src" class="max-w-screen-sm rounded-lg">
+    </div>
   </div>
 </template>
 

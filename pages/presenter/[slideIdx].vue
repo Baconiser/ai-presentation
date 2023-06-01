@@ -10,11 +10,11 @@ import PraxisKI from '~/components/slides/PraxisKI.vue'
 import RisikenKI from '~/components/slides/RisikenKI.vue'
 import CoverAIorArt from '~/components/slides/CoverAIorArt.vue'
 import AIorArtGame from '~/components/slides/AIorArtGame.vue'
-import Slide05 from '~/components/slides/Slide05.vue'
-import CodingInterviewKI from '~/components/slides/CodingInterviewKI.vue'
 import AnwendungKI from '~/components/slides/AnwendungKI.vue'
-import UsageKi from '~/components/slides/UsageKi.vue'
 import BoringHistorySlide from '~/components/slides/BoringHistorySlide.vue'
+import BoringUsageSlideVerarbeitung from '~/components/slides/BoringUsageSlideVerarbeitung.vue'
+import BoringUsageSlideErkennung from '~/components/slides/BoringUsageSlideErkennung.vue'
+import BoringUsageSlideAnwendung from '~/components/slides/BoringUsageSlideAnwendung.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -76,6 +76,15 @@ const options = [
     type: BoringHistorySlide
   },
   {
+    type: BoringUsageSlideErkennung
+  },
+  {
+    type: BoringUsageSlideVerarbeitung
+  },
+  {
+    type: BoringUsageSlideAnwendung
+  },
+  {
     type: CoverStart
   },
   {
@@ -101,15 +110,6 @@ const options = [
   },
   {
     type: AIorArtGame
-  },
-  {
-    type: Slide05
-  },
-  {
-    type: CodingInterviewKI
-  },
-  {
-    type: UsageKi
   }
 ]
 </script>

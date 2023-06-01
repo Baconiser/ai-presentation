@@ -19,7 +19,7 @@
         </p>
       </template>
       <template #img>
-        <img src="@/assets/images/poem/chessboard.jpeg" alt="">
+        <img loading="lazy" src="@/assets/images/poem/chessboard.jpeg" alt="">
       </template>
     </poem-section>
   </content-section>

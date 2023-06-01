@@ -23,7 +23,7 @@ async function login () {
 
 <template>
   <div class="min-h-screen">
-    <div class="relative isolate h-screen px-6 lg:px-8 h-full">
+    <div class="relative isolate h-screen py-8 overflow-auto px-6 lg:px-8 h-full">
       <div class="flex min-h-full flex-col justify-center items-center px-6 lg:px-8">
         <div class="mb-4 sm:mb-8 flex sm:justify-center">
           <div

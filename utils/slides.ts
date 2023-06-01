@@ -1,1 +1,1 @@
-export const coverSlides = [0, 1]
+export const coverSlides = [4, 5]

@@ -3,7 +3,7 @@
 
 <template>
   <div class="min-h-screen">
-    <div class="relative isolate h-screen px-6 lg:px-8 h-full">
+    <div class="relative isolate min-h-screen px-6 lg:px-8 h-full">
       <div class="max-w-2xl pt-12 pb-12 mx-auto h-full flex-col flex items-center justify-center">
         <div class="mb-4 sm:mb-8 flex sm:justify-center">
           <div

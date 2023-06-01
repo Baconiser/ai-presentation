@@ -13,7 +13,7 @@ import bg from '@/assets/images/bg/lock.jpeg'
         Steigt ein in die Expedition,<br>
         es beginnt die KI-Mission.
       </p>
-      <video src="@/assets/videos/ki-mission.mp4" controls />
+      <video src="@/assets/videos/ki-mission.mp4" loading="lazy" controls />
     </template>
   </CoverLayout>
 </template>
