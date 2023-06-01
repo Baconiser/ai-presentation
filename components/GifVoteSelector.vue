@@ -14,21 +14,28 @@ function voteForGif (gifId: string) {
   })
 }
 
-const buttonColors = [
-  'blue', 'cyan', 'red', 'purple'
-]
-
 </script>
+
 <template>
   <div
     class="overflow-hidden w-screen h-screen landscape:grid landscape:grid-cols-2 landscape:grid-rows-2 portrait:flex flex-col p-8 lg:p-12 gap-x-8 gap-y-4 lg:gap-8 relative align-center"
   >
-    <template v-for="(key, value, idx) in GifIds" :key="key">
-      <button type="button" :class="`card shadow-lg shadow-${buttonColors[idx]}-800/80 active:ring-${buttonColors[idx]}-800 relative`" @click="voteForGif(key)">
-        <ParticleEffect />
-        <img class="image" :src="`/${key}.webp`">
-      </button>
-    </template>
+    <button type="button" class="card shadow-lg shadow-blue-800/80 active:ring-blue-800 relative" @click="voteForGif(GifIds.boo)">
+      <ParticleEffect />
+      <img class="image" :src="`/${GifIds.boo}.webp`">
+    </button>
+    <button type="button" class="card shadow-lg shadow-cyan-800/80 active:ring-cyan-800 relative" @click="voteForGif(GifIds.mindblow)">
+      <ParticleEffect />
+      <img class="image" :src="`/${GifIds.mindblow}.webp`">
+    </button>
+    <button type="button" class="card shadow-lg shadow-red-800/80 active:ring-red-800 relative" @click="voteForGif(GifIds.huh)">
+      <ParticleEffect />
+      <img class="image" :src="`/${GifIds.huh}.webp`">
+    </button>
+    <button type="button" class="card shadow-lg shadow-purple-800/80 active:ring-purple-800 relative" @click="voteForGif(GifIds.nice)">
+      <ParticleEffect />
+      <img class="image" :src="`/${GifIds.nice}.webp`">
+    </button>
   </div>
 </template>
 
