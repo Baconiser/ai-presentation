@@ -14,6 +14,7 @@ import AIorArtGame from '~/components/slides/AIorArtGame.vue'
 import Slide05 from '~/components/slides/Slide05.vue'
 import CodingInterviewKI from '~/components/slides/CodingInterviewKI.vue'
 import AnwendungKI from '~/components/slides/AnwendungKI.vue'
+import UsageKi from '~/components/slides/UsageKi.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -106,6 +107,9 @@ const options = [
   },
   {
     type: CodingInterviewKI
+  },
+  {
+    type: UsageKi
   }
 ]
 </script>

@@ -130,8 +130,7 @@ const clickedTop = ref(0)
 const clickedLeft = ref(0)
 
 function handleClick (e: PointerEvent) {
-  console.log(e);
-  if (particles.value.length > 0) { return }
+    if (particles.value.length > 0) { return }
 
   // get the x,y on the current element
   const rect = (e.currentTarget as HTMLElement).getBoundingClientRect()
