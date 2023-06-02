@@ -12,14 +12,20 @@
           'Künstliche Intelligenz' war gebracht.
         </p>
         <p>
-          Schachprogramme kamen dann dazu,<br>
+          <span class="hl">Schachprogramme</span> kamen dann dazu,<br>
           lösten Probleme im Nu. <br>
           In den 50ern und 60ern aufgewacht,<br>
           hat die KI uns Freude gebracht.
         </p>
       </template>
       <template #img>
-        <img loading="lazy" src="@/assets/images/poem/chessboard.jpeg" alt="">
+        <img loading="lazy" class="w-full aspect-[16/9] object-cover object-center" src="@/assets/images/poem/chessboard.jpeg" alt="">
+        <p class="hint">
+          Gedicht: OpenAI ChatGPT
+        </p>
+        <p class="hint">
+          Bild: Stable Diffusion XL
+        </p>
       </template>
     </poem-section>
   </content-section>

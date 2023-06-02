@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { coverSlides } from '~/utils/slides'
-import CoverStart from '~/components/slides/CoverStart.vue'
 
 const currentSlideIdx = useState<number>('currentSlideIdx')
 </script>

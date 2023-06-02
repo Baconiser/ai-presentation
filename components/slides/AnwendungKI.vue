@@ -15,7 +15,7 @@
       </template>
       <template #img>
         <video src="@/assets/videos/ki-anwendung.mp4" loading="lazy" controls />
-        <p class="text-sm text-center mt-4">
+        <p class="hint">
           Video von Quelle
         </p>
       </template>

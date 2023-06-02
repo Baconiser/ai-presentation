@@ -44,10 +44,6 @@ h1 {
   -webkit-background-clip: text;
 }
 
-h1:deep(.hl) {
-  color: #ffc600;
-}
-
 .cover::before {
   z-index: 0;
   content: '';

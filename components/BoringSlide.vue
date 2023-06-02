@@ -10,7 +10,8 @@ const props = defineProps({
   },
   src: {
     type: String,
-    required: false
+    required: false,
+    default: ''
   }
 })
 

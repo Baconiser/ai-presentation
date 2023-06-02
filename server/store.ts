@@ -61,7 +61,7 @@ class Store {
   }
 
   renameUser (user: User) {
-    this.users = this.users.map(u => {
+    this.users = this.users.map((u) => {
       if (u.id === user.id) {
         return user
       }

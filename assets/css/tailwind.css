@@ -16,4 +16,12 @@
             text-shadow: 4px 3px 0 rgba(0,0,0,.3);
         }
     }
+
+    .hl {
+        color: #ffc600;
+    }
+
+    .hint {
+        @apply text-sm text-center mt-4;
+    }
 }

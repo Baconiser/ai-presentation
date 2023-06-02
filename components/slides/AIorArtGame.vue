@@ -39,7 +39,7 @@ const artistPercentage = computed(() => {
     <div class="divider w-2 bg-white" />
     <div class="side grow-1 w-full relative">
       <h1
-          class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center "
+        class="text-2xl font-extrabold md:text-5xl lg:text-6xl shrink-0 flex justify-center "
       >
         🎨 Artist
       </h1>

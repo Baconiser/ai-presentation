@@ -7,7 +7,7 @@
       <template #poem>
         <p>
           DeepMind, ein Star in der Medizin,<br> LearningSlides im Bildungsbereich kein Spinn.<br>
-          Mit KI kann man Wunder sehen,<br> lasst uns nicht durchdrehen.
+          Mit KI kann man <span class="hl">Wunder sehen</span>,<br> lasst uns nicht durchdrehen.
         </p>
         <p>
           Amazon und Netflix sind schlau,<br> nutzen KI und machen Personalabbau. 🥲<br>
@@ -15,7 +15,10 @@
         </p>
       </template>
       <template #img>
-        <img loading="lazy" src="@/assets/images/poem/cartank.jpeg">
+        <img loading="lazy" class="w-full" src="https://mind-video.com/static/media/test304.ad1271acf065ab55c5ef.gif">
+        <p class="hint">
+          DeepMind
+        </p>
       </template>
     </poem-section>
   </content-section>

@@ -27,9 +27,12 @@
       <template #right>
         <div class="flex flex-col justify-center items-center gap-4">
           <video src="@/assets/videos/alarmstufe-rot.mp4" loading="lazy" controls />
-          <!--          <audio controls>-->
-          <!--            <source src="@/assets/audios/alarmstufe-rot-ki.mp3">-->
-          <!--          </audio>-->
+          <p class="hint">
+            Video von Quelle
+          </p>
+          <p class="hint">
+            Audio von Quelle
+          </p>
         </div>
       </template>
     </TwoColumnLayout>
