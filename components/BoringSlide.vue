@@ -45,5 +45,11 @@ const props = defineProps({
 </template>
 
 <style scoped>
-
+h1 {
+  letter-spacing: 1px;
+  color: transparent;
+  -webkit-text-stroke: 2px #ff3b65;
+  background: -webkit-linear-gradient(rgba(255,59,101,.3),transparent);
+  -webkit-background-clip: text;
+}
 </style>

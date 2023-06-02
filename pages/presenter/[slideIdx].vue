@@ -15,7 +15,8 @@ import BoringHistorySlide from '~/components/slides/BoringHistorySlide.vue'
 import BoringUsageSlideVerarbeitung from '~/components/slides/BoringUsageSlideVerarbeitung.vue'
 import BoringUsageSlideErkennung from '~/components/slides/BoringUsageSlideErkennung.vue'
 import BoringUsageSlideAnwendung from '~/components/slides/BoringUsageSlideAnwendung.vue'
-import BoringCover from "~/components/BoringCover.vue";
+import BoringCover from '~/components/BoringCover.vue'
+import BoringChaptersSlide from '~/components/slides/BoringChaptersSlide.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -75,6 +76,9 @@ onKeyStroke(['r'], () => {
 const options = [
   {
     type: BoringCover
+  },
+  {
+    type: BoringChaptersSlide
   },
   {
     type: BoringHistorySlide
