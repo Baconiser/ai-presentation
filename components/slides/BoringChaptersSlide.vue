@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import scream from '@/assets/images/boring/thescream.png'
 </script>
 
 <template>
@@ -10,7 +11,7 @@
       'Chancen',
       'Beispiele'
     ]"
-    src="https://image.lexica.art/full_jpg/3b84ab47-9231-424b-9155-0ad610105805"
+    :src="scream"
   />
 </template>
 

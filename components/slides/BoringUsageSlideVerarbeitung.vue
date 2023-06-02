@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import tesla from '@/assets/images/boring/tesla.jpeg'
 </script>
 
 <template>
@@ -9,7 +10,7 @@
       'Amazon Go',
       'Tesla Autopilot',
     ]"
-    src="https://image.lexica.art/full_jpg/cd55be66-c2bc-4d50-8010-297a8cc9e785"
+    :src="tesla"
   />
 </template>
 

@@ -31,7 +31,7 @@
             Video von Quelle
           </p>
           <p class="hint">
-            Audio von Quelle
+            Audio von ElevenLabs
           </p>
         </div>
       </template>

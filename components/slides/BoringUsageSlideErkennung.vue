@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import segment from '@/assets/images/boring/segment.png'
 </script>
 
 <template>
@@ -10,7 +11,7 @@
       'Medizin: Erkennung von Krankheiten',
       'Meta: Segment AI'
     ]"
-    src="https://assets.entrepreneur.com/content/3x2/2000/1680795198-ScreenShot2023-04-06at113039AM.png"
+    :src="segment"
   />
 </template>
 

@@ -17,6 +17,7 @@ import BoringUsageSlideErkennung from '~/components/slides/BoringUsageSlideErken
 import BoringUsageSlideAnwendung from '~/components/slides/BoringUsageSlideAnwendung.vue'
 import BoringCover from '~/components/BoringCover.vue'
 import BoringChaptersSlide from '~/components/slides/BoringChaptersSlide.vue'
+import CoverLiveCoding from '~/components/slides/CoverLiveCoding.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -118,6 +119,9 @@ const options = [
   },
   {
     type: AIorArtGame
+  },
+  {
+    type: CoverLiveCoding
   }
 ]
 </script>
