@@ -22,6 +22,9 @@ const likeContent = (index: number) => {
 }
 
 function vote (content: string, liked: boolean) {
+
+  const userId = IdUtil.getId();
+
   handledContents.value.push({
     content,
     liked
@@ -33,6 +36,7 @@ function vote (content: string, liked: boolean) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+      userId,
       id: content,
       vote: liked ? 'Artist' : 'AI',
       content

@@ -11,7 +11,7 @@ const currentSlideIdx = useState<number>('currentSlideIdx')
       mode="out-in"
     >
       <AudienceLogin v-if="currentSlideIdx === 4" />
-      <AudienceImagesTindern v-else-if="currentSlideIdx === 9" />
+      <AudienceImagesTindern v-else-if="currentSlideIdx === 14" />
       <GifVoteSelector v-else-if="!coverSlides.includes(currentSlideIdx)" />
       <div v-else class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center">
         <p class="text-lg leading-8 text-center">
