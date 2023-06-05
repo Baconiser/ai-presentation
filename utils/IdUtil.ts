@@ -14,6 +14,10 @@ class IdUtil {
     }
     return item
   }
+
+  public static checkForId () {
+    return localStorage.getItem(this.ID_KEY)
+  }
 }
 
 export default IdUtil

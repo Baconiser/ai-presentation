@@ -1,12 +1,21 @@
 enum SlideType {
-   'Boring' = 'Boring',
-   'Login' = 'Login',
-   'None' = 'None',
-   'Vote' = 'Vote',
-   'ImageTinder' = 'ImageTinder'
+    'Boring' = 'Boring',
+    'Login' = 'Login',
+    'None' = 'None',
+    'Vote' = 'Vote',
+    'ImageTinder' = 'ImageTinder'
 }
 
 const slides = [
+  {
+    type: SlideType.Boring
+  },
+  {
+    type: SlideType.Boring
+  },
+  {
+    type: SlideType.Boring
+  },
   {
     type: SlideType.Boring
   },

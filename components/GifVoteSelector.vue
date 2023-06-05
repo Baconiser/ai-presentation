@@ -17,6 +17,13 @@ function voteForGif (gifId: string) {
   })
 }
 
+onMounted(() => {
+  // TODO Michael LoginFlow: Wenn User noch kein User dann weiter auf Loginseite
+  const userId = IdUtil.checkForId()
+  if (!userId) {
+    navigateTo('/audience/login')
+  }
+})
 </script>
 
 <template>

@@ -49,85 +49,10 @@ const artistPercentage = (id: string): number => {
   const artistVotes = countArtistVotes(votes)
   return Math.round(((artistVotes.length / votes.length) || 0) * 100)
 }
-
-const data = computed(() => {
-  return tinderVotes.value
-})
-
-function calculateCorrect (votes, aiList) {
-  let correctCount = 0
-
-  votes.forEach((vote) => {
-    const aiInfo = aiList.find(ai => ai.id === vote.id)
-
-    if (aiInfo && ((vote.vote === 'AI' && aiInfo.ai) || (vote.vote === 'Artist' && !aiInfo.ai))) {
-      console.log(vote, aiInfo)
-      correctCount++
-    }
-  })
-
-  return ((correctCount / votes.length) * 100).toFixed(2)
-}
-
-function calculateFailure (votes, aiList) {
-  let aiFailureCount = 0
-  let artistFailureCount = 0
-
-  votes.forEach((vote) => {
-    const aiInfo = aiList.find(ai => ai.id === vote.id)
-
-    if (aiInfo && ((vote.vote === 'AI' && !aiInfo.ai) || (vote.vote === 'Artist' && aiInfo.ai))) {
-      if (aiInfo.ai) {
-        artistFailureCount++
-      } else {
-        aiFailureCount++
-      }
-    }
-  })
-
-  return `${aiFailureCount > artistFailureCount ? '🤖 AI' : '🎨 Artist'} geklickt, obwohl es ein Bild von ${aiFailureCount < artistFailureCount ? '🤖 AI' : '🎨 Artist'} war`
-}
-
-function calculateMostAndLeastCorrectImages (votes, aiList) {
-  if (votes.length === 0 || aiList.length === 0) {
-    return
-  }
-  const correctCountMap = {}
-  const incorrectCountMap = {}
-
-  votes.forEach((vote) => {
-    const aiInfo = aiList.find(ai => ai.id === vote.id)
-
-    if (aiInfo) {
-      if ((vote.vote === 'AI' && aiInfo.ai) || (vote.vote === 'Artist' && !aiInfo.ai)) {
-        correctCountMap[vote.id] = (correctCountMap[vote.id] || 0) + 1
-      } else {
-        incorrectCountMap[vote.id] = (incorrectCountMap[vote.id] || 0) + 1
-      }
-    }
-  })
-
-  const mostCorrectImage = Object.keys(correctCountMap).reduce((a, b) => correctCountMap[a] > correctCountMap[b] ? a : b)
-  const leastCorrectImage = Object.keys(incorrectCountMap).reduce((a, b) => incorrectCountMap[a] > incorrectCountMap[b] ? a : b)
-
-  return { mostCorrectImage, leastCorrectImage }
-}
-
 </script>
 
 <template>
   <section class="p-8 w-full">
-    <div class="">
-      <p class="text-2xl">
-        Insgesamt richtig abgestimmt bei: {{ calculateCorrect(tinderVotes, aiList) }}
-      </p>
-      <p class="text-2xl">
-        Öfter {{ calculateFailure(tinderVotes,aiList) }}
-      </p>
-      <p class="text-2xl">
-        {{ calculateMostAndLeastCorrectImages(tinderVotes,aiList) }}
-      </p>
-    </div>
     <div class="grid grid-cols-6 gap-6">
       <div v-for="content in images" :key="content" class="flex flex-col gap-4 items-center">
         <p class="text-2xl">

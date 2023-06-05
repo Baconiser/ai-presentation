@@ -22,6 +22,7 @@ import AIorArtGameSummary from '~/components/slides/AIorArtGameSummary.vue'
 import BoringNewsSlide from '~/components/slides/BoringNewsSlide.vue'
 import BoringMLSlide from '~/components/slides/BoringMLSlide.vue'
 import BoringNeuronaleNetzeSlide from '~/components/slides/BoringNeuronaleNetzeSlide.vue'
+import AIorArtGameDetails from "~/components/slides/AIorArtGameDetails.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -132,6 +133,9 @@ const options = [
   },
   {
     type: AIorArtGame
+  },
+  {
+    type: AIorArtGameDetails
   },
   {
     type: AIorArtGameSummary

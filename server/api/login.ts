@@ -1,5 +1,5 @@
 import { defineEventHandler, readBody } from 'h3'
-import store, { GifVote, User } from '../store'
+import store, { User } from '../store'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)

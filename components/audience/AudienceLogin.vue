@@ -1,24 +1,16 @@
 <script setup lang="ts">
-import ParticleEffect from '~/components/ParticleEffect.vue'
+import IdUtil from '~/utils/IdUtil'
+const name = ref('')
 
-const joined = ref(false)
-const name = useLocalStorage('USER_NAME', '')
-const joining = ref(false)
-
-async function login () {
-  joining.value = true
-  const userId = IdUtil.getId()
-  await useFetch('/api/login', {
-    method: 'POST',
-    body: {
-      name: name.value,
-      userId
-    }
-  })
-  setTimeout(() => {
-    joined.value = true
-  }, 500)
-}
+onMounted(() => {
+  // TODO Michael LoginFlow: Wenn User noch kein User erstellt, dann weiter auf Loginseite
+  const userId = IdUtil.checkForId()
+  if (!userId) {
+    navigateTo('/audience/login')
+  } else {
+    name.value = userId
+  }
+})
 </script>
 
 <template>
@@ -34,59 +26,18 @@ async function login () {
         </div>
 
         <div class="sm:mx-auto max-w-2xl text-center">
-          <h1 v-if="!joined" class="text-4xl font-bold tracking-tight sm:text-6xl select-none">
-            Bereit für Dein KI-Abenteuer?
-          </h1>
           <h2
-            v-else
             class="text-4xl font-bold tracking-tight select-none"
           >
             Willkommen
             an Board, <span style="color: #ffc600">{{ name }}</span>!
           </h2>
-          <p v-if="!joined" class="mt-6 text-lg leading-8 select-none">
-            Gib Deinen Namen ein und starte Deine interaktive Reise! Entdecke die Geheimnisse und Potentiale der
-            Künstlichen Intelligenz und nutze die Möglichkeit, aktiv mitzuwirken.
-          </p>
-          <p v-else class="mt-6 text-lg leading-8 select-none">
+
+          <p class="mt-6 text-lg leading-8 select-none">
             Du hast Dich erfolgreich eingeloggt. Wir bitten Dich um
             ein wenig Geduld. Nutze diese Zeit, um Dich zu
             entspannen und Dich auf die bevorstehenden Erkenntnisse und Interaktionen vorzubereiten.
           </p>
-          <form class="space-y-6 mt-8" action="#" @submit.prevent="login">
-            <div>
-              <div class="">
-                <transition name="fade">
-                  <input
-                    v-if="!joined"
-                    id="name"
-                    v-model="name"
-                    name="name"
-                    autocomplete="name"
-                    placeholder="Namen eingeben..."
-                    required
-                    class="block w-full rounded-md border-0 p-1.5 text-center shadow-sm ring-1
-                      ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset
-                      focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  >
-                </transition>
-              </div>
-            </div>
-
-            <div class="relative">
-              <transition name="fade">
-                <button
-                  v-if="!joined"
-                  :disabled="name.length === 0 || joining"
-                  type="submit"
-                  class="button"
-                >
-                  Starte jetzt Deine KI-Reise!
-                  <ParticleEffect v-if="!(name.length === 0 || joining)" />
-                </button>
-              </transition>
-            </div>
-          </form>
         </div>
         <div
           class="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl"
@@ -102,8 +53,4 @@ async function login () {
   </div>
 </template>
 
-<style scoped>
-.button {
-  @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
-}
-</style>
+<style scoped></style>
