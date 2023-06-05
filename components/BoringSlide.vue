@@ -2,11 +2,13 @@
 const props = defineProps({
   title: {
     type: String,
-    required: true
+    required: false,
+    default: ''
   },
   statements: {
     type: Array as PropType<string[]>,
-    required: true
+    required: false,
+    default: () => []
   },
   src: {
     type: String,
@@ -31,11 +33,12 @@ const props = defineProps({
       <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
       <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
     </div>
-    <h1 class="text-8xl font-bold mb-12 z-10 text-black">
+    <slot name="content" />
+    <h1 v-if="title" class="text-8xl font-bold mb-12 z-10 text-black">
       {{ title }}
     </h1>
-    <div class="z-10 flex justify-between gap-12">
-      <ul class="space-y-4 text-5xl list-disc list-outside pl-[40px] list-image-[url(boo.webp)]">
+    <div v-if="statements.length > 0" class="z-10 flex justify-between gap-12">
+      <ul class="space-y-4 text-4xl list-disc list-outside pl-[40px]">
         <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black">
           {{ statement }}
         </li>
@@ -52,5 +55,10 @@ h1 {
   -webkit-text-stroke: 2px #ff3b65;
   background: -webkit-linear-gradient(rgba(255,59,101,.3),transparent);
   -webkit-background-clip: text;
+}
+
+li {
+  list-style-type: "🤖";
+  padding-inline-start: 1ch;
 }
 </style>

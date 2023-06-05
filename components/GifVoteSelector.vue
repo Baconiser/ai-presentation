@@ -5,6 +5,9 @@ import ParticleEffect from '~/components/ParticleEffect.vue'
 
 function voteForGif (gifId: string) {
   const userId = IdUtil.getId()
+  // TODO: wenn der User sich nicht angemeldet hat, kann er auch nicht mitmachen
+  if (!userId) { return }
+
   fetch('/api/vote_gif/', {
     body: JSON.stringify({ userId, gifId }),
     method: 'POST',

@@ -18,6 +18,10 @@ import BoringUsageSlideAnwendung from '~/components/slides/BoringUsageSlideAnwen
 import BoringCover from '~/components/BoringCover.vue'
 import BoringChaptersSlide from '~/components/slides/BoringChaptersSlide.vue'
 import CoverLiveCoding from '~/components/slides/CoverLiveCoding.vue'
+import AIorArtGameSummary from '~/components/slides/AIorArtGameSummary.vue'
+import BoringNewsSlide from '~/components/slides/BoringNewsSlide.vue'
+import BoringMLSlide from '~/components/slides/BoringMLSlide.vue'
+import BoringNeuronaleNetzeSlide from '~/components/slides/BoringNeuronaleNetzeSlide.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -76,6 +80,9 @@ onKeyStroke(['r'], () => {
 
 const options = [
   {
+    type: BoringNewsSlide
+  },
+  {
     type: BoringCover
   },
   {
@@ -83,6 +90,12 @@ const options = [
   },
   {
     type: BoringHistorySlide
+  },
+  {
+    type: BoringMLSlide
+  },
+  {
+    type: BoringNeuronaleNetzeSlide
   },
   {
     type: BoringUsageSlideErkennung
@@ -119,6 +132,9 @@ const options = [
   },
   {
     type: AIorArtGame
+  },
+  {
+    type: AIorArtGameSummary
   },
   {
     type: CoverLiveCoding

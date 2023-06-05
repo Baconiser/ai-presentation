@@ -10,9 +10,9 @@ const currentSlideIdx = useState<number>('currentSlideIdx')
       name="fade"
       mode="out-in"
     >
-      <AudienceLogin v-if="currentSlideIdx === 4" />
-      <AudienceImagesTindern v-else-if="currentSlideIdx === 14" />
-      <GifVoteSelector v-else-if="!coverSlides.includes(currentSlideIdx)" />
+      <AudienceLogin v-if="loginSlide.includes(currentSlideIdx)" />
+      <AudienceImagesTindern v-else-if="imageTinderSlide.includes(currentSlideIdx)" />
+      <GifVoteSelector v-else-if="voteSlides.includes(currentSlideIdx)" />
       <div v-else class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center">
         <p class="text-lg leading-8 text-center">
           Auf dieser Folie gibt es keine Interaktion.

@@ -13,7 +13,7 @@ const props = defineProps({
 const handledContents = ref<{ content: string, liked: boolean }[]>([])
 
 const currentIndex = computed(() => {
-  return Math.max(0, (props.contents.length - 1) - handledContents.value.length)
+  return (props.contents.length - 1) - handledContents.value.length
 })
 
 const likeContent = (index: number) => {
@@ -30,6 +30,7 @@ function vote (content: string, liked: boolean) {
     liked
   })
 
+  // TODO: wenn der User sich nicht angemeldet hat, kann er auch nicht mitmachen
   useFetch('/api/send_vote/', {
     method: 'POST',
     headers: {
@@ -75,14 +76,14 @@ function getHandledState (content: string) {
         <img v-if="type === 'image'" :src="content" alt="Content" class="w-full h-full object-cover">
       </Card>
       <div
-        v-if="currentIndex === 0"
+        v-if="currentIndex < 0"
         class="w-full h-full flex justify-center items-center"
         :style="`margin-left: -${Math.floor(contents.length) / 2 * 6}px;`"
       >
         Fertig!
       </div>
     </div>
-    <div v-if="currentIndex !== 0" class="flex justify-center shrink-0 space-x-2">
+    <div v-if="currentIndex >= 0" class="flex justify-center shrink-0 space-x-2">
       <VoteButton @click="dislikeContent(currentIndex)">
         🤖 <span class="text-red-800">AI</span>rtist
       </VoteButton>
