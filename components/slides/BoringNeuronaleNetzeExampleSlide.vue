@@ -25,7 +25,7 @@ Text als HTML formatiert, so wie das beispiel, hier ist mein Text:
 -Lernprozess: Durch Backpropagation und Gradientenabstieg, Anpassung der Neuronengewichte basierend auf Feedback und schrittweise Fehlerminimierung.'`)
 
 const data = {
-  apiKey: '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',
+  apiKey: '',
   model: 'text-davinci-003',
   prompt: prompt.value,
   temperature: 0.7,
