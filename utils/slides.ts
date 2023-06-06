@@ -35,6 +35,9 @@ const slides = [
     type: SlideType.Boring
   },
   {
+    type: SlideType.Boring
+  },
+  {
     type: SlideType.Login
   },
   {

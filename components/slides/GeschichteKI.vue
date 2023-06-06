@@ -6,26 +6,22 @@
     <poem-section>
       <template #poem>
         <p>
-          Es begann im Jahr 1956,<br>
-          ein neuer Begriff war fix.<br>
-          John McCarthy hat's gedacht,<br>
-          'Künstliche Intelligenz' war gebracht.
+          In the year of nineteen fifty-six,<br>
+          John McCarthy unveiled his tricks,<br>
+          Coined a term, as story unveils,<br>
+          "Artificial Intelligence" scales.
         </p>
         <p>
-          <span class="hl">Schachprogramme</span> kamen dann dazu,<br>
-          lösten Probleme im Nu. <br>
-          In den 50ern und 60ern aufgewacht,<br>
-          hat die KI uns Freude gebracht.
+          <span class="hl">Chess</span>, a game of mind and tact,<br>
+          Became a field where codes could act.<br>
+          Late fifties trend,<br>
+          Solving problems, codes comprehend.
         </p>
       </template>
       <template #img>
-        <img loading="lazy" class="w-full aspect-[16/9] object-cover object-center" src="@/assets/images/poem/chessboard.jpeg" alt="">
-        <p class="hint">
-          Gedicht: OpenAI ChatGPT
-        </p>
-        <p class="hint">
-          Bild: Stable Diffusion XL
-        </p>
+        <audio controls class="w-full mt-10">
+          <source src="@/assets/audios/history.mp3">
+        </audio>
       </template>
     </poem-section>
   </content-section>

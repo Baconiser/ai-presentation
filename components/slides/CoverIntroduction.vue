@@ -8,6 +8,9 @@ import bg from '@/assets/images/bg/lock.jpeg'
   >
     <template #text>
       <p>
+        Ein Gedicht von OpenAI ChatGPT
+      </p>
+      <p>
         Ein Abenteuer startet nun,<br>
         mit KI, es gibt viel zu tun.<br>
         Steigt ein in die Expedition,<br>

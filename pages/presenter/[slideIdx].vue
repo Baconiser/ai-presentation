@@ -12,7 +12,6 @@ import CoverAIorArt from '~/components/slides/CoverAIorArt.vue'
 import AIorArtGame from '~/components/slides/AIorArtGame.vue'
 import AnwendungKI from '~/components/slides/AnwendungKI.vue'
 import BoringHistorySlide from '~/components/slides/BoringHistorySlide.vue'
-import BoringUsageSlideVerarbeitung from '~/components/slides/BoringUsageSlideVerarbeitung.vue'
 import BoringUsageSlideErkennung from '~/components/slides/BoringUsageSlideErkennung.vue'
 import BoringUsageSlideAnwendung from '~/components/slides/BoringUsageSlideAnwendung.vue'
 import BoringCover from '~/components/BoringCover.vue'
@@ -22,7 +21,11 @@ import AIorArtGameSummary from '~/components/slides/AIorArtGameSummary.vue'
 import BoringNewsSlide from '~/components/slides/BoringNewsSlide.vue'
 import BoringMLSlide from '~/components/slides/BoringMLSlide.vue'
 import BoringNeuronaleNetzeSlide from '~/components/slides/BoringNeuronaleNetzeSlide.vue'
-import AIorArtGameDetails from "~/components/slides/AIorArtGameDetails.vue";
+import AIorArtGameDetails from '~/components/slides/AIorArtGameDetails.vue'
+import BoringNeuronaleNetzeExampleSlide from '~/components/slides/BoringNeuronaleNetzeExampleSlide.vue'
+import BoringMLExampleSlide from '~/components/slides/BoringMLExampleSlide.vue'
+import BoringEndSlide from '~/components/BoringEndSlide.vue'
+import OneMoreThing from '~/components/OneMoreThing.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -96,16 +99,25 @@ const options = [
     type: BoringMLSlide
   },
   {
+    type: BoringMLExampleSlide
+  },
+  {
     type: BoringNeuronaleNetzeSlide
+  },
+  {
+    type: BoringNeuronaleNetzeExampleSlide
+  },
+  {
+    type: BoringUsageSlideAnwendung
   },
   {
     type: BoringUsageSlideErkennung
   },
   {
-    type: BoringUsageSlideVerarbeitung
+    type: BoringEndSlide
   },
   {
-    type: BoringUsageSlideAnwendung
+    type: OneMoreThing
   },
   {
     type: CoverStart

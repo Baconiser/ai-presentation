@@ -14,7 +14,7 @@
 
 <style scoped>
 .poem {
-  font-size: 34px;
   text-align: left;
+  @apply text-3xl;
 }
 </style>

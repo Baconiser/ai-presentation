@@ -20,7 +20,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex py-12 px-16 flex-col min-h-screen w-full relative">
+  <div class="flex py-12 px-16 flex-col min-h-screen w-full relative boring">
     <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
       <img
         alt=""
@@ -33,15 +33,14 @@ const props = defineProps({
       <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
       <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
     </div>
-    <slot name="content" />
+    <slot name="cover" />
     <h1 v-if="title" class="text-8xl font-bold mb-12 z-10 text-black">
       {{ title }}
     </h1>
-    <div v-if="statements.length > 0" class="z-10 flex justify-between gap-12">
-      <ul class="space-y-4 text-4xl list-disc list-outside pl-[40px]">
-        <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black">
-          {{ statement }}
-        </li>
+    <div class="z-10 flex justify-between gap-12">
+      <slot name="content" />
+      <ul v-if="statements.length > 0" class="space-y-4 text-3xl list-disc list-outside pl-[40px]">
+        <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black" v-html="statement" />
       </ul>
       <img v-if="src" :src="src" class="max-w-screen-sm rounded-lg">
     </div>

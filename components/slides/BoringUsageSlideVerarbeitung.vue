@@ -6,9 +6,11 @@ import tesla from '@/assets/images/boring/tesla.jpeg'
   <BoringSlide
     title="Anwendungsgebiete - Verarbeitung"
     :statements="[
-      'Sprachassistenten',
-      'Amazon Go',
-      'Tesla Autopilot',
+      'Spracherkennung',
+      'Texterkennung',
+      'Gesichtserkennung',
+      'Autonomes Fahren',
+      'Word prediction',
     ]"
     :src="tesla"
   />

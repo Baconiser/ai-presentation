@@ -17,8 +17,11 @@
       <template #img>
         <img loading="lazy" class="w-full" src="https://mind-video.com/static/media/test304.ad1271acf065ab55c5ef.gif">
         <p class="hint">
-          DeepMind
+          <a href="https://mind-video.com/" target="_blank">Mind-Video</a>
         </p>
+        <audio controls class="w-full mt-10">
+          <source src="@/assets/audios/praxis.mp3">
+        </audio>
       </template>
     </poem-section>
   </content-section>

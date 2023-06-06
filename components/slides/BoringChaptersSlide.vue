@@ -7,9 +7,13 @@ import scream from '@/assets/images/boring/thescream.png'
     title="Übersicht"
     :statements="[
       'Geschichte',
+      'Machine Learning',
+      'Neuronale Netze',
       'Anwendungsgebiete',
       'Chancen',
-      'Beispiele'
+      'Ethik',
+      'Beispiele',
+      'Ausblick'
     ]"
     :src="scream"
   />
