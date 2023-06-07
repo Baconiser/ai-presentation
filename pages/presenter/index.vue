@@ -24,8 +24,11 @@ onKeyStroke('w', () => {
         </div>
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
-            Are you <span @click="worth">w</span>orth?
+            <span @click="worth">W</span>illkommen auf der exklusiven Präsentationsseite!
           </h1>
+          <p class="mt-6 text-lg leading-8">
+            Aber halt, bevor Sie weitergehen: Sind Sie bereit, Ihre Kreativität und Ihre Expertise in der faszinierenden Welt der Künstlichen Intelligenz zu präsentieren? Haben Sie das Zeug dazu, Ihre Zuhörer auf eine unvergessliche Reise durch die Geschichte, Anwendung und Zukunft der KI mitzunehmen? Wenn Ihre Antwort "Ja" lautet, dann treten Sie ein und entfesseln Sie Ihr Potenzial. Aber denken Sie daran, diese Seite ist nicht für die Schwachen. Sie erfordert Mut, Wissen und vor allem Leidenschaft. Also, sind Sie es wert? Dann beweisen Sie es!"
+          </p>
         </div>
       </div>
       <div

@@ -26,6 +26,9 @@ import BoringNeuronaleNetzeExampleSlide from '~/components/slides/BoringNeuronal
 import BoringMLExampleSlide from '~/components/slides/BoringMLExampleSlide.vue'
 import BoringEndSlide from '~/components/BoringEndSlide.vue'
 import OneMoreThing from '~/components/OneMoreThing.vue'
+import BoringEthikSlide from '~/components/slides/BoringEthikSlide.vue'
+import BoringFutureSlide from '~/components/slides/BoringFutureSlide.vue'
+import BoringExamplesSlide from '~/components/slides/BoringExamplesSlide.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -112,6 +115,15 @@ const options = [
   },
   {
     type: BoringUsageSlideErkennung
+  },
+  {
+    type: BoringEthikSlide
+  },
+  {
+    type: BoringExamplesSlide
+  },
+  {
+    type: BoringFutureSlide
   },
   {
     type: BoringEndSlide

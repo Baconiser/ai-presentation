@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { coverSlides } from '~/utils/slides'
-
 const currentSlideIdx = useState<number>('currentSlideIdx')
 </script>
 

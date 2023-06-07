@@ -10,7 +10,6 @@ import scream from '@/assets/images/boring/thescream.png'
       'Machine Learning',
       'Neuronale Netze',
       'Anwendungsgebiete',
-      'Chancen',
       'Ethik',
       'Beispiele',
       'Ausblick'

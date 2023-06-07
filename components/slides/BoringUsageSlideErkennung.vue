@@ -9,7 +9,8 @@ import segment from '@/assets/images/boring/segment.png'
       'Google Photos: Gesicht Erkennung und Klassifizierung',
       'Landwirtschaft: <a href=\'https://www.instagram.com/reel/CoFnbOkp6G6/\' target=\'_blank\'>Erkennung von Pflanzen und Krankheiten pro Pflanze</a>',
       'Medizin: Erkennung von Krankheiten (z.B. Krebsrisiko bei Muttermalen)',
-      '<a href=\'https://segment-anything.com/demo\' target=\'_blank\'>Meta: Segment AI</a>'
+      '<a href=\'https://segment-anything.com/demo\' target=\'_blank\'>Meta: Segment AI</a>',
+      'https://vcai.mpi-inf.mpg.de/projects/DragGAN/'
     ]"
     :src="segment"
   />
