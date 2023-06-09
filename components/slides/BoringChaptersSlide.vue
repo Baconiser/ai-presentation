@@ -9,9 +9,12 @@ import scream from '@/assets/images/boring/thescream.png'
       'Geschichte',
       'Machine Learning',
       'Neuronale Netze',
-      'Anwendungsgebiete',
-      'Ethik',
-      'Beispiele',
+      'Anwendungsgebiete KI',
+      'Auswahl an KI Tools',
+      'Hands-On-Keyboard Time',
+      'Prompting',
+      'KI Tools - Querbeet',
+      'Ethik / Gefahren',
       'Ausblick'
     ]"
     :src="scream"

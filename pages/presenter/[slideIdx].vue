@@ -129,10 +129,6 @@ const options = [
   {
     type: PraxisKI
   },
-  // {
-  //   type: AIorAlgorithmus
-  // },
-
   {
     type: CoverAIorArt
   },
@@ -145,10 +141,6 @@ const options = [
   {
     type: AIorArtGameSummary
   },
-
-  // {
-  //   type: OneMoreThing
-  // },
 
   {
     type: CoverLiveCoding
@@ -177,6 +169,9 @@ const options = [
   {
     type: BoringEndSlide
   }
+  // {
+  //   type: OneMoreThing
+  // },
 ]
 </script>
 

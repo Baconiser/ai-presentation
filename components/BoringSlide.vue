@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
   <div class="flex py-12 px-16 flex-col min-h-screen w-full relative boring">
-    <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
+    <div class="stylish absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
       <img
         alt=""
         class="absolute right-0 top-0 translate-x-[-55%] translate-y-[-10%] -scale-x-100 sm:right-[-80%] sm:translate-x-[-98%] sm:translate-y-[-6%] lg:translate-x-[-106%] xl:translate-x-[-122%]"

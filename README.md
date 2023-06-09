@@ -33,7 +33,6 @@ Prompting Time - Was ist möglich
   - https://areyouhooked.webflow.io/
 - Cornhole Turnier Rangliste erstellen
 
-
 Prompting 
 - Was ist eigentlich Prompting?
 - Negative Prompting

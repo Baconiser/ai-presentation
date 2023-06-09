@@ -2,18 +2,21 @@
 </script>
 
 <template>
-  <boring-slide title="Zukünftige Trends und Entwicklungen in der KI">
+  <boring-slide title="Trends und Entwicklungen in der KI">
     <template #content>
       <poem-section>
         <template #poem>
           <iframe
-            width="1563"
-            height="813"
             src="https://www.youtube.com/embed/7NK_JOkuSVY"
             title="Lost [Official Music Video] - Linkin Park"
+            frameborder="0"
+            allow=""
             allowfullscreen
             class="w-full aspect-[16/9]"
           />
+          <p class="hint">
+            Lost [Official Music Video] - Linkin Park
+          </p>
         </template>
         <template #img>
           <iframe
@@ -25,7 +28,7 @@
             class="w-full aspect-[16/9]"
           />
           <p class="hint">
-            Coca Cola Ad
+            Coca-Cola® Masterpiece
           </p>
         </template>
       </poem-section>
