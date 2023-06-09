@@ -7,11 +7,18 @@ import abraham from '@/assets/images/boring/abraham.jpg'
     title="Geschichte"
     :src="abraham"
     :statements="[
-      'KI-Geschichte beginnt in der Antike, moderne KI entsteht im 20. Jahrhundert.',
-      'Alan Turing, Wegbereiter der KI, fragte \'Können Maschinen denken?\' und schuf den Turing-Test.',
-      'Fortschritte und Herausforderungen prägen die Entwicklung der KI im Laufe der Jahre.',
-      'Aufschwung in den 80er und 90er Jahren mit Fokus auf Expertensystemen und maschinellem Lernen.',
-      'Heute nutzen wir KI mit tiefen neuronalen Netzen in fast allen Lebensbereichen.']"
+      'Seit der Mitte des vergangenen Jahrhunderts arbeiten Wissenschaftler an Künstlicher Intelligenz. Ihr Ziel: Maschinen zu entwickeln, die wie Menschen lernen und denken.',
+      '1936: Turingmaschine: Alan Turing legt den theoretischen Grundstein für Maschinen, die Algorithmen verarbeiten.',
+      '1956: Die Geschichte beginnt: der Begriff „KI“ entsteht',
+      '1966: Geburt des ersten Chatbots',
+      '1972: KI gelangt in die Medizin',
+      '1986: „NETtalk“ spricht',
+      '1997: Computer schlägt Schachweltmeister',
+      '2011: KI erreicht den Alltag',
+      '2011: KI „Watson“ gewinnt Quizshow',
+      '2016: Computer schlägt stärksten Go-Spieler',
+      '2018: KI debattiert über Raumfahrt und vereinbart einen Friseurtermin',
+    ]"
   />
 </template>
 

@@ -2,31 +2,35 @@
 </script>
 
 <template>
-  <content-section headline="Zukünftige Trends und Entwicklungen in der KI">
-    <poem-section>
-      <template #poem>
-        <p>
-          In vielen Bereichen ist KI dabei, <br>
-          <span class="hl">formt unsere Welt ganz neu</span> - zweifelsfrei.<br>
-          Doch es bleibt eine Frage klar, <br>
-          wie gestalten wir die KI-Zukunft wunderbar?
-        </p>
-      </template>
-      <template #img>
-        <iframe
-          src="https://www.youtube.com/embed/VGa1imApfdg"
-          title="Coca-Cola® Masterpiece"
-          frameborder="0"
-          allow=""
-          allowfullscreen
-          class="w-full aspect-[16/9]"
-        />
-        <p class="hint">
-          Coca Cola Ad
-        </p>
-      </template>
-    </poem-section>
-  </content-section>
+  <boring-slide title="Zukünftige Trends und Entwicklungen in der KI">
+    <template #content>
+      <poem-section>
+        <template #poem>
+          <iframe
+            width="1563"
+            height="813"
+            src="https://www.youtube.com/embed/7NK_JOkuSVY"
+            title="Lost [Official Music Video] - Linkin Park"
+            allowfullscreen
+            class="w-full aspect-[16/9]"
+          />
+        </template>
+        <template #img>
+          <iframe
+            src="https://www.youtube.com/embed/VGa1imApfdg"
+            title="Coca-Cola® Masterpiece"
+            frameborder="0"
+            allow=""
+            allowfullscreen
+            class="w-full aspect-[16/9]"
+          />
+          <p class="hint">
+            Coca Cola Ad
+          </p>
+        </template>
+      </poem-section>
+    </template>
+  </boring-slide>
 </template>
 
 <style scoped>

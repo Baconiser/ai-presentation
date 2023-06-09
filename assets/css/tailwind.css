@@ -21,17 +21,14 @@
         color: #ffc600;
     }
 
-    .hint {
-        @apply text-sm text-center mt-4;
-    }
 
     .hint a {
         color: #ff3b65;
     }
 
-    .boring p {
+    .boring p, .boring li {
         text-shadow: none;
-        @apply text-black text-3xl;
+        @apply text-black text-2xl;
     }
 
     .boring a {
@@ -47,6 +44,10 @@
 
     .boring .hl {
         color: #ff3b65;
+    }
+
+    .boring .hint {
+        @apply text-sm text-center mt-4;
     }
 
     .button {

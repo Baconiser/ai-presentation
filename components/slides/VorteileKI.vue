@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <content-section headline="Vor- und Nachteile von KI">
+  <boring-slide title="Vor- und Nachteile von KI">
     <poem-section>
       <template #poem>
         <p>
@@ -18,7 +18,7 @@
         <img src="@/assets/images/poem/net.jpeg">
       </template>
     </poem-section>
-  </content-section>
+  </boring-slide>
 </template>
 
 <style scoped></style>

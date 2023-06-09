@@ -5,7 +5,7 @@ const flip = ref(false)
 
 <template>
   <BoringSlide
-    title="Auswahl an KI Tools"
+    title="Prompting"
     :src="handout"
   >
     <template #content>

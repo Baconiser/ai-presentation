@@ -39,7 +39,7 @@ const props = defineProps({
     </h1>
     <div class="z-10 flex justify-between gap-12">
       <slot name="content" />
-      <ul v-if="statements.length > 0" class="space-y-4 text-3xl list-disc list-outside pl-[40px]">
+      <ul v-if="statements.length > 0" class="space-y-4 list-disc list-outside pl-[40px]">
         <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black" v-html="statement" />
       </ul>
       <img v-if="src" :src="src" class="max-w-screen-sm rounded-lg">

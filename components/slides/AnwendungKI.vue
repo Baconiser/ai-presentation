@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <content-section headline="Anwendungsbereiche von KI">
+  <boring-slide title="Anwendungsbereiche von KI">
     <poem-section>
       <template #poem>
         <p>
@@ -20,7 +20,7 @@
         </p>
       </template>
     </poem-section>
-  </content-section>
+  </boring-slide>
 </template>
 
 <style scoped></style>

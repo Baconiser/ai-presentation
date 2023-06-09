@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <content-section headline="Geschichte der Künstlichen Intelligenz">
+  <boring-slide title="Geschichte der Künstlichen Intelligenz">
     <poem-section>
       <template #poem>
         <p>
@@ -24,7 +24,7 @@
         </audio>
       </template>
     </poem-section>
-  </content-section>
+  </boring-slide>
 </template>
 
 <style scoped>

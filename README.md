@@ -1,42 +1,131 @@
-# Nuxt 3 Minimal Starter
+# AI Presentation 
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Slides 
 
-## Setup
+Einleitung
+- Time Magazin + Photoshop
+- Titel
+- Kapitel
 
-Make sure to install the dependencies:
+Hintergründe
+- Geschichte, woher kommt es, was ist es
+- https://www.bosch.com/de/stories/geschichte-der-kuenstlichen-intelligenz/
+- ML, was ist es 
+- ML, Beispiel 
+- Neuronale Netze, was ist es
 
-```bash
-# yarn
-yarn install
+Interaktiv
+- Publikum Interaktion
+- ChatGPT ansprechen
 
-# npm
-npm install
+Beispiele
+- Anwendungsgebiete + Beispiele
+- Beispiele von AI, wie wir sie nutzen 
+  - Link Sammlung + Handout
 
-# pnpm
-pnpm install
-```
+Von KI generierte Inhalte
+- OpenAI Gedicht vorlesen lassen + Video
+- Bilder Tindern um die Power von AI Image Generation zu zeigen
 
-## Development Server
+Prompting Time - Was ist möglich
+- Landingpage erstellen 
+  - mehrere AI Tools verwenden (Background removal / Segmenter / Generative Fill)
+  - https://areyouhooked.webflow.io/
+- Cornhole Turnier Rangliste erstellen
 
-Start the development server on `http://localhost:3000`
 
-```bash
-npm run dev
-```
+Prompting 
+- Was ist eigentlich Prompting?
+- Negative Prompting
 
-## Production
+Abschluss
+- Future Tools (Krasse neue Tools - was uns bevorsteht)
+- Ethik
+- Gefahren
+- Zukunft
 
-Build the application for production:
 
-```bash
-npm run build
-```
+## TODOs
+- Over 2k new Al tools have launched in the past 30 days.
+- Was ist ein LLM wie wird es trainiert
+- Deep Learning?
+- Ai kreiert neue Jobs
+- AI oder Algorithmus
+- Code Brushes / Copilot
+- Whisper hört zu für ein transkript
+- Warum GPUs
+- Unterschiede zwischen grossen und kleinen Modellen
 
-Locally preview production build:
 
-```bash
-npm run preview
-```
+## Tools
+- AutoGPT
+- Den Chatbot Tay nahm dessen Entwickler Microsoft 2016 nur 24 Stunden nach Veröffentlichung vom Netz. Galactica des Facebook-Konzerns Meta hielt im vergangenen November immerhin drei Tage durch
+- Hautarzt schickt Muttermale an KI zum Krebs prüfen
+- Plan your dream trip in seconds
+- Meeting Zusammenfassungen
+- CoPilot Code Zeug
+- Webseiten Zusammenfassungen
+- Automatisches Tagging von Sachen
+- Video
+- Audio
+- Voide
+- Whisper
+- Meta Segment
+- LinkinPark Musikvideo
+- CocaCola Werbung
+- Bier Werbung
+- Apple Vision Pro
+- wollen wir die big players auflisten in AI ?
+  - Adobe,
+  - replicate
+  - Huggingfaces
+  - openai
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Links
+- https://twelvelabs.io/
+- https://vcai.mpi-inf.mpg.de/projects/DragGAN/
+- https://research.nvidia.com/labs/rtr/neural_appearance_models/
+- https://remodeled.ai/
+- https://imagebind.metademolab.com/
+- https://invideo.io/
+- https://github.com/SevaSk/ecoute
+- https://bjoernkarmann.dk/project/paragraphica
+- https://www.lalal.ai/
+- https://mubert.com/
+- https://www.golem.de/sonstiges/zustimmung/auswahl.html?from=https://www.golem.de/news/projekt-burnham-und-astro-amazon-will-haushaltsroboter-intelligenter-machen-2305-174055.html
+- https://mind-video.com/
+- https://web.archive.org/web/20230531203946/https://website-nm4keew22-humanloopml.vercel.app/blog/openai-plans
+- https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/
+- https://www.proplanta.de/agrar-nachrichten/landtechnik/sortiermaschine-fuer-rapssaatgut-was-kann-ki-leisten_article1644152288.html
+- https://www.bvse.de/recycling/recycling-nachrichten/5386-mehr-sortiersicherheit-durch-kuenstliche-intelligenz-gestuetzte-software-und-hardwareupgrades.html
+- https://www.gamestar.de/artikel/kuenstliche-intelligenz-maschine-sortiert-lego-ki,3352314.html
+- https://falconllm.tii.ae/
+- https://beta.albus.org/preview/92553A1A
+- https://arstechnica.com/information-technology/2023/05/ai-expanded-album-cover-artworks-go-viral-thanks-to-photoshops-generative-fill/
+- https://twitter.com/StepnEurope/status/1663340168458240001
+- https://www.restorephotos.io/
+- 
+
+## Handout
+- OpenAI Chat
+- Bard
+- Falcon
+- OpenAI Dall-E
+- Midjourney
+- Github Next
+- 11Labs
+- d-id
+- synthesia
+- https://www.emergentmind.com/
+- https://github.com/f/awesome-chatgpt-prompts
+- https://github.com/trigaten/Learn_Prompting
+- https://www.phind.com/
+
+
+## Stuff
+- Generierung: AI generiert neue Inhalte wie Bilder, Texte oder Videos. Das umfasst Anwendungen wie Bildgenerierung, Textgenerierung, musikalische Komposition und Videoproduktion.
+- Erkennung: AI erkennt und klassifiziert Muster, Objekte oder Informationen in Daten. Das umfasst Anwendungen wie Bilderkennung, Spracherkennung, Texterkennung und Anomalieerkennung.
+- Verarbeitung: AI verarbeitet und analysiert Daten, um Erkenntnisse zu gewinnen oder Aufgaben zu automatisieren. Das umfasst Anwendungen wie Datenanalyse, natürliche Sprachverarbeitung, maschinelles Lernen und Predictive Analytics.
+- Steuerung: AI steuert und optimiert Prozesse, Systeme oder Entscheidungen. Das umfasst Anwendungen wie autonome Fahrzeuge, Entscheidungsunterstützungssysteme, Robotik und Prozessautomatisierung.
+
+## One more thing???

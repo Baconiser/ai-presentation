@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennis Tournament</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           max-width: 800px;
+           margin: 0 auto;
+       }
+
+       table {
+           width: 100%;
+           border-collapse: collapse;
+       }
+
+       table, th, td {
+           border: 1px solid black;
+       }
+
+       th, td {
+           padding: 8px;
+           text-align: center;
+       }
+
+   </style>
+</head>
+<body>
+<h1>Cornhole Tournament</h1>
+<div id="participants">
+    <h2>Add Participants</h2>
+    <input type="text" id="participantName" placeholder="Name">
+    <button id="addParticipant">Add Participant</button>
+    <ul id="participantList"></ul>
+</div>
+<div id="results">
+    <h2>Add Results</h2>
+    <div id="resultInputs"></div>
+    <button id="calculateResults">Calculate Results</button>
+</div>
+<div id="tournamentTable">
+    <h2>Tournament Table</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Score Difference</th>
+        </tr>
+        </thead>
+        <tbody id="tournamentResults"></tbody>
+    </table>
+</div>
+<script>
+    var participants = [];
+    var participantNameInput = document.getElementById("participantName");
+    var addParticipantButton = document.getElementById("addParticipant");
+    var participantList = document.getElementById("participantList");
+    var resultInputs = document.getElementById("resultInputs");
+    var calculateResultsButton = document.getElementById("calculateResults");
+    var tournamentResults = document.getElementById("tournamentResults");
+    addParticipantButton.addEventListener("click", function () {
+        var name = participantNameInput.value.trim();
+        if (name === "")
+            return;
+        participants.push({
+            name: name,
+            wins: 0,
+            losses: 0,
+            scoreDifference: 0,
+        });
+        var listItem = document.createElement("li");
+        listItem.textContent = name;
+        participantList.appendChild(listItem);
+        participantNameInput.value = "";
+        updateResultInputs();
+    });
+    function updateResultInputs() {
+        resultInputs.innerHTML = "";
+        for (var i = 0; i < participants.length; i++) {
+            for (var j = i + 1; j < participants.length; j++) {
+                var inputGroup = document.createElement("div");
+                var label = document.createElement("label");
+                label.textContent = "".concat(participants[i].name, " vs ").concat(participants[j].name, ": ");
+                inputGroup.appendChild(label);
+                const input = document.createElement("input");
+                input.type = "text";
+                input.id = `result-${i}-${j}`;
+                inputGroup.appendChild(input);
+                resultInputs.appendChild(inputGroup);
+
+
+            }
+        }
+    }
+    calculateResultsButton.addEventListener("click", () => {
+        for (let i = 0; i < participants.length; i++) {
+            participants[i].wins = 0;
+            participants[i].losses = 0;
+            participants[i].scoreDifference = 0;
+        }
+
+        for (let i = 0; i < participants.length; i++) {
+            for (let j = i + 1; j < participants.length; j++) {
+                const input = document.getElementById(`result-${i}-${j}`)
+                const scoreText = input.value.trim();
+                const scores = scoreText.split("-");
+
+                if (scores.length !== 2) continue;
+
+                const score1 = parseInt(scores[0], 10);
+                const score2 = parseInt(scores[1], 10);
+
+                if (isNaN(score1) || isNaN(score2)) continue;
+
+                const scoreDifference = score1 - score2;
+
+                if (scoreDifference > 0) {
+                    participants[i].wins++;
+                    participants[j].losses++;
+                } else if (scoreDifference < 0) {
+                    participants[i].losses++;
+                    participants[j].wins++;
+                }
+
+                participants[i].scoreDifference += scoreDifference;
+                participants[j].scoreDifference -= scoreDifference;
+            }
+        }
+
+        participants.sort((a, b) => {
+            if (a.wins !== b.wins) {
+                return b.wins - a.wins;
+            }
+            return b.scoreDifference - a.scoreDifference;
+        });
+
+        updateTournamentTable();
+    });
+
+    function updateTournamentTable() {
+        tournamentResults.innerHTML = '';
+        for (var _i = 0, participants_1 = participants; _i < participants_1.length; _i++) {
+            var participant = participants_1[_i];
+            var row = document.createElement('tr');
+            var nameCell = document.createElement('td');
+            nameCell.textContent = participant.name;
+            row.appendChild(nameCell);
+            var winsCell = document.createElement('td');
+            winsCell.textContent = participant.wins.toString();
+            row.appendChild(winsCell);
+            var lossesCell = document.createElement('td');
+            lossesCell.textContent = participant.losses.toString();
+            row.appendChild(lossesCell);
+            var scoreDifferenceCell = document.createElement('td');
+            scoreDifferenceCell.textContent = participant.scoreDifference.toString();
+            row.appendChild(scoreDifferenceCell);
+            tournamentResults.appendChild(row);
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -29,6 +29,10 @@ import OneMoreThing from '~/components/OneMoreThing.vue'
 import BoringEthikSlide from '~/components/slides/BoringEthikSlide.vue'
 import BoringFutureSlide from '~/components/slides/BoringFutureSlide.vue'
 import BoringExamplesSlide from '~/components/slides/BoringExamplesSlide.vue'
+import AIorAlgorithmus from '~/components/audience/AIorAlgorithmus.vue'
+import PromptingLandingPage from '~/components/slides/PromptingLandingPage.vue'
+import PromptingLogicPage from '~/components/slides/PromptingLogicPage.vue'
+import BoringPromptingSlide from '~/components/slides/BoringPromptingSlide.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -108,6 +112,9 @@ const options = [
     type: BoringNeuronaleNetzeSlide
   },
   {
+    type: CoverStart
+  },
+  {
     type: BoringNeuronaleNetzeExampleSlide
   },
   {
@@ -117,41 +124,15 @@ const options = [
     type: BoringUsageSlideErkennung
   },
   {
-    type: BoringEthikSlide
-  },
-  {
     type: BoringExamplesSlide
-  },
-  {
-    type: BoringFutureSlide
-  },
-  {
-    type: BoringEndSlide
-  },
-  {
-    type: OneMoreThing
-  },
-  {
-    type: CoverStart
-  },
-  {
-    type: CoverIntroduction
-  },
-  {
-    type: GeschichteKI
   },
   {
     type: PraxisKI
   },
-  {
-    type: AnwendungKI
-  },
-  {
-    type: TrendsKI
-  },
-  {
-    type: RisikenKI
-  },
+  // {
+  //   type: AIorAlgorithmus
+  // },
+
   {
     type: CoverAIorArt
   },
@@ -164,8 +145,37 @@ const options = [
   {
     type: AIorArtGameSummary
   },
+
+  // {
+  //   type: OneMoreThing
+  // },
+
   {
     type: CoverLiveCoding
+  },
+  {
+    type: PromptingLandingPage
+  },
+  {
+    type: PromptingLogicPage
+  },
+  {
+    type: BoringPromptingSlide
+  },
+  {
+    type: TrendsKI
+  },
+  {
+    type: RisikenKI
+  },
+  {
+    type: BoringEthikSlide
+  },
+  {
+    type: BoringFutureSlide
+  },
+  {
+    type: BoringEndSlide
   }
 ]
 </script>
