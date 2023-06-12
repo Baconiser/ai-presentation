@@ -7,6 +7,7 @@ import neuralnet from '@/assets/images/boring/neuralnet.jpeg'
     title="Ethik"
     :src="neuralnet"
     :statements="[
+        'https://www.zdf.de/nachrichten/panorama/schumacher-interview-ki-aktuelle-chefin-100.html'
     ]"
   />
 </template>

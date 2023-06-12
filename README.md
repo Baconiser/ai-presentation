@@ -3,9 +3,9 @@
 ## Slides 
 
 Einleitung
-- Time Magazin + Photoshop
-- Titel
-- Kapitel
+- ✅ Time Magazin + Photoshop
+- ✅ Titel
+- ✅ Kapitel
 
 Hintergründe
 - Geschichte, woher kommt es, was ist es
@@ -15,7 +15,7 @@ Hintergründe
 - Neuronale Netze, was ist es
 
 Interaktiv
-- Publikum Interaktion
+- ✅ Publikum Interaktion
 - ChatGPT ansprechen
 
 Beispiele
@@ -24,18 +24,19 @@ Beispiele
   - Link Sammlung + Handout
 
 Von KI generierte Inhalte
-- OpenAI Gedicht vorlesen lassen + Video
+- ✅ OpenAI Gedicht vorlesen lassen + Video
 - Bilder Tindern um die Power von AI Image Generation zu zeigen
 
 Prompting Time - Was ist möglich
-- Landingpage erstellen 
-  - mehrere AI Tools verwenden (Background removal / Segmenter / Generative Fill)
-  - https://areyouhooked.webflow.io/
-- Cornhole Turnier Rangliste erstellen
+- ✅ Landingpage erstellen 
+  - ✅ mehrere AI Tools verwenden (Background removal / Segmenter / Generative Fill)
+  - ✅ https://areyouhooked.webflow.io/
+- ✅ Cornhole Turnier Rangliste erstellen
 
 Prompting 
 - Was ist eigentlich Prompting?
 - Negative Prompting
+- Hallucination
 
 Abschluss
 - Future Tools (Krasse neue Tools - was uns bevorsteht)
@@ -57,11 +58,7 @@ Abschluss
 
 
 ## Tools
-- AutoGPT
-- Den Chatbot Tay nahm dessen Entwickler Microsoft 2016 nur 24 Stunden nach Veröffentlichung vom Netz. Galactica des Facebook-Konzerns Meta hielt im vergangenen November immerhin drei Tage durch
 - Hautarzt schickt Muttermale an KI zum Krebs prüfen
-- Plan your dream trip in seconds
-- Meeting Zusammenfassungen
 - CoPilot Code Zeug
 - Webseiten Zusammenfassungen
 - Automatisches Tagging von Sachen
@@ -70,9 +67,6 @@ Abschluss
 - Voide
 - Whisper
 - Meta Segment
-- LinkinPark Musikvideo
-- CocaCola Werbung
-- Bier Werbung
 - Apple Vision Pro
 - wollen wir die big players auflisten in AI ?
   - Adobe,
@@ -82,13 +76,9 @@ Abschluss
 
 ## Links
 - https://twelvelabs.io/
-- https://vcai.mpi-inf.mpg.de/projects/DragGAN/
 - https://research.nvidia.com/labs/rtr/neural_appearance_models/
-- https://remodeled.ai/
-- https://imagebind.metademolab.com/
-- https://invideo.io/
+- 
 - https://github.com/SevaSk/ecoute
-- https://bjoernkarmann.dk/project/paragraphica
 - https://www.lalal.ai/
 - https://mubert.com/
 - https://www.golem.de/sonstiges/zustimmung/auswahl.html?from=https://www.golem.de/news/projekt-burnham-und-astro-amazon-will-haushaltsroboter-intelligenter-machen-2305-174055.html
@@ -100,9 +90,6 @@ Abschluss
 - https://www.gamestar.de/artikel/kuenstliche-intelligenz-maschine-sortiert-lego-ki,3352314.html
 - https://falconllm.tii.ae/
 - https://beta.albus.org/preview/92553A1A
-- https://arstechnica.com/information-technology/2023/05/ai-expanded-album-cover-artworks-go-viral-thanks-to-photoshops-generative-fill/
-- https://twitter.com/StepnEurope/status/1663340168458240001
-- https://www.restorephotos.io/
 - 
 
 ## Handout

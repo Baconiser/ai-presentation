@@ -18,6 +18,7 @@ import abraham from '@/assets/images/boring/abraham.jpg'
       '2011: KI „Watson“ gewinnt Quizshow',
       '2016: Computer schlägt stärksten Go-Spieler',
       '2018: KI debattiert über Raumfahrt und vereinbart einen Friseurtermin',
+      'Den Chatbot Tay nahm dessen Entwickler Microsoft 2016 nur 24 Stunden nach Veröffentlichung vom Netz. Galactica des Facebook-Konzerns Meta hielt im vergangenen November immerhin drei Tage durch'
     ]"
   />
 </template>

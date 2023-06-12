@@ -1,18 +1,19 @@
 <script lang="ts" setup>
-import handout from '@/assets/images/boring/handout.jpg'
 </script>
 
 <template>
   <BoringSlide
     title="Prompting"
-    :src="handout"
   >
     <template #content>
       <div class="space-y-4">
-        <p>Good prompting</p>
-        <p>Bad prompting</p>
-        <p>Expert prompting</p>
+        <p>ChatGPT im Job nutzen: Ziel der Aufgabe definieren</p>
+        <p>Die Aufgabe für die KI besonders konkret formulieren</p>
+        <p>Ausprobieren bei ChatGPT hilft weiter</p>
+        <p>Die Grenzen der KI kennen</p>
+        <p>Sensibel mit Daten umgehen</p>
       </div>
+      <p>Es kann und wird faktisch falsche Informationen produzieren, Fakten und Handlungen halluzinieren</p>
     </template>
   </BoringSlide>
 </template>

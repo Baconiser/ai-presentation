@@ -3,14 +3,10 @@ import { onKeyStroke } from '@vueuse/core'
 import store from '~/server/store'
 
 import CoverStart from '~/components/slides/CoverStart.vue'
-import CoverIntroduction from '~/components/slides/CoverIntroduction.vue'
-import GeschichteKI from '~/components/slides/GeschichteKI.vue'
 import TrendsKI from '~/components/slides/TrendsKI.vue'
-import PraxisKI from '~/components/slides/PraxisKI.vue'
 import RisikenKI from '~/components/slides/RisikenKI.vue'
 import CoverAIorArt from '~/components/slides/CoverAIorArt.vue'
 import AIorArtGame from '~/components/slides/AIorArtGame.vue'
-import AnwendungKI from '~/components/slides/AnwendungKI.vue'
 import BoringHistorySlide from '~/components/slides/BoringHistorySlide.vue'
 import BoringUsageSlideErkennung from '~/components/slides/BoringUsageSlideErkennung.vue'
 import BoringUsageSlideAnwendung from '~/components/slides/BoringUsageSlideAnwendung.vue'
@@ -25,14 +21,17 @@ import AIorArtGameDetails from '~/components/slides/AIorArtGameDetails.vue'
 import BoringNeuronaleNetzeExampleSlide from '~/components/slides/BoringNeuronaleNetzeExampleSlide.vue'
 import BoringMLExampleSlide from '~/components/slides/BoringMLExampleSlide.vue'
 import BoringEndSlide from '~/components/BoringEndSlide.vue'
-import OneMoreThing from '~/components/OneMoreThing.vue'
 import BoringEthikSlide from '~/components/slides/BoringEthikSlide.vue'
 import BoringFutureSlide from '~/components/slides/BoringFutureSlide.vue'
 import BoringExamplesSlide from '~/components/slides/BoringExamplesSlide.vue'
-import AIorAlgorithmus from '~/components/audience/AIorAlgorithmus.vue'
 import PromptingLandingPage from '~/components/slides/PromptingLandingPage.vue'
 import PromptingLogicPage from '~/components/slides/PromptingLogicPage.vue'
 import BoringPromptingSlide from '~/components/slides/BoringPromptingSlide.vue'
+import PromptingLandingPageDone from '~/components/slides/PromptingLandingPageDone.vue'
+import FutureTools from '~/components/slides/FutureTools.vue'
+import FunnyUses from '~/components/slides/FunnyUses.vue'
+import OneMoreThing from '~/components/OneMoreThing.vue'
+import KIGedicht from '~/components/slides/KIGedicht.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -127,7 +126,7 @@ const options = [
     type: BoringExamplesSlide
   },
   {
-    type: PraxisKI
+    type: KIGedicht
   },
   {
     type: CoverAIorArt
@@ -149,6 +148,9 @@ const options = [
     type: PromptingLandingPage
   },
   {
+    type: PromptingLandingPageDone
+  },
+  {
     type: PromptingLogicPage
   },
   {
@@ -156,6 +158,12 @@ const options = [
   },
   {
     type: TrendsKI
+  },
+  {
+    type: FutureTools
+  },
+  {
+    type: FunnyUses
   },
   {
     type: RisikenKI
@@ -168,10 +176,10 @@ const options = [
   },
   {
     type: BoringEndSlide
+  },
+  {
+    type: OneMoreThing
   }
-  // {
-  //   type: OneMoreThing
-  // },
 ]
 </script>
 

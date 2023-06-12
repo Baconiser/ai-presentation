@@ -31,6 +31,19 @@
         @apply text-black text-2xl;
     }
 
+    pre {
+        @apply text-black;
+        @apply block whitespace-pre overflow-x-auto;
+        background: #3a3a3a;
+        color: white;
+        padding: 20px;
+        box-shadow: 0 0 8px 0 rgba(255,59,101, 0.5);
+    }
+
+    ul {
+       @apply list-disc list-outside pl-[40px];
+    }
+
     .boring a {
         color: #ff3b65;
         text-decoration: underline;
@@ -40,6 +53,8 @@
         font-weight: 100;
         font-family: operator mono,Courier New,monospace;
         line-height: 1.5;
+        list-style-type: "🤖";
+        padding-inline-start: 1ch;
     }
 
     .boring .hl {

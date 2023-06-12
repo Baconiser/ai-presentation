@@ -2,10 +2,11 @@
 </script>
 
 <template>
-  <boring-slide title="Trends und Entwicklungen in der KI">
+  <boring-slide title="KI Videos">
     <template #content>
       <poem-section>
         <template #poem>
+          <li><a href="https://www.instagram.com/p/CrbU3OApKkV/" target="_blank">Pizza Werbung</a></li>
           <iframe
             src="https://www.youtube.com/embed/7NK_JOkuSVY"
             title="Lost [Official Music Video] - Linkin Park"
