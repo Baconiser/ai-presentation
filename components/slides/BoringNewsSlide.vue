@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const steps = ref(0)
+const steps = ref(-1)
 </script>
 
 <template>
@@ -10,8 +10,11 @@ const steps = ref(0)
           <div class="w-full h-full flex items-center">
             <img v-show="steps > 0" src="@/assets/images/news/papst.jpg">
           </div>
-          <div class="w-full h-full flex items-center">
+          <div v-if="steps >= 0" class="w-full h-full flex items-center">
             <img class="scale-110 " src="@/assets/images/news/time.jpeg">
+          </div>
+          <div v-if="steps === -1" class="w-full h-full flex items-center">
+            <video src="@/assets/videos/jesusbaby.mp4" loading="lazy" controls />
           </div>
           <div class="w-full h-full flex items-center">
             <img v-show="steps === 2" src="@/assets/images/news/trump.jpeg">

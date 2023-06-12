@@ -7,7 +7,8 @@ import future from '@/assets/images/boring/future.jpg'
     title="Ausblick"
     :src="future"
     :statements="[
-      'Zukunft'
+      'Over 2k new Al tools have launched in the past 30 days',
+      'Viele tot einfach'
     ]"
   />
 </template>

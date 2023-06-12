@@ -17,6 +17,7 @@ import handout from '@/assets/images/boring/handout.jpg'
           <li><a href="https://www.midjourney.com/" target="_blank">Midjourney</a></li>
           <li><a href="https://stablediffusionweb.com/" target="_blank">Stable Diffusion</a></li>
           <li><a href="https://www.adobe.com/de/products/photoshop.html" target="_blank">Adobe Photoshop</a></li>
+          <li><a href="https://clipdrop.co/uncrop" target="_blank">Uncrop</a></li>
           <li><a href="https://githubnext.com/" target="_blank">Github Next</a></li>
           <li><a href="https://beta.elevenlabs.io/" target="_blank">ElevenLabs</a></li>
           <li><a href="https://www.d-id.com/" target="_blank">D-ID</a></li>

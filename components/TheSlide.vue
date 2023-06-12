@@ -24,7 +24,7 @@ function getGifVoteCount (gifId: string) {
     <div class="grow flex min-h-0 w-full">
       <slot />
     </div>
-    <footer v-if="voteSlides.includes(currentSlideIdx)" class="shrink-0 w-[66vw] h-[100px] z-10 mb-4 flex justify-around">
+    <footer v-if="!noInteractionSlides.includes(currentSlideIdx)" class="shrink-0 w-[66vw] h-[100px] z-10 mb-4 flex justify-around">
       <div v-for="(gif, index) in votedGifIds" :key="index" class="gif relative flex align-center justify-center rounded-lg overflow-hidden aspect-[16/11]">
         <span
           class="jello-horizontal counter absolute top-0 left-0

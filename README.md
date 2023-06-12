@@ -3,8 +3,7 @@
 ## Slides 
 
 Einleitung
-- Jesus?
-- ✅ Time Magazin + Photoshop
+- ✅ Jesus + Time Magazin + Photoshop
 - ✅ Titel
 - ✅ Kapitel
 
@@ -17,7 +16,7 @@ Hintergründe
 
 Interaktiv
 - ✅ Publikum Interaktion
-- ChatGPT ansprechen
+- ChatGPT + 11Labs ansprechen
 
 Beispiele
 - Anwendungsgebiete + Beispiele
@@ -47,7 +46,6 @@ Abschluss
 
 
 ## TODOs
-- Over 2k new Al tools have launched in the past 30 days.
 - Was ist ein LLM wie wird es trainiert
 - Deep Learning?
 - Ai kreiert neue Jobs
@@ -59,15 +57,10 @@ Abschluss
 
 
 ## Tools
-- Hautarzt schickt Muttermale an KI zum Krebs prüfen
 - CoPilot Code Zeug
 - Webseiten Zusammenfassungen
 - Automatisches Tagging von Sachen
-- Video
-- Audio
-- Voide
 - Whisper
-- Meta Segment
 - Apple Vision Pro
 - wollen wir die big players auflisten in AI ?
   - Adobe,
@@ -76,22 +69,18 @@ Abschluss
   - openai
 
 ## Links
-- https://twelvelabs.io/
-- https://research.nvidia.com/labs/rtr/neural_appearance_models/
-- 
 - https://github.com/SevaSk/ecoute
 - https://www.lalal.ai/
 - https://mubert.com/
-- https://www.golem.de/sonstiges/zustimmung/auswahl.html?from=https://www.golem.de/news/projekt-burnham-und-astro-amazon-will-haushaltsroboter-intelligenter-machen-2305-174055.html
-- https://mind-video.com/
+- https://www.golem.de/news/projekt-burnham-und-astro-amazon-will-haushaltsroboter-intelligenter-machen-2305-174055.html
+- 
 - https://web.archive.org/web/20230531203946/https://website-nm4keew22-humanloopml.vercel.app/blog/openai-plans
 - https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/
 - https://www.proplanta.de/agrar-nachrichten/landtechnik/sortiermaschine-fuer-rapssaatgut-was-kann-ki-leisten_article1644152288.html
 - https://www.bvse.de/recycling/recycling-nachrichten/5386-mehr-sortiersicherheit-durch-kuenstliche-intelligenz-gestuetzte-software-und-hardwareupgrades.html
 - https://www.gamestar.de/artikel/kuenstliche-intelligenz-maschine-sortiert-lego-ki,3352314.html
 - https://beta.albus.org/preview/92553A1A
-- https://styledrop.github.io/
-- https://flair.ai/
+- meeting zusammenfassungen
 
 ## Handout
 
