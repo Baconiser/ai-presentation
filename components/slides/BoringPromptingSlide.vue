@@ -7,13 +7,61 @@
   >
     <template #content>
       <div class="space-y-4">
-        <p>ChatGPT im Job nutzen: Ziel der Aufgabe definieren</p>
-        <p>Die Aufgabe für die KI besonders konkret formulieren</p>
-        <p>Ausprobieren bei ChatGPT hilft weiter</p>
-        <p>Die Grenzen der KI kennen</p>
-        <p>Sensibel mit Daten umgehen</p>
+        <p>
+          Es ist wichtig, die Aufgabe für die KI <span class="hl">besonders konkret</span> zu formulieren.
+        </p>
+        <p><span class="hl">Ausprobieren</span> kann helfen, die Interaktion zu verbessern.</p>
+        <p>Es ist wichtig <span class="hl">sensibel mit Daten</span> umzugehen.</p>
+        <p>Es sollte beachtet werden, dass die KI tatsächlich falsche Informationen produzieren kann und wird, sowie Fakten und Handlungen <span class="hl">halluzinieren kann</span>.</p>
+        <p>Zero Shot Prompting</p>
+        <pre class="text-sm">
+Complete the sentence: The sun is
+        </pre>
+        <p>Few Shot Prompting</p>
+        <pre class="text-sm">
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+A: The answer is False.
+
+The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.
+A: The answer is True.
+
+The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.
+A: The answer is True.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+A: </pre>
       </div>
-      <p>Es kann und wird faktisch falsche Informationen produzieren, Fakten und Handlungen halluzinieren</p>
+      <div class="space-y-4">
+        <p>
+          Beginne mit <span class="hl">"I want you to act as..."</span> (personal trainer/copywriter/comedian/etc.)
+        </p>
+        <p>
+          Dann <span class="hl">"I will..."</span>
+          Welche Informationen wirst du genau zur Verfügung stellen?
+        </p>
+        <p>
+          Dann <span class="hl">"You will..."</span>
+          Du kannst so spezifisch sein, wie du möchtest.
+          Welche Punkte sollte es zurückgeben? Wie ist der Stil? Tonfall?
+        </p>
+        <p>
+          Dann formuliere deine spezifische Anfrage.
+        </p>
+        <pre>
+I want you to act as an advertiser.
+I will give you a product and the target
+customer.
+You will create a campaign a
+to promote the product. You will choose
+the product's slogan, channels for
+promotion, the key messaging, and the
+brand guidelines.
+My first request: "Product: A new type
+of candy that looks like rocks and tastes
+like fruit. Target Audience: Young adults
+aged 15-23"
+          </pre>
+      </div>
     </template>
   </BoringSlide>
 </template>

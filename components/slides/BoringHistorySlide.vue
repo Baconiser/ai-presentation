@@ -7,7 +7,7 @@ import abraham from '@/assets/images/boring/abraham.jpg'
     title="Geschichte"
     :src="abraham"
     :statements="[
-      'Seit der Mitte des vergangenen Jahrhunderts arbeiten Wissenschaftler an Künstlicher Intelligenz. Ihr Ziel: Maschinen zu entwickeln, die wie Menschen lernen und denken.',
+      'Seit der Mitte des vergangenen Jahrhunderts arbeiten Wissenschaftler an Künstlicher Intelligenz.',
       '1936: Turingmaschine: Alan Turing legt den theoretischen Grundstein für Maschinen, die Algorithmen verarbeiten.',
       '1956: Die Geschichte beginnt: der Begriff „KI“ entsteht',
       '1966: Geburt des ersten Chatbots',

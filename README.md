@@ -3,6 +3,7 @@
 ## Slides 
 
 Einleitung
+- Jesus?
 - ✅ Time Magazin + Photoshop
 - ✅ Titel
 - ✅ Kapitel
@@ -26,6 +27,7 @@ Beispiele
 Von KI generierte Inhalte
 - ✅ OpenAI Gedicht vorlesen lassen + Video
 - Bilder Tindern um die Power von AI Image Generation zu zeigen
+  - 12 Bilder
 
 Prompting Time - Was ist möglich
 - ✅ Landingpage erstellen 
@@ -34,14 +36,13 @@ Prompting Time - Was ist möglich
 - ✅ Cornhole Turnier Rangliste erstellen
 
 Prompting 
-- Was ist eigentlich Prompting?
+- ✅ Was ist eigentlich Prompting?
 - Negative Prompting
-- Hallucination
+- ✅ Hallucination
 
 Abschluss
 - Future Tools (Krasse neue Tools - was uns bevorsteht)
-- Ethik
-- Gefahren
+- Ethik / Gefahren
 - Zukunft
 
 
@@ -88,25 +89,11 @@ Abschluss
 - https://www.proplanta.de/agrar-nachrichten/landtechnik/sortiermaschine-fuer-rapssaatgut-was-kann-ki-leisten_article1644152288.html
 - https://www.bvse.de/recycling/recycling-nachrichten/5386-mehr-sortiersicherheit-durch-kuenstliche-intelligenz-gestuetzte-software-und-hardwareupgrades.html
 - https://www.gamestar.de/artikel/kuenstliche-intelligenz-maschine-sortiert-lego-ki,3352314.html
-- https://falconllm.tii.ae/
 - https://beta.albus.org/preview/92553A1A
-- 
+- https://styledrop.github.io/
+- https://flair.ai/
 
 ## Handout
-- OpenAI Chat
-- Bard
-- Falcon
-- OpenAI Dall-E
-- Midjourney
-- Github Next
-- 11Labs
-- d-id
-- synthesia
-- https://www.emergentmind.com/
-- https://github.com/f/awesome-chatgpt-prompts
-- https://github.com/trigaten/Learn_Prompting
-- https://www.phind.com/
-
 
 ## Stuff
 - Generierung: AI generiert neue Inhalte wie Bilder, Texte oder Videos. Das umfasst Anwendungen wie Bildgenerierung, Textgenerierung, musikalische Komposition und Videoproduktion.
@@ -115,3 +102,4 @@ Abschluss
 - Steuerung: AI steuert und optimiert Prozesse, Systeme oder Entscheidungen. Das umfasst Anwendungen wie autonome Fahrzeuge, Entscheidungsunterstützungssysteme, Robotik und Prozessautomatisierung.
 
 ## One more thing???
+- Michael Film Wiki LLM
