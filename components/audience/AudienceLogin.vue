@@ -16,12 +16,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen bg-stone-900 text-white">
     <div class="relative isolate h-screen py-8 overflow-auto px-6 lg:px-8 h-full">
       <div class="flex min-h-full flex-col justify-center items-center px-6 lg:px-8">
         <div class="mb-4 sm:mb-8 flex sm:justify-center">
           <div
-            class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/10"
+            class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-white/10"
           >
             w.e.b. Alpen Code Retreat
           </div>

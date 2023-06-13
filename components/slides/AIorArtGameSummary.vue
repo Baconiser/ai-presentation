@@ -34,17 +34,19 @@ const artistPercentage = (id: AiOrArt): number => {
 </script>
 
 <template>
-  <section class="p-8 w-full">
-    <div class="grid grid-cols-6 gap-6">
-      <div v-for="content in images" :key="content.image" class="flex flex-col gap-4 items-center">
-        <p class="text-2xl">
-          {{ isAI(content) ? '🤖' : '🎨' }}
-        </p>
-        <img :src="content.image" alt="Content" class="w-60 aspect-[1/1] object-cover">
-        <pie-chart :ai="aiPercentage(content)" :artist="artistPercentage(content)" :is-ai="isAI(content)"/>
+  <boring-slide>
+    <template #content>
+      <div class="grid grid-cols-6 gap-6">
+        <div v-for="content in images" :key="content.image" class="flex flex-col gap-4 items-center">
+          <p class="text-2xl">
+            {{ isAI(content) ? '🤖' : '🎨' }}
+          </p>
+          <img :src="content.image" alt="Content" class="w-60 aspect-[1/1] object-cover">
+          <pie-chart :ai="aiPercentage(content)" :artist="artistPercentage(content)" :is-ai="isAI(content)" />
+        </div>
       </div>
-    </div>
-  </section>
+    </template>
+  </boring-slide>
 </template>
 
 <style scoped></style>

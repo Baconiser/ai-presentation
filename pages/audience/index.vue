@@ -5,14 +5,14 @@ const currentSlideIdx = useState<number>('currentSlideIdx')
 </script>
 
 <template>
-  <div class="relative overflow-hidden w-screen h-screen">
+  <div class="relative overflow-hidden w-screen h-screen bg-stone-900">
     <transition
       name="fade"
       mode="out-in"
     >
       <AudienceLogin v-if="currentSlideIdx === 7" />
       <AudienceImagesTindern v-else-if="currentSlideIdx === 14" />
-      <div v-else-if="noInteractionSlides.includes(currentSlideIdx)" class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center">
+      <div v-else-if="noInteractionSlides.includes(currentSlideIdx)" class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center text-white">
         <p class="text-lg leading-8 text-center">
           Auf dieser Folie gibt es keine Interaktion.
         </p>

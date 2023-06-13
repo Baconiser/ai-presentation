@@ -24,7 +24,7 @@ const randomClass = computed(() => {
       <template v-if="headline">
         <h1 class="font-bold max-w-screen-xl text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-center" v-html="headline" />
       </template>
-      <p v-if="text">
+      <p v-if="text" class="text-white">
         {{ text }}
       </p>
       <slot name="text" />

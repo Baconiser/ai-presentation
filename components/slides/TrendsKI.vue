@@ -7,31 +7,10 @@
       <poem-section>
         <template #poem>
           <li><a href="https://www.instagram.com/p/CrbU3OApKkV/" target="_blank">Pizza Werbung</a></li>
-          <iframe
-            src="https://www.youtube.com/embed/7NK_JOkuSVY"
-            title="Lost [Official Music Video] - Linkin Park"
-            frameborder="0"
-            allow=""
-            allowfullscreen
-            class="w-full aspect-[16/9]"
-          />
-          <p class="hint">
-            Lost [Official Music Video] - Linkin Park
-          </p>
+          <li><a href="https://www.youtube.com/embed/7NK_JOkuSVY" target="_blank">Lost [Official Music Video] - Linkin Park</a></li>
+          <li><a href="https://www.youtube.com/embed/VGa1imApfdg" target="_blank">Coca-Cola® Masterpiece</a></li>
         </template>
-        <template #img>
-          <iframe
-            src="https://www.youtube.com/embed/VGa1imApfdg"
-            title="Coca-Cola® Masterpiece"
-            frameborder="0"
-            allow=""
-            allowfullscreen
-            class="w-full aspect-[16/9]"
-          />
-          <p class="hint">
-            Coca-Cola® Masterpiece
-          </p>
-        </template>
+        <template #img />
       </poem-section>
     </template>
   </boring-slide>

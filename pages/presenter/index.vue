@@ -12,12 +12,12 @@ onKeyStroke('w', () => {
 </script>
 
 <template>
-  <div class="h-screen">
+  <div class="h-screen bg-stone-900 text-white">
     <div class="relative isolate px-6 lg:px-8 h-full">
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 h-full flex-col flex items-center">
         <div class="mb-4 sm:mb-8 flex sm:justify-center">
           <div
-            class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/10"
+            class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-white/10"
           >
             w.e.b. Alpen Code Retreat
           </div>

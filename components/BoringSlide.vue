@@ -24,7 +24,7 @@ const props = defineProps({
     <div class="stylish absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
       <img
         alt=""
-        class="absolute right-0 top-0 translate-x-[-55%] translate-y-[-10%] -scale-x-100 sm:right-[-80%] sm:translate-x-[-98%] sm:translate-y-[-6%] lg:translate-x-[-106%] xl:translate-x-[-122%]"
+        class="absolute right-[-150px] top-0 h-[1200px] w-[600px] -scale-x-100"
         src="@/assets/images/background.6c3571e0.jpg"
         loading="lazy"
         width="918"

@@ -2,21 +2,21 @@
 </script>
 
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen bg-stone-900">
     <div class="relative isolate min-h-screen px-6 lg:px-8 h-full">
       <div class="max-w-2xl pt-12 pb-12 mx-auto min-h-screen h-full flex-col flex items-center justify-center">
         <div class="mb-4 sm:mb-8 flex sm:justify-center">
           <div
-            class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/10"
+            class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 hover:ring-gray-900/20 ring-white/10 text-white"
           >
             w.e.b. Alpen Code Retreat
           </div>
         </div>
         <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-6xl text-white">
             Eure Reise beginnt
           </h1>
-          <p class="mt-6 text-lg leading-8">
+          <p class="mt-6 text-lg leading-8 text-white">
             Taucht ein in die faszinierende Welt der Künstlichen Intelligenz! Begleitet uns auf einer spannenden Reise
             durch die Geschichte und die unglaublichen Anwendungsfälle von KI in verschiedenen Branchen. Erweitert Euer
             Wissen und lasst Euch von den Möglichkeiten begeistern.

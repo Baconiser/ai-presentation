@@ -61,7 +61,7 @@ function getHandledState (content: string) {
 </script>
 
 <template>
-  <div class="content-stack relative w-full h-screen overflow-hidden flex flex-col max-h-full justify-center items-center gap-8">
+  <div class="bg-stone-900 content-stack relative w-full h-screen overflow-hidden flex flex-col max-h-full justify-center items-center gap-8">
     <div
       class="content-stack__cards w-80 max-w-80  mx-auto relative aspect-[1/1]"
       :style="`left: ${Math.floor(contents.length) / 2 * 6}px; margin-top: ${contents.length * 6}px; margin-bottom: ${contents.length * 6}px`"
@@ -79,7 +79,7 @@ function getHandledState (content: string) {
       </Card>
       <div
         v-if="currentIndex < 0"
-        class="w-full h-full flex justify-center items-center"
+        class="w-full h-full flex justify-center items-center text-white"
         :style="`margin-left: -${Math.floor(contents.length) / 2 * 6}px;`"
       >
         Fertig!
