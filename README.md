@@ -13,7 +13,10 @@ Hintergründe
 - ML, was ist es 
 - ML, Beispiel 
 - Neuronale Netze, was ist es
-
+  if (checkHwTeilEmpty(softwareVergleichWunschDTO) || checkHwVersionEmpty(softwareVergleichWunschDTO)) {
+  style.setBackground(Color.LIGHT_GRAY);
+  return;
+  }
 Interaktiv
 - ✅ Publikum Interaktion
 - ChatGPT + 11Labs ansprechen

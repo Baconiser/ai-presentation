@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { AiOrArt } from '~/utils/aiOrArt'
+
 const props = defineProps({
   contents: {
-    type: Array as PropType<string[]>,
+    type: Array as PropType<AiOrArt[]>,
     default: (): string[] => []
   },
   type: {
@@ -10,18 +12,17 @@ const props = defineProps({
   }
 })
 
-const handledContents = ref<{ content: string, liked: boolean }[]>([])
+const handledContents = ref<{ content: AiOrArt, liked: boolean }[]>([])
 
 const currentIndex = computed(() => {
   return (props.contents.length - 1) - handledContents.value.length
 })
 
 const likeContent = (index: number) => {
-  console.log(`Liked content at index ${index}`)
   vote(props.contents[index], true)
 }
 
-function vote (content: string, liked: boolean) {
+function vote (content: AiOrArt, liked: boolean) {
 
   const userId = IdUtil.getId();
 
@@ -30,7 +31,9 @@ function vote (content: string, liked: boolean) {
     liked
   })
 
-  // TODO: wenn der User sich nicht angemeldet hat, kann er auch nicht mitmachen
+
+  let vote = liked ? 'Artist' : 'AI';
+
   useFetch('/api/send_vote/', {
     method: 'POST',
     headers: {
@@ -38,9 +41,8 @@ function vote (content: string, liked: boolean) {
     },
     body: JSON.stringify({
       userId,
-      id: content,
-      vote: liked ? 'Artist' : 'AI',
-      content
+      content,
+      vote
     })
   })
 }
@@ -50,7 +52,7 @@ const dislikeContent = (index: number) => {
 }
 
 function getHandledState (content: string) {
-  const handledContent = handledContents.value.find(e => e.content === content)
+  const handledContent = handledContents.value.find(e => e.content.image === content)
   if (handledContent) {
     return handledContent.liked ? 'liked' : 'disliked'
   }
@@ -66,14 +68,14 @@ function getHandledState (content: string) {
     >
       <Card
         v-for="(content, index) in contents"
-        :id="content"
+        :id="content.image"
         :key="index"
         :index="contents.length - index"
-        :handled-state="getHandledState(content)"
+        :handled-state="getHandledState(content.image)"
         @like="likeContent(index)"
         @dislike="dislikeContent(index)"
       >
-        <img v-if="type === 'image'" :src="content" alt="Content" class="w-full h-full object-cover">
+        <img v-if="type === 'image'" :src="content.image" alt="Content" class="w-full h-full object-cover">
       </Card>
       <div
         v-if="currentIndex < 0"

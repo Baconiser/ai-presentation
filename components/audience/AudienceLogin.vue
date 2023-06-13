@@ -2,13 +2,15 @@
 import IdUtil from '~/utils/IdUtil'
 const name = ref('')
 
+const idUsernameMap = useState<Record<string, string>>('idUsernameMap')
 onMounted(() => {
-  // TODO Michael LoginFlow: Wenn User noch kein User erstellt, dann weiter auf Loginseite
-  const userId = IdUtil.checkForId()
-  if (!userId) {
+  const userId = IdUtil.getId()
+  let username = idUsernameMap.value[userId];
+
+  if (!username) {
     navigateTo('/audience/login')
   } else {
-    name.value = userId
+    name.value = username
   }
 })
 </script>

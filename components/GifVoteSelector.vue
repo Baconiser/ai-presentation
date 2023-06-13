@@ -5,8 +5,6 @@ import ParticleEffect from '~/components/ParticleEffect.vue'
 
 function voteForGif (gifId: string) {
   const userId = IdUtil.getId()
-  // TODO: wenn der User sich nicht angemeldet hat, kann er auch nicht mitmachen
-  if (!userId) { return }
 
   fetch('/api/vote_gif/', {
     body: JSON.stringify({ userId, gifId }),
@@ -17,10 +15,12 @@ function voteForGif (gifId: string) {
   })
 }
 
+const idUsernameMap = useState<Record<string, string>>('idUsernameMap')
+
 onMounted(() => {
-  // TODO Michael LoginFlow: Wenn User noch kein User dann weiter auf Loginseite
-  const userId = IdUtil.checkForId()
-  if (!userId) {
+  const userId = IdUtil.getId()
+  let username = idUsernameMap.value[userId];
+  if (!username) {
     navigateTo('/audience/login')
   }
 })

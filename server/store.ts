@@ -108,7 +108,8 @@ class Store {
     return {
       votes: this.votes,
       gif_votes: this.gif_votes,
-      currentSlideIdx: this.currentSlideIdx
+      currentSlideIdx: this.currentSlideIdx,
+      users: this.users
     }
   }
 }

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { User } from '~/server/store'
+
 const data = reactive({
   votes: [],
   gif_votes: [],
@@ -7,6 +9,7 @@ const data = reactive({
 const currentSlideIdx = useState('currentSlideIdx', () => data.currentSlideIdx)
 const votedGifs = useState('votedGifs', () => [])
 const tinderVotes = useState('tinderVotes', () => [])
+const idUsernameMap = useState<Record<string, string>>('idUsernameMap', () => ({}) )
 
 const { data: state } = await useFetch<{ votes: [], gif_votes: [], currentSlideIdx: 0 }>('/api/get_state/')
 if (state.value) {
@@ -32,13 +35,23 @@ function updateState (state: any) {
   currentSlideIdx.value = state.currentSlideIdx
   votedGifs.value = state.gif_votes
   tinderVotes.value = state.votes
+
+  const idMap: Record<string, string> = {}
+  state.users.forEach(({
+    id,
+    name
+  }: User) => {
+    idMap[id] = name;
+  })
+  idUsernameMap.value = idMap;
+
 }
 
 </script>
 
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage/>
   </NuxtLayout>
 </template>
 

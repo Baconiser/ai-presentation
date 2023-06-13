@@ -25,9 +25,9 @@ Text als HTML formatiert, so wie das beispiel, hier ist mein Text:
 -Lernprozess: Durch Backpropagation und Gradientenabstieg, Anpassung der Neuronengewichte basierend auf Feedback und schrittweise Fehlerminimierung.'`)
 
 const data = {
-  apiKey: '',
-  model: 'text-davinci-003',
-  prompt: prompt.value,
+  apiKey: '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',
+  model: 'gpt-4',
+  messages: [{role: "user", content:prompt.value, }],
   temperature: 0.7,
   maxTokens: 1500,
   frequencyPenalty: 0
@@ -35,7 +35,7 @@ const data = {
 
 const getFromOpenAI = () => {
   loading.value = true
-  return $fetch('https://openai-proxy-ls.deno.dev/api/complete', {
+  return $fetch('https://openai-proxy-ls.deno.dev/api/chat/complete', {
     method: 'POST',
     body: JSON.stringify(data)
   })
@@ -44,7 +44,7 @@ const getFromOpenAI = () => {
 const json = ref({})
 const text = computed(() => {
   if (summoned) {
-    return json.value.choices[0].text
+    return json.value.choices[0].message.content
   } else {
     return ''
   }

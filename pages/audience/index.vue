@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { noInteractionSlides } from '~/utils/slides'
+
 const currentSlideIdx = useState<number>('currentSlideIdx')
 </script>
 
