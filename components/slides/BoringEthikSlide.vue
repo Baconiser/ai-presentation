@@ -15,6 +15,15 @@ import neuralnet from '@/assets/images/boring/neuralnet.jpeg'
       </ul>
       <img src="@/assets/images/future/long-vs-short-view.png" alt="">
     </template>
+
+    'Trainingsdaten sind oft urheberrechtlich geschützt gewesen',
+    'Diebstahl?',
+    'Billige Arbeitskräfte kennzeichnen Datensets fürs Training',
+    'KI in Werbung',
+    'KI im Millitär',
+    'Automatisches Geschütz irgendwo in Syrien?',
+    'Drohnen Dillema',
+
   </BoringSlide>
 </template>
 

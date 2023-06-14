@@ -32,6 +32,7 @@ import FunnyUses from '~/components/slides/FunnyUses.vue'
 import OneMoreThing from '~/components/OneMoreThing.vue'
 import KIGedicht from '~/components/slides/KIGedicht.vue'
 import GifSummary from '~/components/slides/GifSummary.vue'
+import SchlussSlide from '~/components/slides/SchlussSlide.vue'
 import BoringUsageSlideAnwendungAllgemein from '~/components/slides/BoringUsageSlideAnwendungAllgemein.vue'
 
 const route = useRoute()
@@ -183,6 +184,9 @@ const options = [
   },
   {
     type: GifSummary
+  },
+  {
+    type: SchlussSlide
   }
 ]
 </script>

@@ -33,6 +33,35 @@ class Store {
   listeners: Listener[] = []
   currentSlideIdx = 0
   users: User[] = []
+  poemName: string | null = null
+  creatingPoem = false
+  poemText: string | null = null
+
+  isCreatingPoem () {
+    return this.creatingPoem
+  }
+
+  setPoemText (text: string) {
+    this.poemText = text
+    this.emitToAll()
+  }
+
+  getPoemText () {
+    return this.poemText
+  }
+
+  setPoemName (name: string) {
+    this.poemName = name
+    this.emitToAll()
+  }
+
+  setCreatingPoem (creating: boolean) {
+    this.creatingPoem = creating
+  }
+
+  getPoemName () {
+    return this.poemName
+  }
 
   setCurrentSlideIdx (idx: number) {
     this.currentSlideIdx = idx
@@ -50,6 +79,7 @@ class Store {
   emitToAll () {
     this.listeners.forEach(listener => listener())
   }
+
   addUser (user: User) {
     if (this.doesUserExist(user)) {
       this.renameUser(user)
@@ -103,12 +133,18 @@ class Store {
     this.listeners.push(listener)
   }
 
+  getUsers () {
+    return this.users
+  }
+
   getState () {
     return {
       votes: this.votes,
       gif_votes: this.gif_votes,
       currentSlideIdx: this.currentSlideIdx,
-      users: this.users
+      users: this.users,
+      poemName: this.poemName,
+      poemText: this.poemText
     }
   }
 }

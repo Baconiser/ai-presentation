@@ -72,3 +72,4 @@ Abschluss
 
 ## One more thing???
 - Michael Film Wiki LLM
+- ✅ Generierung Gedicht mittels gpt4 + elevenlabs

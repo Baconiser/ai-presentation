@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const summoned = ref(false)
 const loading = ref(false)
+
+const allowPoem = useState('allowPoem', () => false)
 const prompt = ref(`
 persona:
   profession: Experte für KI-Präsentationen und Java-Programmierung
@@ -27,7 +29,10 @@ Text als HTML formatiert, so wie das beispiel, hier ist mein Text:
 const data = {
   apiKey: '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',
   model: 'gpt-4',
-  messages: [{role: "user", content:prompt.value, }],
+  messages: [{
+    role: 'user',
+    content: prompt.value,
+  }],
   temperature: 0.7,
   maxTokens: 1500,
   frequencyPenalty: 0
@@ -63,17 +68,25 @@ async function summon () {
 
 <template>
   <BoringSlide
-    title="Neuronale Netze - Beispiel"
+      title="Neuronale Netze - Beispiel"
   >
     <template #content>
       <button v-if="!summoned" :disabled="loading" class="button" type="button" @click="summon">
         <span v-if="loading">Waiting for OpenAI</span>
         <span v-else>Summon OpenAI</span>
       </button>
+
+      <div>
+        <label for="poem">
+          <input id="poem" type="checkbox" v-model="allowPoem">
+          Gedicht generierung aktivieren
+        </label>
+
+      </div>
       <div
-        v-if="summoned"
-        class="space-y-4"
-        v-html="text"
+          v-if="summoned"
+          class="space-y-4"
+          v-html="text"
       />
     </template>
   </BoringSlide>
