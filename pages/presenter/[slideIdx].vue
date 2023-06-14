@@ -32,6 +32,7 @@ import FunnyUses from '~/components/slides/FunnyUses.vue'
 import OneMoreThing from '~/components/OneMoreThing.vue'
 import KIGedicht from '~/components/slides/KIGedicht.vue'
 import GifSummary from '~/components/slides/GifSummary.vue'
+import BoringUsageSlideAnwendungAllgemein from '~/components/slides/BoringUsageSlideAnwendungAllgemein.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -115,6 +116,9 @@ const options = [
   },
   {
     type: BoringNeuronaleNetzeExampleSlide
+  },
+  {
+    type: BoringUsageSlideAnwendungAllgemein
   },
   {
     type: BoringUsageSlideAnwendung

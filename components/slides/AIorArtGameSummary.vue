@@ -4,10 +4,6 @@ import { images, AiOrArt } from '~/utils/aiOrArt'
 
 const tinderVotes = useState<Vote[]>('tinderVotes')
 
-const isAI = (img: AiOrArt) => {
-  return img.type === 'AI'
-}
-
 const constVotesForId = (id: string) => {
   return tinderVotes.value.filter(vote => vote.id === id)
 }
@@ -20,14 +16,14 @@ const countArtistVotes = (votes: Vote[]) => {
   return votes.filter((vote: Vote) => vote.vote === 'Artist')
 }
 
-const aiPercentage = (id: AiOrArt): number => {
-  const votes = constVotesForId(id.image)
+const aiPercentage = (id: string): number => {
+  const votes = constVotesForId(id)
   const aiVotes = countAiVotes(votes)
   return Math.round(((aiVotes.length / votes.length) || 0) * 100)
 }
 
-const artistPercentage = (id: AiOrArt): number => {
-  const votes = constVotesForId(id.image)
+const artistPercentage = (id: string): number => {
+  const votes = constVotesForId(id)
   const artistVotes = countArtistVotes(votes)
   return Math.round(((artistVotes.length / votes.length) || 0) * 100)
 }
@@ -37,12 +33,15 @@ const artistPercentage = (id: AiOrArt): number => {
   <boring-slide>
     <template #content>
       <div class="grid grid-cols-6 gap-6">
+        <div class="col-span-6">
+          {{ images }}
+        </div>
         <div v-for="content in images" :key="content.image" class="flex flex-col gap-4 items-center">
           <p class="text-2xl">
-            {{ isAI(content) ? '🤖' : '🎨' }}
+            {{ content.type === 'AI' ? '🤖' : '🎨' }}
           </p>
           <img :src="content.image" alt="Content" class="w-60 aspect-[1/1] object-cover">
-          <pie-chart :ai="aiPercentage(content)" :artist="artistPercentage(content)" :is-ai="isAI(content)" />
+          <pie-chart :ai="aiPercentage(content.image)" :artist="artistPercentage(content.image)" :is-ai="content.type === 'AI'" />
         </div>
       </div>
     </template>

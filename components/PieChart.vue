@@ -16,7 +16,7 @@ const calculateStrokeOffset = (ai, artist) => {
 }
 
 const aiColor = computed(() => {
-  if (props.isAi && props.ai > props.artist) {
+  if (props.isAi && props.ai >= props.artist) {
     return 'green'
   } else {
     return 'red'
@@ -24,7 +24,7 @@ const aiColor = computed(() => {
 })
 
 const artistColor = computed(() => {
-  if (!props.isAi && props.artist > props.ai) {
+  if (!props.isAi && props.artist >= props.ai) {
     return 'green'
   } else {
     return 'red'

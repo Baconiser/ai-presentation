@@ -49,24 +49,15 @@ Abschluss
 - Was ist ein LLM wie wird es trainiert
 - Deep Learning?
 - Ai kreiert neue Jobs
-- AI oder Algorithmus
 - Code Brushes / Copilot
-- Whisper hört zu für ein transkript
+- Whisper 
 - Warum GPUs
 - Unterschiede zwischen grossen und kleinen Modellen
-
-
-## Tools
-- CoPilot Code Zeug
+- Apple Vision Pro
 - Webseiten Zusammenfassungen
 - Automatisches Tagging von Sachen
-- Whisper
-- Apple Vision Pro
-- wollen wir die big players auflisten in AI ?
-  - Adobe,
-  - replicate
-  - Huggingfaces
-  - openai
+- meeting zusammenfassungen
+
 
 ## Links
 - https://github.com/SevaSk/ecoute
@@ -78,15 +69,6 @@ Abschluss
 - https://www.bvse.de/recycling/recycling-nachrichten/5386-mehr-sortiersicherheit-durch-kuenstliche-intelligenz-gestuetzte-software-und-hardwareupgrades.html
 - https://www.gamestar.de/artikel/kuenstliche-intelligenz-maschine-sortiert-lego-ki,3352314.html
 - https://beta.albus.org/preview/92553A1A
-- meeting zusammenfassungen
-
-## Handout
-
-## Stuff
-- Generierung: AI generiert neue Inhalte wie Bilder, Texte oder Videos. Das umfasst Anwendungen wie Bildgenerierung, Textgenerierung, musikalische Komposition und Videoproduktion.
-- Erkennung: AI erkennt und klassifiziert Muster, Objekte oder Informationen in Daten. Das umfasst Anwendungen wie Bilderkennung, Spracherkennung, Texterkennung und Anomalieerkennung.
-- Verarbeitung: AI verarbeitet und analysiert Daten, um Erkenntnisse zu gewinnen oder Aufgaben zu automatisieren. Das umfasst Anwendungen wie Datenanalyse, natürliche Sprachverarbeitung, maschinelles Lernen und Predictive Analytics.
-- Steuerung: AI steuert und optimiert Prozesse, Systeme oder Entscheidungen. Das umfasst Anwendungen wie autonome Fahrzeuge, Entscheidungsunterstützungssysteme, Robotik und Prozessautomatisierung.
 
 ## One more thing???
 - Michael Film Wiki LLM
