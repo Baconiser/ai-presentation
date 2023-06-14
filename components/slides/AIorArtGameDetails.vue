@@ -2,6 +2,7 @@
 import { Vote } from '~/server/store'
 
 const tinderVotes = useState<Vote[]>('tinderVotes')
+const idUsernameMap = useState<Record<string, string>>('idUsernameMap', () => ({}))
 
 const correctVotes = computed(() => {
   const correctVotes = tinderVotes.value.filter(e => e.correct)
@@ -90,9 +91,8 @@ const mostAndLeastCorrectImages = computed(() => {
       <TwoColumnLayout>
         <template #left>
           <div class="h-full">
-            <h2>Ranking</h2>
-            <table class="table table-striped table-bordered">
-              <thead>
+            <table class="table text-gray-500">
+              <thead class="text-xs uppercase text-gray-700">
                 <tr>
                   <th class="text-xl px-8">
                     Name
@@ -106,17 +106,19 @@ const mostAndLeastCorrectImages = computed(() => {
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="user in userRanking" :key="user.userId">
-                  <td class="text-center text-xl">
-                    {{ user.userId }}
-                  </td>
-                  <td class="text-center text-xl">
-                    {{ user.correct }}
-                  </td>
-                  <td class="text-center text-xl">
-                    {{ user.incorrect }}
-                  </td>
-                </tr>
+                <transition-group name="shift">
+                  <tr v-for="user in userRanking" :key="user.userId" class="border-b">
+                    <td class="text-center text-2xl px-6 py-4 font-medium whitespace-nowrap text-gray-900">
+                      {{ idUsernameMap[user.userId] }}
+                    </td>
+                    <td class="text-center text-2xl text-gray-900 px-6 py-4">
+                      {{ user.correct }}
+                    </td>
+                    <td class="text-center text-2xl text-gray-900 px-6 py-4">
+                      {{ user.incorrect }}
+                    </td>
+                  </tr>
+                </transition-group>
               </tbody>
             </table>
           </div>

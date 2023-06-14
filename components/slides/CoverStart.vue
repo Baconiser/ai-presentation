@@ -8,7 +8,12 @@ import bg from '@/assets/images/bg/start.jpeg'
     headline="Die <div class='hl'>Magie</div> der KI"
   >
     <template #text>
-      <img class="w-60 mt-10" loading="lazy" src="@/assets/qr-code.png">
+      <div class="flex gap-x-8 mt-10">
+        <img class="w-60" loading="lazy" src="@/assets/images/qrcodes/q1.png">
+        <img class="w-60" loading="lazy" src="@/assets/images/qrcodes/q2.png">
+        <img class="w-60" loading="lazy" src="@/assets/images/qrcodes/q3.png">
+        <img class="w-60" loading="lazy" src="@/assets/images/qrcodes/q4.png">
+      </div>
     </template>
   </CoverLayout>
 </template>

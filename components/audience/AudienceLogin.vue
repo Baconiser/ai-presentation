@@ -5,7 +5,7 @@ const name = ref('')
 const idUsernameMap = useState<Record<string, string>>('idUsernameMap')
 onMounted(() => {
   const userId = IdUtil.getId()
-  let username = idUsernameMap.value[userId];
+  const username = idUsernameMap.value[userId]
 
   if (!username) {
     navigateTo('/audience/login')

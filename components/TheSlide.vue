@@ -28,7 +28,7 @@ function getGifVoteCount (gifId: string) {
       <div v-for="(gif, index) in votedGifIds" :key="index" class="gif relative flex align-center justify-center rounded-lg overflow-hidden aspect-[16/11]">
         <span
           class="jello-horizontal counter absolute top-0 left-0
-        z-10 drop-shadow text-5xl flex items-center justify-center w-full h-full"
+        z-10 drop-shadow text-5xl flex items-center justify-center w-full h-full text-white"
         >{{ getGifVoteCount(gif) }}x</span>
         <img :key="getGifVoteCount(gif)" :src="`/${gif}.webp`" class="jello-horizontal object-cover object-center w-full h-full">
       </div>

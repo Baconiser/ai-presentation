@@ -3,7 +3,6 @@ import { onKeyStroke } from '@vueuse/core'
 import store from '~/server/store'
 
 import CoverStart from '~/components/slides/CoverStart.vue'
-import TrendsKI from '~/components/slides/TrendsKI.vue'
 import RisikenKI from '~/components/slides/RisikenKI.vue'
 import CoverAIorArt from '~/components/slides/CoverAIorArt.vue'
 import AIorArtGame from '~/components/slides/AIorArtGame.vue'
@@ -156,9 +155,6 @@ const options = [
   },
   {
     type: BoringPromptingSlide
-  },
-  {
-    type: TrendsKI
   },
   {
     type: FutureTools

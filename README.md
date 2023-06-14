@@ -13,10 +13,7 @@ Hintergründe
 - ML, was ist es 
 - ML, Beispiel 
 - Neuronale Netze, was ist es
-  if (checkHwTeilEmpty(softwareVergleichWunschDTO) || checkHwVersionEmpty(softwareVergleichWunschDTO)) {
-  style.setBackground(Color.LIGHT_GRAY);
-  return;
-  }
+
 Interaktiv
 - ✅ Publikum Interaktion
 - ChatGPT + 11Labs ansprechen
@@ -28,8 +25,8 @@ Beispiele
 
 Von KI generierte Inhalte
 - ✅ OpenAI Gedicht vorlesen lassen + Video
-- Bilder Tindern um die Power von AI Image Generation zu zeigen
-  - 12 Bilder
+- ✅Bilder Tindern um die Power von AI Image Generation zu zeigen
+  - ✅12 Bilder
 
 Prompting Time - Was ist möglich
 - ✅ Landingpage erstellen 
@@ -43,7 +40,7 @@ Prompting
 - ✅ Hallucination
 
 Abschluss
-- Future Tools (Krasse neue Tools - was uns bevorsteht)
+- ✅ Future Tools (Krasse neue Tools - was uns bevorsteht)
 - Ethik / Gefahren
 - Zukunft
 

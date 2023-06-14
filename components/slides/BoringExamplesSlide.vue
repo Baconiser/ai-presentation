@@ -13,6 +13,7 @@ import handout from '@/assets/images/boring/handout.jpg'
           <li><a href="https://chat.openai.com/" target="_blank">OpenAI ChatGPT</a></li>
           <li><a href="https://bard.google.com/" target="_blank">Google Bard</a></li>
           <li><a href="https://huggingface.co/spaces/HuggingFaceH4/falcon-chat" target="_blank">Falcon-Chat</a></li>
+          <li><a href="https://www.aleph-alpha.com/" target="_blank">ALEPH ALPHA</a></li>
           <li><a href="https://openai.com/dall-e-2" target="_blank">OpenAI DALL·E 2</a></li>
           <li><a href="https://www.midjourney.com/" target="_blank">Midjourney</a></li>
           <li><a href="https://stablediffusionweb.com/" target="_blank">Stable Diffusion</a></li>

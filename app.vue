@@ -9,7 +9,7 @@ const data = reactive({
 const currentSlideIdx = useState('currentSlideIdx', () => data.currentSlideIdx)
 const votedGifs = useState('votedGifs', () => [])
 const tinderVotes = useState('tinderVotes', () => [])
-const idUsernameMap = useState<Record<string, string>>('idUsernameMap', () => ({}) )
+const idUsernameMap = useState<Record<string, string>>('idUsernameMap', () => ({}))
 
 const { data: state } = await useFetch<{ votes: [], gif_votes: [], currentSlideIdx: 0 }>('/api/get_state/')
 if (state.value) {
@@ -41,17 +41,16 @@ function updateState (state: any) {
     id,
     name
   }: User) => {
-    idMap[id] = name;
+    idMap[id] = name
   })
-  idUsernameMap.value = idMap;
-
+  idUsernameMap.value = idMap
 }
 
 </script>
 
 <template>
   <NuxtLayout>
-    <NuxtPage/>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
