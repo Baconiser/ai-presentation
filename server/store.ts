@@ -50,14 +50,13 @@ class Store {
   emitToAll () {
     this.listeners.forEach(listener => listener())
   }
-
   addUser (user: User) {
     if (this.doesUserExist(user)) {
       this.renameUser(user)
       return
     }
-    this.emitToAll()
     this.users.push(user)
+    this.emitToAll()
   }
 
   renameUser (user: User) {
