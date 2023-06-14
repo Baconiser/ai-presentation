@@ -23,15 +23,15 @@ export default defineEventHandler(async () => {
   Namen: ${userNames}
   Gedicht: 
   `
-return await doThings(prompt, 0);
+  return await doThings(prompt, 0)
 
 })
 
-async function doThings(prompt: string, versuch: number) : Promise<any> {
+async function doThings (prompt: string, versuch: number): Promise<any> {
   try {
 
     if (versuch > 3) {
-        return createError('Failed to create poem after 3 Tries');
+      return createError('Failed to create poem after 3 Tries')
     }
 
     let poemText = store.getPoemText()
@@ -40,7 +40,7 @@ async function doThings(prompt: string, versuch: number) : Promise<any> {
       const [choice] = choices
       const { message: { content } } = choice
       poemText = content
-      store.setPoemText(content);
+      store.setPoemText(content)
     }
 
     const audio = await call11Labs(poemText as string)
@@ -48,10 +48,10 @@ async function doThings(prompt: string, versuch: number) : Promise<any> {
     const fileName = `${Date.now()}.mp3`
     store.setPoemName(fileName)
 
-    audio.pipe(createWriteStream(`./public/${fileName}`));
+    audio.pipe(createWriteStream(`./public/${fileName}`))
     return fileName
   } catch (e) {
-    versuch++;
+    versuch++
     return doThings(prompt, versuch)
   }
 }
@@ -69,7 +69,7 @@ async function call11Labs (text: string) {
     }, {
       headers: {
         'Content-Type': 'application/json',
-        'Xi-Api-Key': '3e166d646ff11c9a80c3386014da159b'
+        'Xi-Api-Key': process.env.ELEVENLABS_KEY
       },
       responseType: 'stream'
     })
@@ -86,7 +86,7 @@ async function callOpenAi (content: string) {
   const result = await axios.post('https://openai-proxy-ls.deno.dev/api/chat/complete',
     // @ts-ignore
     {
-      apiKey: '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',
+      apiKey: process.env.OPENAI_KEY,
       model: 'gpt-4',
       messages: [{
         role: 'user',
