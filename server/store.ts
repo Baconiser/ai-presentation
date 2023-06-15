@@ -27,6 +27,15 @@ interface User {
   name: string;
 }
 
+interface TriviaAnswer {
+    userId: string;
+    answer: string;
+    questionId: number;
+    correct: boolean;
+
+}
+
+
 class Store {
   votes: Vote[] = []
   gif_votes: GifVote[] = []
@@ -36,6 +45,7 @@ class Store {
   poemName: string | null = null
   creatingPoem = false
   poemText: string | null = null
+  triviaAnswers: TriviaAnswer[] = [];
 
   isCreatingPoem () {
     return this.creatingPoem
@@ -150,4 +160,4 @@ class Store {
 }
 
 export default new Store()
-export { Vote, Listener, GifVote, GifIds, User }
+export { Vote, Listener, GifVote, GifIds, User, TriviaAnswer }

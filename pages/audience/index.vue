@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { noInteractionSlides } from '~/utils/slides'
+import TriviaComponent from '~/components/audience/TriviaComponent.vue'
 
 const currentSlideIdx = useState<number>('currentSlideIdx')
 </script>
@@ -12,6 +13,7 @@ const currentSlideIdx = useState<number>('currentSlideIdx')
     >
       <AudienceLogin v-if="currentSlideIdx === 7" />
       <AudienceImagesTindern v-else-if="currentSlideIdx === 14" />
+      <TriviaComponent v-else-if="currentSlideIdx === 9"></TriviaComponent>
       <div v-else-if="noInteractionSlides.includes(currentSlideIdx)" class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center text-white">
         <p class="text-lg leading-8 text-center">
           Auf dieser Folie gibt es keine Interaktion.

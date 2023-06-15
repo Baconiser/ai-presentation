@@ -61,4 +61,8 @@ function updateState (state: any) {
 .page-leave-active {
   transition: all 0.4s;
 }
+.page-enter-from,
+.page-leave-to {
+  filter: blur(1rem);
+}
 </style>

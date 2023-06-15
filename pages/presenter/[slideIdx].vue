@@ -194,12 +194,12 @@ const options = [
 <template>
   <div class="slider flex justify-start items-center h-full w-full select-none overflow-hidden" @drag="preventDrag">
     <div
-      class="slide__scroller h-full relative flex transition-transform ease-linear duration-500"
-      :style="{transform: `translateX(${-100 * slideIdx}vw)`}"
+        class="slide__scroller h-full relative flex transition-transform ease-linear duration-500"
+        :style="{transform: `translateX(${-100 * slideIdx}vw)`}"
     >
       <template v-for="option in options" :key="option.type">
         <TheSlide>
-          <component :is="option.type" @drag="preventDrag" />
+          <component :is="option.type" @drag="preventDrag"/>
         </TheSlide>
       </template>
     </div>
