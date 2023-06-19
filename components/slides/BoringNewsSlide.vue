@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const steps = ref(-1)
+const steps = ref(-2)
 </script>
 
 <template>
   <boring-slide>
-    <template #cover>
-      <div class="grid grid-cols-3 items-center h-full relative" @click="steps < 3 ? steps += 1 : steps === 3">
+    <template #content>
+      <div class="grid grid-cols-3 items-center h-full relative w-full" @click="steps < 3 ? steps += 1 : steps === 3">
         <template v-if="steps < 3">
           <div class="w-full h-full flex items-center">
             <img v-show="steps > 0" src="@/assets/images/news/papst.jpg">
@@ -13,6 +13,9 @@ const steps = ref(-1)
           <div v-if="steps >= 0" class="w-full h-full flex items-center">
             <img class="scale-110 " src="@/assets/images/news/time.jpeg">
           </div>
+          <audio v-if="steps === -2" controls loop class="w-full">
+            <source src="@/assets/audios/epic.mp3">
+          </audio>
           <div v-if="steps === -1" class="w-full h-full flex items-center">
             <video src="@/assets/videos/jesusbaby.mp4" loading="lazy" controls />
           </div>

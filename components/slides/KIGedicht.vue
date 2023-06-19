@@ -33,25 +33,15 @@
           <p>
             Wirtschaft und Unterhaltung gehen voran, <br>
             KI hilft uns, macht uns zum Fachmann.<br>
-            Kundenerlebnis, Betriebsabläufe optimiert, <br>
+            Kundenerlebnis, Betriebsabläufe optimiert,<br>
             KI hat sich hier etabliert.
           </p>
         </div>
         <div class="flex flex-col gap-8">
           <div class="flex gap-x-8">
-            <div class="flex-1">
-              <audio controls class="w-full mt-10">
-                <source src="@/assets/audios/gedicht.mp3">
-              </audio>
-            </div>
-            <div class="flex-1">
-              <img loading="lazy" class="w-full" src="https://mind-video.com/static/media/test304.ad1271acf065ab55c5ef.gif">
-              <p class="hint">
-                <a href="https://mind-video.com/" target="_blank">Mind-Video</a>
-              </p>
-            </div>
+            <img loading="lazy" class="w-full max-h-[300px] object-contain" src="https://mind-video.com/static/media/test304.ad1271acf065ab55c5ef.gif">
           </div>
-          <video class="flex-1" src="@/assets/videos/ki-anwendung.mp4" loading="lazy" controls />
+          <video class="flex-1 max-h-[300px] object-contain" src="@/assets/videos/ki-anwendung.mp4" loading="lazy" controls />
         </div>
       </div>
     </template>

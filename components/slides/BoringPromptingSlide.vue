@@ -15,7 +15,7 @@
         <p>Es sollte beachtet werden, dass die KI tatsächlich falsche Informationen produzieren kann und wird, sowie Fakten und Handlungen <span class="hl">halluzinieren kann</span>.</p>
         <p>Zero Shot Prompting</p>
         <pre class="text-sm">
-Complete the sentence: The sun is
+Complete the sentence: Die Hauptstadt von Deutschland ist
         </pre>
         <p>Few Shot Prompting</p>
         <pre class="text-sm">
@@ -47,20 +47,8 @@ A: </pre>
         <p>
           Dann formuliere deine spezifische Anfrage.
         </p>
-        <pre>
-I want you to act as an advertiser.
-I will give you a product and the target
-customer.
-You will create a campaign a
-to promote the product. You will choose
-the product's slogan, channels for
-promotion, the key messaging, and the
-brand guidelines.
-My first request: "Product: A new type
-of candy that looks like rocks and tastes
-like fruit. Target Audience: Young adults
-aged 15-23"
-          </pre>
+
+        <p>Negative Prompting</p>
       </div>
     </template>
   </BoringSlide>

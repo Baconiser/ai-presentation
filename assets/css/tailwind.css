@@ -28,7 +28,7 @@
 
     .boring p, .boring li {
         text-shadow: none;
-        @apply text-black text-2xl;
+        @apply text-black text-xl 2xl:text-2xl;
     }
 
     pre {

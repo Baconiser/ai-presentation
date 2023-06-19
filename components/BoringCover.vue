@@ -15,14 +15,14 @@
       <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
       <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
     </div>
-    <h1 class="z-10 mx-auto font-bold max-w-screen-xl text-center">
+    <h1 class="z-10 mx-auto font-bold max-w-screen-xl text-center text-8xl 2xl:text-9xl">
       KI entmystifiziert
     </h1>
     <div class="z-10 mt-12 flex flex-col justify-between items-center gap-12 text-black">
-      <h2 class="text-2xl sm:text-4xl md:text-5xl">
+      <h2 class="text-2xl sm:text-4xl 2xl:text-5xl text-center">
         Reise durch die Zeit, Anwendungen und Chancen.
       </h2>
-      <h2 class="text-2xl sm:text-4xl md:text-5xl">
+      <h2 class="text-2xl sm:text-4xl 2xl:text-5xl text-center">
         Grund zur Angst oder Werkzeug für uns?
       </h2>
     </div>
@@ -36,6 +36,5 @@ h1 {
   -webkit-text-stroke: 2px #ff3b65;
   background: -webkit-linear-gradient(rgba(255,59,101,.3),transparent);
   -webkit-background-clip: text;
-  font-size: 150px;
 }
 </style>

@@ -17,6 +17,10 @@ const props = defineProps({
   }
 })
 
+const slots = useSlots()
+const showContent = () => {
+  return !!slots.content
+}
 </script>
 
 <template>
@@ -33,16 +37,15 @@ const props = defineProps({
       <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
       <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
     </div>
-    <slot name="cover" />
-    <h1 v-if="title" class="text-8xl font-bold mb-12 z-10 text-black">
+    <h1 v-if="title" class="text-5xl 2xl:text-8xl font-bold mb-12 z-10 text-black">
       {{ title }}
     </h1>
-    <div class="z-10 flex justify-between gap-12">
-      <slot name="content" />
+    <div class="z-10 flex justify-between gap-12 h-full">
+      <slot v-if="showContent" name="content" />
       <ul v-if="statements.length > 0" class="space-y-4 list-disc list-outside pl-[40px]">
         <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black" v-html="statement" />
       </ul>
-      <img v-if="src" :src="src" class="max-w-xl rounded-lg object-cover">
+      <img v-if="src" :src="src" class="2xl:max-w-xl shrink-0 rounded-lg object-contain">
     </div>
   </div>
 </template>

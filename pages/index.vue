@@ -1,4 +1,5 @@
 <script setup lang="ts">
+definePageMeta({ layout: 'audience' })
 </script>
 
 <template>

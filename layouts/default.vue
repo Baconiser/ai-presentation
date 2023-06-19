@@ -21,7 +21,9 @@ onKeyStroke(['f'], () => {
 <template>
   <main ref="slideRef" class="layout" :class="{'no-cursor': showPointer}">
     <laser-pointer v-if="showPointer" />
-    <slot :key="$route.fullPath" />
+    <transition name="fade">
+      <slot :key="$route.fullPath" />
+    </transition>
   </main>
 </template>
 

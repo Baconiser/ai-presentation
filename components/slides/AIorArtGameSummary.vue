@@ -33,9 +33,6 @@ const artistPercentage = (id: string): number => {
   <boring-slide>
     <template #content>
       <div class="grid grid-cols-6 gap-6">
-        <div class="col-span-6">
-          {{ images }}
-        </div>
         <div v-for="content in images" :key="content.image" class="flex flex-col gap-4 items-center">
           <p class="text-2xl">
             {{ content.type === 'AI' ? '🤖' : '🎨' }}

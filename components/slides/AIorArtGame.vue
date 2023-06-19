@@ -21,6 +21,19 @@ const artistPercentage = computed(() => {
   return Math.round(((artistVotes.value.length / tinderVotes.value.length) || 0) * 100)
 })
 
+const energetic = ref<HTMLAudioElement | null>(null)
+const bach = ref<HTMLAudioElement | null>(null)
+
+watch([artistPercentage, aiPercentage], () => {
+  if (!bach.value || !energetic.value) { return }
+  if (aiPercentage.value >= artistPercentage.value) {
+    bach.value.pause()
+    energetic.value.play()
+  } else {
+    bach.value.play()
+    energetic.value.pause()
+  }
+})
 </script>
 
 <template>
@@ -33,6 +46,9 @@ const artistPercentage = computed(() => {
           >
             🤖 <span class="text-red-800">AI</span>rtist
           </h1>
+          <audio ref="energetic" controls loop class="w-full">
+            <source src="@/assets/audios/loop-energetic.mp3">
+          </audio>
           <div
             class="progress origin-bottom-left transition-all absolute bg-center bg-no-repeat bg-cover bottom-0 left-0 w-full h-full"
             :style="{maxHeight: `${aiPercentage}vh`, backgroundImage: `url(${AIDali}`}"
@@ -45,6 +61,9 @@ const artistPercentage = computed(() => {
           >
             🎨 Artist
           </h1>
+          <audio ref="bach" controls loop class="w-full">
+            <source src="@/assets/audios/loop-bach.mp3">
+          </audio>
           <div
             class="progress origin-bottom-left
       transition-all absolute

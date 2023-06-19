@@ -3,6 +3,8 @@ import { noInteractionSlides } from '~/utils/slides'
 import TriviaComponent from '~/components/audience/TriviaComponent.vue'
 
 const currentSlideIdx = useState<number>('currentSlideIdx')
+
+definePageMeta({ layout: 'audience' })
 </script>
 
 <template>
@@ -12,7 +14,7 @@ const currentSlideIdx = useState<number>('currentSlideIdx')
       mode="out-in"
     >
       <AudienceLogin v-if="currentSlideIdx === 7" />
-      <AudienceImagesTindern v-else-if="currentSlideIdx === 14" />
+      <AudienceImagesTindern v-else-if="currentSlideIdx === 15" />
       <TriviaComponent v-else-if="currentSlideIdx === 9"></TriviaComponent>
       <div v-else-if="noInteractionSlides.includes(currentSlideIdx)" class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center text-white">
         <p class="text-lg leading-8 text-center">

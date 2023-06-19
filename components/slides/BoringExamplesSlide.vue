@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import handout from '@/assets/images/boring/handout.jpg'
+
+const allowPoem = useState('allowPoem', () => false)
 </script>
 
 <template>
@@ -28,6 +30,10 @@ import handout from '@/assets/images/boring/handout.jpg'
           <li><a href="https://github.com/trigaten/Learn_Prompting" target="_blank">Learn Prompting</a></li>
           <li><a href="https://www.phind.com" target="_blank">The AI search engine for developers</a></li>
         </ul>
+        <label for="poem">
+          <input id="poem" v-model="allowPoem" type="checkbox">
+          Gedicht generierung aktivieren
+        </label>
       </div>
     </template>
   </BoringSlide>

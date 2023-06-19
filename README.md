@@ -16,7 +16,6 @@ Hintergründe
 
 Interaktiv
 - ✅ Publikum Interaktion
-- ChatGPT + 11Labs ansprechen
 
 Beispiele
 - Anwendungsgebiete + Beispiele

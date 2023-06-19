@@ -38,6 +38,6 @@ h1 {
   -webkit-text-stroke: 2px #ff3b65;
   background: -webkit-linear-gradient(rgba(255,59,101,.3),transparent);
   -webkit-background-clip: text;
-  font-size: 150px;
+  @apply text-8xl 2xl:text-9xl;
 }
 </style>

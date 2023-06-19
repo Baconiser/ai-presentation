@@ -49,7 +49,7 @@ And the application should calculate the table.
 With wins and losses. And also with difference.
 give me js ,css, html for this side</pre>
           <p>Output:</p>
-          <p v-if="count > 2"><a href="https://tmpfiles.web-dienstleister.de/qk/cornhole/index.html" target="_blank">Cornhole Tournament Page</a> </p>
+          <p v-if="count > 2"><a href="https://tmpfiles.web-dienstleister.de/ai-presentation/cornhole/index.html" target="_blank">Cornhole Tournament Page</a> </p>
         </div>
       </div>
     </template>
