@@ -63,6 +63,6 @@ function updateState (state: any) {
 }
 .page-enter-from,
 .page-leave-to {
-  filter: blur(1rem);
+  filter: blur(12px);
 }
 </style>
