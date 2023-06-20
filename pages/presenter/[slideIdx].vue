@@ -35,6 +35,10 @@ import GifSummary from '~/components/slides/GifSummary.vue'
 import SchlussSlide from '~/components/slides/SchlussSlide.vue'
 import BoringUsageSlideAnwendungAllgemein from '~/components/slides/BoringUsageSlideAnwendungAllgemein.vue'
 import BoringPPTSlide from '~/components/slides/BoringPPTSlide.vue'
+import BoringQASlide from '~/components/BoringQASlide.vue'
+import WhatLLM from '~/components/slides/WhatLLM.vue'
+import WhatGenerativeKI from '~/components/slides/WhatGenerativeKI.vue'
+import WhatLLMTwo from '~/components/slides/WhatLLMTwo.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -121,7 +125,16 @@ const options = [
     type: CoverStart
   },
   {
-    type: BoringExamplesSlide
+    type: WhatGenerativeKI
+  },
+  {
+    type: KIGedicht
+  },
+  {
+    type: WhatLLM
+  },
+  {
+    type: WhatLLMTwo
   },
   {
     type: BoringUsageSlideAnwendungAllgemein
@@ -133,7 +146,7 @@ const options = [
     type: BoringUsageSlideErkennung
   },
   {
-    type: KIGedicht
+    type: BoringExamplesSlide
   },
   {
     type: CoverAIorArt
@@ -147,7 +160,6 @@ const options = [
   {
     type: AIorArtGameSummary
   },
-
   {
     type: CoverLiveCoding
   },
@@ -182,10 +194,13 @@ const options = [
     type: BoringEndSlide
   },
   {
-    type: OneMoreThing
+    type: BoringQASlide
   },
   {
     type: GifSummary
+  },
+  {
+    type: OneMoreThing
   },
   {
     type: SchlussSlide

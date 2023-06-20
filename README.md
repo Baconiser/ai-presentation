@@ -60,14 +60,14 @@ Abschluss
 
 ## Links
 - https://github.com/SevaSk/ecoute
-- https://mubert.com/
-- https://www.golem.de/news/projekt-burnham-und-astro-amazon-will-haushaltsroboter-intelligenter-machen-2305-174055.html
 - 
 - https://web.archive.org/web/20230531203946/https://website-nm4keew22-humanloopml.vercel.app/blog/openai-plans
 - https://www.proplanta.de/agrar-nachrichten/landtechnik/sortiermaschine-fuer-rapssaatgut-was-kann-ki-leisten_article1644152288.html
 - https://www.bvse.de/recycling/recycling-nachrichten/5386-mehr-sortiersicherheit-durch-kuenstliche-intelligenz-gestuetzte-software-und-hardwareupgrades.html
 - https://www.gamestar.de/artikel/kuenstliche-intelligenz-maschine-sortiert-lego-ki,3352314.html
 - https://beta.albus.org/preview/92553A1A
+  <div>Over 2k new Al tools have launched in the past 30 days</div>
+According to Github more than one million developers have used Copilot with users now generating more than 40% of their code with the tool.
 
 ## One more thing???
 - Michael Film Wiki LLM

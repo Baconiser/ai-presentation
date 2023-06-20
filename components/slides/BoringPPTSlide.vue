@@ -6,7 +6,7 @@ const flip = ref(false)
 
 <template>
   <BoringSlide
-    title="Easy peasy"
+    title="Automatisierung"
     :src="microsoft"
   >
     <template #content>

@@ -69,6 +69,14 @@
         @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
     }
 
+    .stylish, img {
+        pointer-events: none;
+    }
+
+    strong {
+        color: #ff3b65;
+    }
+
     @page {
         size: A4 portrait;
         margin: 0.5cm;

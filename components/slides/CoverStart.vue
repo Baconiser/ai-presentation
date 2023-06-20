@@ -7,7 +7,7 @@ const flip = ref(true)
 <template>
   <CoverLayout
     :img="bg"
-    headline="Die <div class='hl'>Magie</div> der KI"
+    headline="Die <span class='hl'>Magie</span><br>der<br><span class='hl'>generativen</span> KI"
   >
     <template #text>
       <div class="flex gap-x-8 mt-10 items-center" @click="flip = !flip">

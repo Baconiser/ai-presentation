@@ -10,7 +10,7 @@ import tesla from '@/assets/images/boring/tesla.jpeg'
       'Tesla: Autopilot',
       'Google: Google Suche',
       'FinTech: Betrugsbekämpfung',
-      'Medizin: Analysieren von Patientendaten',
+      'Medizin: Analysieren von Patientendaten, Frühzeitige Diagnose, neue Medikamente & präzisere Therapien',
       'Marketing: Optimale Produkte vorschlagen ',
       'Kundenservice: Chatbot',
       'Apple: Siri / VisionPro'
