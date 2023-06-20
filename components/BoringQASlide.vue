@@ -10,7 +10,7 @@ const steps = ref(true)
     <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
       <img
         alt=""
-        class="absolute right-[-150px] top-0 h-[1200px] w-[600px] -scale-x-100"
+        class="stylish absolute right-[-150px] top-0 h-[1200px] w-[600px] -scale-x-100"
         src="@/assets/images/background.6c3571e0.jpg"
         loading="lazy"
         width="918"
@@ -24,7 +24,6 @@ const steps = ref(true)
     </h1>
     <div class="z-10 mt-12 flex flex-col justify-between items-center gap-12 text-black">
       <h2 class="text-2xl sm:text-4xl md:text-5xl text-center">
-        mit KI
       </h2>
     </div>
   </div>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import questionsData from '~/utils/TriviaQuestions'
-import { TriviaAnswer } from '~/server/store'
 
 const activeQuestionIdx = ref(0)
 const questions = reactive(questionsData())
@@ -22,32 +21,31 @@ function answerQuestion (answer: number) {
     </div>
 
     <div
-        :key="currentQuestion.question"
-        class="bg-black min-h-screen min-w-screen flex flex-col justify-center items-center"
-        v-else
+      v-else
+      :key="currentQuestion.question"
+      class="bg-stone-900 min-h-screen min-w-screen flex flex-col justify-center items-center"
     >
-      <div class="w-full h-1/2 flex flex-col items-center justify-center grow p-2">
-        <h1 class="text-2xl text-white mb-2 mt-4 text-center p-4 bg-white bg-opacity-10 rounded-xl">
-          {{ currentQuestion.question }}
-        </h1>
-        <h2 class="text-xl text-white mb-8">
+      <div class="w-full h-1/2 flex flex-col items-center justify-center gap-2 grow p-2">
+        <h2 class="text-md text-white">
           {{ currentQuestion.theme }}
         </h2>
+        <h1 class="lg:text-2xl text-white text-center p-4 bg-white bg-opacity-10 rounded-xl">
+          {{ currentQuestion.question }}
+        </h1>
       </div>
-      <div class="w-full h-1/2 flex items-center justify-evenly grow">
-        <div class="grid grid-cols-2 gap-4 w-full">
+      <div class="w-full h-1/2 flex items-center justify-evenly grow p-2">
+        <div class="grid sm:grid-cols-2 gap-4 w-full">
           <div
-              v-for="(answer, idx) in currentQuestion.answers"
-              :key="answer"
-              class="flex m-2"
+            v-for="(answer, idx) in currentQuestion.answers"
+            :key="answer"
+            class="flex"
           >
-
             <button
-                @click="answerQuestion(idx as number)"
-                class="relative bg-white w-full h-full py-2 rounded-lg shadow text-gray-800 text-xl block text-center transition-colors"
-                :class="{'bg-green-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer === currentQuestion.correctAnswer, 'bg-red-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer !== currentQuestion.correctAnswer }"
+              class="relative bg-white w-full h-full py-2 text-gray-800 text-xl block text-center transition-colors"
+              :class="{'bg-green-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer === currentQuestion.correctAnswer, 'bg-red-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer !== currentQuestion.correctAnswer }"
+              @click="answerQuestion(idx as number)"
             >
-              <ParticleEffect/>
+              <ParticleEffect />
               {{ answer }}
             </button>
           </div>

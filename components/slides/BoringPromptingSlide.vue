@@ -12,7 +12,10 @@
         </p>
         <p><span class="hl">Ausprobieren</span> kann helfen, die Interaktion zu verbessern.</p>
         <p>Es ist wichtig <span class="hl">sensibel mit Daten</span> umzugehen.</p>
-        <p>Es sollte beachtet werden, dass die KI tatsächlich falsche Informationen produzieren kann und wird, sowie Fakten und Handlungen <span class="hl">halluzinieren kann</span>.</p>
+        <p>
+          Es sollte beachtet werden, dass die KI tatsächlich falsche Informationen produzieren kann und wird, sowie
+          Fakten und Handlungen <span class="hl">halluzinieren kann</span>.
+        </p>
         <p>Zero Shot Prompting</p>
         <pre class="text-sm">
 Complete the sentence: Die Hauptstadt von Deutschland ist
@@ -48,7 +51,15 @@ A: </pre>
           Dann formuliere deine spezifische Anfrage.
         </p>
 
-        <p>Negative Prompting</p>
+        <div>
+          <p>Negative Prompting gibt uns eine zusätzliche Möglichkeit zur Steuerung der Text-zu-Bild-Erzeugung</p>
+          <pre>
+ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face,
+out of frame, extra limbs, disfigured, deformed, body out of frame,
+bad anatomy, watermark, signature, cut off, low contrast, underexposed,
+overexposed, bad art, beginner, amateur, distorted face
+          </pre>
+        </div>
       </div>
     </template>
   </BoringSlide>

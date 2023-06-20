@@ -13,9 +13,9 @@ definePageMeta({ layout: 'audience' })
       name="fade"
       mode="out-in"
     >
-      <AudienceLogin v-if="currentSlideIdx === 7" />
-      <AudienceImagesTindern v-else-if="currentSlideIdx === 15" />
-      <TriviaComponent v-else-if="currentSlideIdx === 9"></TriviaComponent>
+      <AudienceLogin v-if="currentSlideIdx === 9" />
+      <AudienceImagesTindern v-else-if="currentSlideIdx === 19" />
+      <TriviaComponent v-else-if="currentSlideIdx === 35" />
       <div v-else-if="noInteractionSlides.includes(currentSlideIdx)" class="p-8 w-full h-full flex flex-col gap-4 justify-center items-center text-white">
         <p class="text-lg leading-8 text-center">
           Auf dieser Folie gibt es keine Interaktion.

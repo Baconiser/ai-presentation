@@ -23,16 +23,14 @@ const likeContent = (index: number) => {
 }
 
 function vote (content: AiOrArt, liked: boolean) {
-
-  const userId = IdUtil.getId();
+  const userId = IdUtil.getId()
 
   handledContents.value.push({
     content,
     liked
   })
 
-
-  let vote = liked ? 'Artist' : 'AI';
+  const vote = liked ? 'Artist' : 'AI'
 
   useFetch('/api/send_vote/', {
     method: 'POST',
@@ -64,7 +62,7 @@ function getHandledState (content: string) {
   <div class="bg-stone-900 content-stack relative w-full h-screen overflow-hidden flex flex-col max-h-full justify-center items-center gap-8">
     <div
       class="content-stack__cards w-80 max-w-80  mx-auto relative aspect-[1/1]"
-      :style="`left: ${Math.floor(contents.length) / 2 * 6}px; margin-top: ${contents.length * 6}px; margin-bottom: ${contents.length * 6}px`"
+      :style="`left: ${Math.floor(contents.length) / 2 * 6}px; margin-top: ${contents.length * 6}px; margin-bottom: ${contents.length * 1}px`"
     >
       <Card
         v-for="(content, index) in contents"

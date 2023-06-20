@@ -7,17 +7,112 @@ interface Question {
 }
 
 const questions: Question[] = [
-  // KI im Popkultur
   {
-    theme: 'Popkultur',
-    question: 'In welchem Science-Fiction-Film spielt eine KI namens HAL 9000 eine zentrale Rolle?',
+    theme: 'Geschichte',
+    question: 'In welchem Jahr hat Alan Turing den theoretischen Grundstein für Maschinen zur Verarbeitung von Algorithmen gelegt?',
     answers: [
-      'Blade Runner',
-      'Matrix',
-      '2001: Odyssee im Weltraum',
-      'Ex Machina'
+      '1936',
+      '1956',
+      '1966',
+      '2011'
+    ],
+    correctAnswer: 0,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Konzepte',
+    question: 'Wie ähnelt maschinelles Lernen dem menschlichen Lernen?',
+    answers: [
+      'Keine Ähnlichkeit',
+      'Durch Anweisungen',
+      'Durch Erfahrungen',
+      'Durch Buchwissen'
     ],
     correctAnswer: 2,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Technologie',
+    question: 'Was ist ein Beispiel für eine generative KI?',
+    answers: [
+      'Textklassifikations-KI',
+      'Bilderkennungs-KI',
+      'ChatGPT',
+      'Spam-Erkennungs-KI'
+    ],
+    correctAnswer: 2,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Technologie',
+    question: 'Wie viele Verbindungen gibt es im neuronalen Netzwerk von GPT-3?',
+    answers: [
+      '570 Millionen',
+      '170 Milliarden',
+      '100 Millionen',
+      '300 Milliarden'
+    ],
+    correctAnswer: 1,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Anwendungen',
+    question: 'Was ist eine Anwendung von KI im medizinischen Bereich?',
+    answers: [
+      'Operationen durchführen',
+      'Frühe Diagnose durch Datenanalyse',
+      'Unterstützung in Rechtsfällen',
+      'Steuerung von autonomen Fahrzeugen'
+    ],
+    correctAnswer: 1,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Konzepte',
+    question: 'Wie lernt ein neuronales Netzwerk?',
+    answers: [
+      'Befolgt vorgegebene Regeln',
+      'Nutzt Rückkopplung und Gewichtsanpassung',
+      'Liest Lehrbücher',
+      'Verwendet Intuition'
+    ],
+    correctAnswer: 1,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Anwendungen',
+    question: 'Wie interagiert das KI-Tool Google Duplex mit Benutzern?',
+    answers: [
+      'Per E-Mail',
+      'Über eine Chat-Schnittstelle',
+      'Am Telefon',
+      'Persönlich'
+    ],
+    correctAnswer: 2,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Konzepte',
+    question: 'Was ist ein Schlüsselelement der generativen KI?',
+    answers: [
+      'Sie befolgt strenge Programmieranweisungen',
+      'Sie erzeugt oder prognostiziert Ausgaben basierend auf analysierten Daten',
+      'Sie kann nur Text generieren',
+      'Sie kann nur Bilder verarbeiten'
+    ],
+    correctAnswer: 1,
+    selectedAnswer: null
+  },
+  {
+    theme: 'Anwendungen',
+    question: 'Welches Unternehmen nutzt KI in seinem Autopilotensystem für selbstfahrende Autos?',
+    answers: [
+      'McDonald\'s',
+      'Tesla',
+      'Microsoft',
+      'Nike'
+    ],
+    correctAnswer: 1,
     selectedAnswer: null
   },
 
@@ -29,60 +124,6 @@ const questions: Question[] = [
       'I, Robot',
       'Brave New World',
       'Fahrenheit 451'
-    ],
-    correctAnswer: 1,
-    selectedAnswer: null
-  },
-
-  // Anwendungen
-  {
-    theme: 'Anwendungen',
-    question: 'In welchem medizinischen Bereich wird KI erfolgreich eingesetzt, um verschiedene Erkrankungen auf Bildern (Röntgen, CT, MRT) zu erkennen?',
-    answers: [
-      'Radiologie',
-      'Kardiologie',
-      'Neurologie',
-      'Pathologie'
-    ],
-    correctAnswer: 0,
-    selectedAnswer: null
-  },
-
-  {
-    theme: 'Anwendungen',
-    question: 'Welcher KI-Algorithmus wird oft genutzt, um ähnliche Elemente in Datensätzen zu gruppieren?',
-    answers: [
-      'K-Means',
-      'Linear Regression',
-      'Naive Bayes',
-      'Random Forest'
-    ],
-    correctAnswer: 0,
-    selectedAnswer: null
-  },
-
-  // KI und Wirtschaft
-  {
-    theme: 'Wirtschaft',
-    question: 'Welche KI-Innovation hat das Potenzial, den Kundenservice zu verbessern, indem sie den Mitarbeitern hilft, schneller und präziser auf Kundenanfragen zu reagieren?',
-    answers: [
-      'Autonomes Fahren',
-      'Robotergestützte Prozessautomatisierung',
-      'Natürliche Sprachverarbeitung',
-      'Empfehlungssysteme'
-    ],
-    correctAnswer: 2,
-    selectedAnswer: null
-  },
-
-  {
-    theme: 'Wirtschaft',
-    question: 'Welcher Sektor wird am stärksten von Künstlicher Intelligenz profitieren, indem er seine Effizienz und Genauigkeit bei der Verarbeitung großer Mengen von Finanzdaten erhöht?',
-    answers: [
-      'Einzelhandel',
-      'Finanzdienstleistungen',
-      'Telekommunikation',
-      'Landwirtschaft'
     ],
     correctAnswer: 1,
     selectedAnswer: null

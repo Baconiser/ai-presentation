@@ -27,6 +27,9 @@ import ChatGrowth from '@/assets/images/boring/chat-growth.jpeg'
               <strong>Allgemeine Intelligenz hat keine Obergrenze!</strong>
             </p>
           </div>
+          <p>
+            Nach Angaben von Github haben mehr als eine Million Entwickler Copilot verwendet, wobei die Nutzer inzwischen mehr als 40 % ihres Codes mit dem Tool erstellen.
+          </p>
         </div>
         <div class="flex flex-col gap-8">
           <div class="flex gap-4 flex-col">

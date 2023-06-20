@@ -6,7 +6,7 @@
     <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-indigo-50">
       <img
         alt=""
-        class="absolute right-[-150px] top-0 h-[1200px] w-[600px] -scale-x-100"
+        class="stylish absolute right-[-150px] top-0 h-[1200px] w-[600px] -scale-x-100"
         src="@/assets/images/background.6c3571e0.jpg"
         loading="lazy"
         width="918"
