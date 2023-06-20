@@ -15,14 +15,15 @@ export default defineEventHandler(async () => {
   Quirin und Michael Hielten eine Präsentation über KI und die Zukunft der Arbeit.
   Die Präsentation war für die Arbeitskollegen der W.E.B. Wirth EDV Beratung.
   Für den Schluss der Präsentation wird ein sich reimendes kurzes Gedicht für die Kollegen erstellt.
-  Das gedicht soll die Namen der Kollegen in witziger Art und Weise beinhalten.
+  Das gedicht soll die Namen der Kollegen in witziger, humorvoller Art und Weise beinhalten.
   Gehe nicht auf genaue tätigkeiten oder Persönlichkeiten ein.
   Schreibe zu jedem namen einen sich reimenden Satz. Der Reim muss sich auf den Namen beziehen.
   Gib nur das Gedicht aus, sonst nichts.
   Zum schluss des gedichtes soll gesagt werden dass sich Michael und Quirin auf die für die Aufmerksamkeit bedanken.
-  Namen: ${userNames}
+  Namen: ${userNames.join(", ")}
   Gedicht: 
   `
+  console.log(prompt);
   return await doThings(prompt, 0)
 
 })
@@ -58,7 +59,7 @@ async function doThings (prompt: string, versuch: number): Promise<any> {
 
 async function call11Labs (text: string) {
   try {
-
+    console.log(text, "11labs");
     const response = await axios.post(`https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB/stream`, {
       text,
       model_id: 'eleven_multilingual_v1',
@@ -82,7 +83,7 @@ async function call11Labs (text: string) {
 }
 
 async function callOpenAi (content: string) {
-
+  console.log(content)
   const result = await axios.post('https://openai-proxy-ls.deno.dev/api/chat/complete',
     // @ts-ignore
     {

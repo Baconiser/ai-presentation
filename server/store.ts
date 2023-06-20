@@ -83,6 +83,10 @@ class Store {
     this.gif_votes = []
     this.currentSlideIdx = 0
     this.users = []
+    this.poemText = null;
+    this.poemName = null;
+    this.creatingPoem = false;
+    this.triviaAnswers = [];
     this.emitToAll()
   }
 
