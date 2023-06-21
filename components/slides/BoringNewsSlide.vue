@@ -1,9 +1,7 @@
 <script lang="ts" setup>
+
 const steps = ref(-2)
-const showPointer = ref(false)
-onKeyStroke('q', () => {
-  showPointer.value = !showPointer.value
-})
+
 </script>
 
 <template>
