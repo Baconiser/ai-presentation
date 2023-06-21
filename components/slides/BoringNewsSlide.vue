@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 const steps = ref(-2)
+const showPointer = ref(false)
+onKeyStroke('q', () => {
+  showPointer.value = !showPointer.value
+})
 </script>
 
 <template>
@@ -13,9 +17,14 @@ const steps = ref(-2)
           <div v-if="steps >= 0" class="w-full h-full flex items-center">
             <img class="scale-110 " src="@/assets/images/news/time.jpeg">
           </div>
-          <audio v-if="steps === -2" controls loop class="w-full">
-            <source src="@/assets/audios/epic.mp3">
-          </audio>
+          <div v-if="steps === -2" class="w-full flex flex-col">
+            <audio controls loop>
+              <source src="@/assets/audios/epic.mp3">
+            </audio>
+            <p class="hint">
+              Epic intro music with guitar solo by <a href="https://huggingface.co/spaces/facebook/MusicGen" target="_blank">MusicGen</a>
+            </p>
+          </div>
           <div v-if="steps === -1" class="w-full h-full flex items-center">
             <video src="@/assets/videos/jesusbaby.mp4" loading="lazy" controls />
           </div>

@@ -51,7 +51,7 @@ watch([artistPercentage, aiPercentage], () => {
           </audio>
           <div
             class="progress origin-bottom-left transition-all absolute bg-center bg-no-repeat bg-cover bottom-0 left-0 w-full h-full"
-            :style="{maxHeight: `${aiPercentage}vh`, backgroundImage: `url(${AIDali}`}"
+            :style="{maxHeight: `${aiPercentage}vh`, backgroundImage: `url(${AIDali})`}"
           />
         </div>
         <div class="divider w-2 bg-white" />
@@ -71,7 +71,7 @@ watch([artistPercentage, aiPercentage], () => {
       bg-no-repeat
       bg-cover
       bottom-0 left-0 w-full h-full"
-            :style="{maxHeight: `${artistPercentage}vh`, backgroundImage: `url(${Dali}`}"
+            :style="{maxHeight: `${artistPercentage}vh`, backgroundImage: `url(${Dali})`}"
           />
         </div>
       </div>
