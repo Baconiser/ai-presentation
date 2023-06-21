@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import future from '@/assets/images/boring/future.jpg'
+import future from '@/assets/images/future/long-vs-short-view.png'
 </script>
 
 <template>
@@ -11,16 +11,10 @@ import future from '@/assets/images/boring/future.jpg'
       <div class="space-y-4">
         <p>Die Rolle des Menschen: wir werden zum Orchestrator des Wissen, damit kommt eine neue Verantwortung</p>
 
-        <p>Big Players to watch:</p>
-        <ul>
-          <li>Microsoft/Google/Apple/Meta</li>
-          <li>OpenAI</li>
-          <li>Adobe</li>
-          <li>Nvidia</li>
-          <li>Hugging Face</li>
-        </ul>
         <p>AI will drive the cost of content creation (word, image, video) to near zero</p>
         <p>Advertising will be hyper-personalized: unique ads and commercials for every user!</p>
+
+        <p><a href="https://github.com/Significant-Gravitas/Auto-GPT" target="_blank">AutoGPT</a></p>
         <p>
           Artificial General Intelligence:
           „Starke" bzw. allgemeine Künstliche
