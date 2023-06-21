@@ -9,6 +9,7 @@ const data = reactive({
 const currentSlideIdx = useState('currentSlideIdx', () => data.currentSlideIdx)
 const votedGifs = useState('votedGifs', () => [])
 const tinderVotes = useState('tinderVotes', () => [])
+const triviaAnswers = useState('triviaAnswers', () => [])
 const idUsernameMap = useState<Record<string, string>>('idUsernameMap', () => ({}))
 const poemName = useState<string|null>('poemName', () => null)
 const poemText = useState<string|null>('poemText', () => null)
@@ -35,6 +36,7 @@ function updateState (state: any) {
   currentSlideIdx.value = state.currentSlideIdx
   votedGifs.value = state.gif_votes
   tinderVotes.value = state.votes
+  triviaAnswers.value = state.votes
   poemName.value = state.poemName
   poemText.value = state.poemText
 

@@ -35,7 +35,6 @@ interface TriviaAnswer {
 
 }
 
-
 class Store {
   votes: Vote[] = []
   gif_votes: GifVote[] = []
@@ -45,7 +44,7 @@ class Store {
   poemName: string | null = null
   creatingPoem = false
   poemText: string | null = null
-  triviaAnswers: TriviaAnswer[] = [];
+  triviaAnswers: TriviaAnswer[] = []
 
   isCreatingPoem () {
     return this.creatingPoem
@@ -83,10 +82,10 @@ class Store {
     this.gif_votes = []
     this.currentSlideIdx = 0
     this.users = []
-    this.poemText = null;
-    this.poemName = null;
-    this.creatingPoem = false;
-    this.triviaAnswers = [];
+    this.poemText = null
+    this.poemName = null
+    this.creatingPoem = false
+    this.triviaAnswers = []
     this.emitToAll()
   }
 

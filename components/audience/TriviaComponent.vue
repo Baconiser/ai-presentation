@@ -41,8 +41,12 @@ function answerQuestion (answer: number) {
             class="flex"
           >
             <button
-              class="relative bg-white w-full h-full py-2 text-gray-800 text-xl block text-center transition-colors"
-              :class="{'bg-green-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer === currentQuestion.correctAnswer, 'bg-red-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer !== currentQuestion.correctAnswer }"
+              class="relative w-full h-full py-2 text-gray-800 text-xl block text-center transition-colors"
+              :class="{
+                'bg-white': currentQuestion.selectedAnswer !== idx,
+                'bg-green-500': idx === currentQuestion.selectedAnswer && currentQuestion.selectedAnswer === currentQuestion.correctAnswer,
+                'bg-red-500': idx == currentQuestion.selectedAnswer && currentQuestion.selectedAnswer !== currentQuestion.correctAnswer
+              }"
               @click="answerQuestion(idx as number)"
             >
               <ParticleEffect />
