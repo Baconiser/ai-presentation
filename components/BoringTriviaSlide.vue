@@ -2,15 +2,19 @@
 
 import { TriviaAnswer } from '~/server/store'
 
-const triviaAnswers = useState<TriviaAnswer[]>('triviaAnswers')
+const triviaAnswers = useState<TriviaAnswer[]>('triviaAnswers', () => [])
 const idUsernameMap = useState<Record<string, string>>('idUsernameMap', () => ({}))
 
 const userRanking = computed(() => {
-  const userRanking: Record<string, {correct: number, incorrect: number}> = {}
+  const userRanking: Record<string, { correct: number, incorrect: number, username: string }> = {}
 
   triviaAnswers.value.forEach((vote) => {
+
+    let username = idUsernameMap.value[vote.userId]
+    console.log(username, idUsernameMap.value);
     if (!userRanking[vote.userId]) {
       userRanking[vote.userId] = {
+        username,
         correct: 0,
         incorrect: 0
       }
@@ -24,8 +28,8 @@ const userRanking = computed(() => {
   })
 
   return Object.keys(userRanking)
-    .map(userId => ({ userId, ...userRanking[userId] }))
-    .sort((a, b) => b.correct - a.correct)
+      .map(userId => ({ userId, ...userRanking[userId] }))
+      .sort((a, b) => b.correct - a.correct)
 })
 </script>
 
@@ -34,9 +38,8 @@ const userRanking = computed(() => {
     <template #content>
       <TwoColumnLayout>
         <template #left>
-          {{ triviaAnswers }}
           <div
-            class="flex py-12 px-16 gap-8 flex-col justify-center items-center min-h-screen w-full relative"
+              class="flex py-12 px-16 gap-8 flex-col justify-center items-center min-h-screen w-full relative"
           >
             <h1 class="z-10 mx-auto font-bold max-w-screen-xl text-center">
               Trivia Time
@@ -55,32 +58,32 @@ const userRanking = computed(() => {
           <div class="h-full">
             <table class="table text-gray-500">
               <thead class="text-xs uppercase text-gray-700">
-                <tr>
-                  <th class="text-xl px-8">
-                    Name
-                  </th>
-                  <th class="text-xl px-8">
-                    Richtig
-                  </th>
-                  <th class="text-xl px-8">
-                    Falsch
-                  </th>
-                </tr>
+              <tr>
+                <th class="text-xl px-8">
+                  Name
+                </th>
+                <th class="text-xl px-8">
+                  Richtig
+                </th>
+                <th class="text-xl px-8">
+                  Falsch
+                </th>
+              </tr>
               </thead>
               <tbody>
-<!--                <transition-group name="shift">-->
-<!--                  <tr v-for="user in userRanking" :key="user.userId" class="border-b">-->
-<!--                    <td class="text-center text-2xl px-6 py-4 font-medium whitespace-nowrap text-gray-900">-->
-<!--                      {{ idUsernameMap[user.userId] }}-->
-<!--                    </td>-->
-<!--                    <td class="text-center text-2xl text-gray-900 px-6 py-4">-->
-<!--                      {{ user.correct }}-->
-<!--                    </td>-->
-<!--                    <td class="text-center text-2xl text-gray-900 px-6 py-4">-->
-<!--                      {{ user.incorrect }}-->
-<!--                    </td>-->
-<!--                  </tr>-->
-<!--                </transition-group>-->
+              <transition-group name="shift">
+                <tr v-for="user in userRanking" :key="user.userId" class="border-b">
+                  <td class="text-center text-2xl px-6 py-4 font-medium whitespace-nowrap text-gray-900">
+                    {{ user.username }}
+                  </td>
+                  <td class="text-center text-2xl text-gray-900 px-6 py-4">
+                    {{ user.correct }}
+                  </td>
+                  <td class="text-center text-2xl text-gray-900 px-6 py-4">
+                    {{ user.incorrect }}
+                  </td>
+                </tr>
+              </transition-group>
               </tbody>
             </table>
           </div>
@@ -95,7 +98,7 @@ h1 {
   letter-spacing: 1px;
   color: transparent;
   -webkit-text-stroke: 2px #ff3b65;
-  background: -webkit-linear-gradient(rgba(255,59,101,.3),transparent);
+  background: -webkit-linear-gradient(rgba(255, 59, 101, .3), transparent);
   -webkit-background-clip: text;
   @apply text-8xl 2xl:text-9xl;
 }

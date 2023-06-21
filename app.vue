@@ -36,7 +36,7 @@ function updateState (state: any) {
   currentSlideIdx.value = state.currentSlideIdx
   votedGifs.value = state.gif_votes
   tinderVotes.value = state.votes
-  triviaAnswers.value = state.votes
+  triviaAnswers.value = state.triviaAnswers
   poemName.value = state.poemName
   poemText.value = state.poemText
 

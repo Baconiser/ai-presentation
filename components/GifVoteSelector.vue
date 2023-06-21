@@ -6,7 +6,7 @@ import ParticleEffect from '~/components/ParticleEffect.vue'
 function voteForGif (gifId: string) {
   const userId = IdUtil.getId()
 
-  fetch('/api/vote_gif/', {
+  useFetch('/api/vote_gif/', {
     body: JSON.stringify({ userId, gifId }),
     method: 'POST',
     headers: {

@@ -1,12 +1,24 @@
 <script setup lang="ts">
 import questionsData from '~/utils/TriviaQuestions'
+import { TriviaAnswer } from '~/server/store'
 
 const activeQuestionIdx = ref(0)
 const questions = reactive(questionsData())
 const currentQuestion = computed(() => questions[activeQuestionIdx.value])
 
-function answerQuestion (answer: number) {
-  currentQuestion.value.selectedAnswer = answer
+async function answerQuestion (answer: number) {
+  currentQuestion.value.selectedAnswer = answer;
+  const userId = IdUtil.getId();
+  const triviaAnswer : TriviaAnswer = {
+    questionId: activeQuestionIdx.value,
+    userId,
+    correct: answer === currentQuestion.value.correctAnswer,
+    answer: currentQuestion.value.answers[answer]
+  }
+  await useFetch('/api/vote_question', {
+    method: 'POST',
+    body: JSON.stringify(triviaAnswer),
+  });
   setTimeout(() => {
     activeQuestionIdx.value++
   }, 600)

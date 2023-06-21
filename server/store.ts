@@ -28,11 +28,10 @@ interface User {
 }
 
 interface TriviaAnswer {
-    userId: string;
-    answer: string;
-    questionId: number;
-    correct: boolean;
-
+  userId: string;
+  answer: string;
+  questionId: number;
+  correct: boolean;
 }
 
 class Store {
@@ -53,6 +52,22 @@ class Store {
   setPoemText (text: string) {
     this.poemText = text
     this.emitToAll()
+  }
+
+  addTriviaAnswer (answer: TriviaAnswer) {
+    if (this.checkTriviaAnswerExists(answer)) {
+      return
+    }
+    this.triviaAnswers.push(answer)
+    this.emitToAll()
+  }
+
+  checkTriviaAnswerExists (answer: TriviaAnswer) {
+    return this.triviaAnswers.find(a => a.userId === answer.userId && a.questionId === answer.questionId)
+  }
+
+  getTriviaAnswers () {
+    return this.triviaAnswers
   }
 
   getPoemText () {
@@ -118,7 +133,6 @@ class Store {
 
   addGifVote (vote: GifVote) {
     this.gif_votes.push(vote)
-    console.log(`Gif vote added: ${JSON.stringify(vote)}`)
     this.emitToAll()
   }
 
@@ -157,7 +171,8 @@ class Store {
       currentSlideIdx: this.currentSlideIdx,
       users: this.users,
       poemName: this.poemName,
-      poemText: this.poemText
+      poemText: this.poemText,
+      triviaAnswers: this.triviaAnswers
     }
   }
 }
