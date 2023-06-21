@@ -8,8 +8,7 @@ Einleitung
 - ✅ Kapitel
 
 Hintergründe
-- Geschichte, woher kommt es, was ist es
-- https://www.bosch.com/de/stories/geschichte-der-kuenstlichen-intelligenz/
+- ✅ Geschichte, woher kommt es, was ist es
 - ML, was ist es 
 - ML, Beispiel 
 - Neuronale Netze, was ist es
@@ -19,8 +18,8 @@ Interaktiv
 
 Beispiele
 - Anwendungsgebiete + Beispiele
-- Beispiele von AI, wie wir sie nutzen 
-  - Link Sammlung + Handout
+- ✅ Beispiele von AI, wie wir sie nutzen 
+  - ✅ Link Sammlung + Handout
 
 Von KI generierte Inhalte
 - ✅ OpenAI Gedicht vorlesen lassen + Video
@@ -35,9 +34,13 @@ Prompting Time - Was ist möglich
 
 Prompting 
 - ✅ Was ist eigentlich Prompting?
-- Negative Prompting
+- ✅ Negative Prompting
 - ✅ Hallucination
 
+Einsatz bei w.e.b.
+- in LS2
+- Beispiel, falsche Antworten generieren lassen
+- 
 Abschluss
 - ✅ Future Tools (Krasse neue Tools - was uns bevorsteht)
 - Ethik / Gefahren

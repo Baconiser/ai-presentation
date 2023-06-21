@@ -40,6 +40,7 @@ import WhatLLM from '~/components/slides/WhatLLM.vue'
 import WhatGenerativeKI from '~/components/slides/WhatGenerativeKI.vue'
 import WhatLLMTwo from '~/components/slides/WhatLLMTwo.vue'
 import BoringTriviaSlide from '~/components/BoringTriviaSlide.vue'
+import EinsatzBeiWEBSlide from '~/components/slides/EinsatzBeiWEBSlide.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -175,6 +176,9 @@ const options = [
   },
   {
     type: BoringPromptingSlide
+  },
+  {
+    type: EinsatzBeiWEBSlide
   },
   {
     type: FutureTools

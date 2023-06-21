@@ -95,10 +95,10 @@ const questions: Question[] = [
     theme: 'Konzepte',
     question: 'Was ist ein Schlüsselelement der generativen KI?',
     answers: [
-      'Sie befolgt strenge Programmieranweisungen',
-      'Sie erzeugt oder prognostiziert Ausgaben basierend auf analysierten Daten',
-      'Sie kann nur Text generieren',
-      'Sie kann nur Bilder verarbeiten'
+      'Befolgt strikte Anweisungen',
+      'Erzeugt basierend auf Daten',
+      'Generiert nur Text',
+      'Verarbeitet nur Bilder'
     ],
     correctAnswer: 1,
     selectedAnswer: null
