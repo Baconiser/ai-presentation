@@ -10,7 +10,6 @@ function increaseIndex () {
   idx.value = (idx.value +1) % 4
 }
 
-
 </script>
 <template>
   <BoringSlide

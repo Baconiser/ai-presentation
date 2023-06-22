@@ -16,6 +16,7 @@ import ml from '@/assets/images/boring/ml.jpg'
       'Paradigmenwechsel in der Softwareentwicklung: Lernen aus Daten statt expliziter Programmierung.',
       'Optimierung der Modellparameter durch Verfahren wie Gradientenabstieg.',
       'Vielfältige Ziele: Vorhersage von Variablen (überwachtes Lernen), Entdeckung verborgener Strukturen (nicht überwachtes Lernen), Optimierung durch Interaktion (Verstärkungslernen).',
+      'https://www.datarevenue.com/en-blog/what-is-machine-learning-a-visual-explanation'
     ]"
   />
 </template>
