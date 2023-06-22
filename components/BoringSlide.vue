@@ -45,7 +45,7 @@ const showContent = () => {
       <ul v-if="statements.length > 0" class="space-y-4 list-disc list-outside pl-[40px]">
         <li v-for="(statement, index) in statements" :key="'statement-' + index" class="text-black" v-html="statement" />
       </ul>
-      <img v-if="src" :src="src" class="2xl:max-w-xl shrink-0 rounded-lg object-contain">
+      <img v-if="src" :src="src" class="max-w-lg 2xl:max-w-xl shrink-0 rounded-lg object-contain">
     </div>
   </div>
 </template>

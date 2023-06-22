@@ -4,7 +4,7 @@ import neuralnet from '@/assets/images/boring/neuralnet.jpeg'
 
 <template>
   <BoringSlide
-    title="Neuronale Netze / Deep Learning"
+    title="Neuronale Netze"
     :src="neuralnet"
     :statements="[
       'Inspiriert durch das menschliche Gehirn, bestehend aus verbundenen \'Neuronen\' in verschiedenen Schichten.',

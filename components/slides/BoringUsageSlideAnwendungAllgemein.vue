@@ -9,7 +9,6 @@ import classification from '@/assets/images/boring/classification.jpg'
   >
     <template #content>
       <div class="space-y-4">
-
         <div>
           <h2>Erkennung</h2>
           <p>
