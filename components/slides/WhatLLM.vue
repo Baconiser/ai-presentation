@@ -9,8 +9,10 @@ import LLMGrowth from '@/assets/images/boring/llm-growth.png'
       <div class="grid grid-cols-2 gap-x-8 w-full">
         <div class="space-y-4">
           <p>GPT: Generative Pretrained Transformer</p>
-          <p>GPT-3 hat auf 570 GB Text Daten trainiert </p>
-          <p>300 Jahre Rechenleistung und 170 Milliarden Verbindungen im neuronalen Netzwerk</p>
+          <p>GPT-3 ist ein 175-Milliarden-Parameter-Sprachmodell. Es hat auf 570 GB Text Daten trainiert in 355 Jahre Rechenleistung</p>
+          <p>Google PaLM 2 ist ein 340-Milliarden-Parameter-Sprachmodell trainiert auf 3,6 Billionen Tokens</p>
+          <p>GPT-4 geschätzt 1 Billionen Parameter und 825 TB Daten</p>
+          <p>Microsoft Orca 13 Milliarden Parameter</p>
           <div>
             <p>
               <strong>Transformer</strong><br>
@@ -23,7 +25,7 @@ import LLMGrowth from '@/assets/images/boring/llm-growth.png'
               Besteht aus einem generierenden und einem beurteilenden Algorithmus
             </p>
           </div>
-          <p>Alignmenent: Reinforcement learning from human feedback</p>
+          <p>Alignment: Reinforcement learning from human feedback</p>
         </div>
         <div class="flex flex-col gap-8">
           <div class="flex gap-4 flex-col">

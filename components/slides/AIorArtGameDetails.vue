@@ -23,7 +23,7 @@ const incorrectVotes = computed(() => {
   const correctAiLength = correctAi.length
   const correctArtistLength = correctArtist.length
 
-  if (correctAiLength == correctArtistLength) {
+  if (correctAiLength === correctArtistLength) {
     return 'Es steht unentschieden. Die KI hat gewonnen. '
   }
 
@@ -134,20 +134,20 @@ const mostAndLeastCorrectImages = computed(() => {
               {{ incorrectVotes }}
             </p>
             <div class="flex justify-between gap-8 items-center">
-              <p v-if="mostAndLeastCorrectImages.mostCorrectImage" class="text-2xl">
-                Masterpiece (Korrektestes Bild)
+              <p v-if="mostAndLeastCorrectImages.mostCorrectImage" class="text-2xl text-center">
+                Masterpiece
                 <img
                   :src="mostAndLeastCorrectImages.mostCorrectImage.imageId"
                   alt="Content"
-                  class="w-60 aspect-[1/1] object-cover rounded-tr-[6rem] rounded-bl-[6rem]"
+                  class="w-80 aspect-[1/1] object-cover rounded-lg mt-4"
                 >
               </p>
-              <p v-if="mostAndLeastCorrectImages.leastCorrectImage" class="text-2xl">
-                Die beste Fälschung (Am wenigsten korrektes Bild)
+              <p v-if="mostAndLeastCorrectImages.leastCorrectImage" class="text-2xl text-center">
+                Die beste Fälschung
                 <img
                   :src="mostAndLeastCorrectImages.leastCorrectImage.imageId"
                   alt="Content"
-                  class="w-60 aspect-[1/1] object-cover rounded-tl-[6rem] rounded-br-[6rem]"
+                  class="w-80 aspect-[1/1] object-cover rounded-lg mt-4"
                 >
               </p>
             </div>

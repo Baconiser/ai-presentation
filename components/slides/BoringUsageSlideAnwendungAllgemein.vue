@@ -9,13 +9,7 @@ import classification from '@/assets/images/boring/classification.jpg'
   >
     <template #content>
       <div class="space-y-4">
-        <div>
-          <h2>Generierung</h2>
-          <p>
-            AI generiert neue Inhalte wie Bilder, Texte oder Videos. <br>
-            Das umfasst Anwendungen wie Bildgenerierung, Textgenerierung, musikalische Komposition und Videoproduktion.
-          </p>
-        </div>
+
         <div>
           <h2>Erkennung</h2>
           <p>
@@ -36,6 +30,13 @@ import classification from '@/assets/images/boring/classification.jpg'
           <p>
             AI steuert und optimiert Prozesse, Systeme oder Entscheidungen.<br> Das umfasst Anwendungen wie autonome
             Fahrzeuge, Entscheidungsunterstützungssysteme, Robotik und Prozessautomatisierung.
+          </p>
+        </div>
+        <div>
+          <h2>Generierung</h2>
+          <p>
+            AI generiert neue Inhalte wie Bilder, Texte oder Videos. <br>
+            Das umfasst Anwendungen wie Bildgenerierung, Textgenerierung, musikalische Komposition und Videoproduktion.
           </p>
         </div>
       </div>

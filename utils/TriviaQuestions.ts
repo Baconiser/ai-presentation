@@ -45,10 +45,10 @@ const questions: Question[] = [
   },
   {
     theme: 'Technologie',
-    question: 'Wie viele Verbindungen gibt es im neuronalen Netzwerk von GPT-3?',
+    question: 'Wie viele Parameter gibt es im neuronalen Netzwerk von GPT-3?',
     answers: [
       '570 Millionen',
-      '170 Milliarden',
+      '175 Milliarden',
       '100 Millionen',
       '300 Milliarden'
     ],
