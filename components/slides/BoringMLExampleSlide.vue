@@ -8,7 +8,7 @@ const backend = ref(false)
   >
     <template #content>
       <template v-if="!backend">
-        <div class="space-y-4">
+        <div class="space-y-4" @click="backend = !backend">
           <p>
             Stellt euch vor, ihr seid <span class="hl">Frontend-Entwickler</span> und arbeitet an einer <span
               class="hl"
@@ -34,8 +34,8 @@ const backend = ref(false)
           </p>
         </div>
       </template>
-      <template v-else>
-        <div class="space-y-4">
+      <template v-else >
+        <div class="space-y-4" @click="backend = !backend">
           <p>
             Also, stellt euch <span class="hl">Maschinelles Lernen</span> als den heimlichen Superhelden vor, der im
             Hintergrund eurer Java-Anwendungen und Datenbanken arbeitet. Es ist ein ganz wichtiger Teil der <span
